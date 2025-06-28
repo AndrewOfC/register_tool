@@ -1,0 +1,4031 @@
+##
+## Register map for a Raspberry Pi 4B
+## Mappings taken from bcm2711-peripherals.pdf
+##
+
+# Data for ucompleter tool
+completion=metadata:
+    root: "registers"
+    terminus:  "offset"
+
+base: 0x7e200000
+
+registers:
+    ##
+    ## Reference Section 5.2
+    ##
+    GPIO:
+      ##
+      ##
+      ##
+      GPIO0:
+        GPFSEL0:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          width: 32
+      GPFSEL0_bits:
+
+        FSEL09:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 29:27
+        FSEL08:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 26:24
+        FSEL07:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 23:21
+        FSEL06:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 20:18
+        FSEL05:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 17:15
+        FSEL04:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 14:12
+        FSEL03:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 11:9
+        FSEL02:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 8:6
+        FSEL01:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 5:3
+        FSEL00:
+          offset: 0x00
+          reset: 0x0000
+          read-write: "rw"
+          bits: 2:0
+      ##
+      ##
+      ##
+      GPIO1:
+        GPFSEL1:
+          offset: 0x04
+          reset: 0x0000
+          read-write: "rw"
+          width: 32
+        GPFSEL1_bits:
+
+          FSEL19:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 29:27
+          FSEL18:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 26:24
+          FSEL17:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 23:21
+          FSEL16:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 20:18
+          FSEL15:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 17:15
+          FSEL14:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 14:12
+          FSEL13:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 11:9
+          FSEL12:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 8:6
+          FSEL11:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:3
+          FSEL10:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 2:0
+        ##
+        ##
+        ##
+        GPIO2:
+          GPFSEL2:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            width: 32
+        GPFSEL2_bits:
+
+          FSEL29:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 29:27
+          FSEL28:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 26:24
+          FSEL27:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 23:21
+          FSEL26:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 20:18
+          FSEL25:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 17:15
+          FSEL24:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 14:12
+          FSEL23:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 11:9
+          FSEL22:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 8:6
+          FSEL21:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:3
+          FSEL20:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 2:0
+        ##
+        ##
+        ##
+        GPIO3:
+          GPFSEL3:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            width: 32
+        GPFSEL3_bits:
+
+          FSEL39:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 29:27
+          FSEL38:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 26:24
+          FSEL37:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 23:21
+          FSEL36:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 20:18
+          FSEL35:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 17:15
+          FSEL34:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 14:12
+          FSEL33:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 11:9
+          FSEL32:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 8:6
+          FSEL31:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:3
+          FSEL30:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 2:0
+        ##
+        ##
+        ##
+        GPIO4:
+          GPFSEL4:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            width: 32
+        GPFSEL4_bits:
+
+          FSEL49:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 29:27
+          FSEL48:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 26:24
+          FSEL47:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 23:21
+          FSEL46:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 20:18
+          FSEL45:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 17:15
+          FSEL44:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 14:12
+          FSEL43:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 11:9
+          FSEL42:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 8:6
+          FSEL41:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:3
+          FSEL40:
+            offset: 0x10
+            reset: 0x0000
+            read-write: "rw"
+            bits: 2:0
+        ##
+        ##
+        ##
+        GPIO5:
+          GPFSEL5:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            width: 32
+        GPFSEL5_bits:
+
+          FSEL59:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 29:27
+          FSEL58:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 26:24
+          FSEL57:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 23:21
+          FSEL56:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 20:18
+          FSEL55:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 17:15
+          FSEL54:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 14:12
+          FSEL53:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 11:9
+          FSEL52:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 8:6
+          FSEL51:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:3
+          FSEL50:
+            offset: 0x14
+            reset: 0x0000
+            read-write: "rw"
+            bits: 2:0
+
+## cut here
+        GPset0:
+            offset: 0x1C
+            read-write: "wo"
+            width: 32
+
+
+
+      set_GPIO57:
+          offset: 0x20
+          bits:   25:25
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO56:
+          offset: 0x20
+          bits:   24:24
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO55:
+          offset: 0x20
+          bits:   23:23
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO54:
+          offset: 0x20
+          bits:   22:22
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO53:
+          offset: 0x20
+          bits:   21:21
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO52:
+          offset: 0x20
+          bits:   20:20
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO51:
+          offset: 0x20
+          bits:   19:19
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO50:
+          offset: 0x20
+          bits:   18:18
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO49:
+          offset: 0x20
+          bits:   17:17
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO48:
+          offset: 0x20
+          bits:   16:16
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO47:
+          offset: 0x20
+          bits:   15:15
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO46:
+          offset: 0x20
+          bits:   14:14
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO45:
+          offset: 0x20
+          bits:   13:13
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO44:
+          offset: 0x20
+          bits:   12:12
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO43:
+          offset: 0x20
+          bits:   11:11
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO42:
+          offset: 0x20
+          bits:   10:10
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO41:
+          offset: 0x20
+          bits:   9:9
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO40:
+          offset: 0x20
+          bits:   8:8
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO39:
+          offset: 0x20
+          bits:   7:7
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO38:
+          offset: 0x20
+          bits:   6:6
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO37:
+          offset: 0x20
+          bits:   5:5
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO36:
+          offset: 0x20
+          bits:   4:4
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO35:
+          offset: 0x20
+          bits:   3:3
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO34:
+          offset: 0x20
+          bits:   2:2
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO33:
+          offset: 0x20
+          bits:   1:1
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO32:
+          offset: 0x20
+          bits:   0:0
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO31:
+          offset: 0x1C
+          bits:   31:31
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO30:
+          offset: 0x1C
+          bits:   30:30
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO29:
+          offset: 0x1C
+          bits:   29:29
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO28:
+          offset: 0x1C
+          bits:   28:28
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO27:
+          offset: 0x1C
+          bits:   27:27
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO26:
+          offset: 0x1C
+          bits:   26:26
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO25:
+          offset: 0x1C
+          bits:   25:25
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO24:
+          offset: 0x1C
+          bits:   24:24
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO23:
+          offset: 0x1C
+          bits:   23:23
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO22:
+          offset: 0x1C
+          bits:   22:22
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO21:
+          offset: 0x1C
+          bits:   21:21
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO20:
+          offset: 0x1C
+          bits:   20:20
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO19:
+          offset: 0x1C
+          bits:   19:19
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO18:
+          offset: 0x1C
+          bits:   18:18
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO17:
+          offset: 0x1C
+          bits:   17:17
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO16:
+          offset: 0x1C
+          bits:   16:16
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO15:
+          offset: 0x1C
+          bits:   15:15
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO14:
+          offset: 0x1C
+          bits:   14:14
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO13:
+          offset: 0x1C
+          bits:   13:13
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO12:
+          offset: 0x1C
+          bits:   12:12
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO11:
+          offset: 0x1C
+          bits:   11:11
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO10:
+          offset: 0x1C
+          bits:   10:10
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO09:
+          offset: 0x1C
+          bits:   9:9
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO08:
+          offset: 0x1C
+          bits:   8:8
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO07:
+          offset: 0x1C
+          bits:   7:7
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO06:
+          offset: 0x1C
+          bits:   6:6
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO05:
+          offset: 0x1C
+          bits:   5:5
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO04:
+          offset: 0x1C
+          bits:   4:4
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO03:
+          offset: 0x1C
+          bits:   3:3
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO02:
+          offset: 0x1C
+          bits:   2:2
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO01:
+          offset: 0x1C
+          bits:   1:1
+          reset: 0x00000000
+          read-write: ""
+
+      set_GPIO00:
+          offset: 0x1C
+          bits:   0:0
+          reset: 0x00000000
+          read-write: ""
+
+
+      GPclr1:
+          offset: 0x24
+          read-write: "wo"
+          width: 32
+
+
+
+      clr_GPIO57:
+          offset: 0x2C
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO56:
+          offset: 0x2C
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO55:
+          offset: 0x2C
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO54:
+          offset: 0x2C
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO53:
+          offset: 0x2C
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO52:
+          offset: 0x2C
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO51:
+          offset: 0x2C
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO50:
+          offset: 0x2C
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO49:
+          offset: 0x2C
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO48:
+          offset: 0x2C
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO47:
+          offset: 0x2C
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO46:
+          offset: 0x2C
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO45:
+          offset: 0x2C
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO44:
+          offset: 0x2C
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO43:
+          offset: 0x2C
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO42:
+          offset: 0x2C
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO41:
+          offset: 0x2C
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO40:
+          offset: 0x2C
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO39:
+          offset: 0x2C
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO38:
+          offset: 0x2C
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO37:
+          offset: 0x2C
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO36:
+          offset: 0x2C
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO35:
+          offset: 0x2C
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO34:
+          offset: 0x2C
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO33:
+          offset: 0x2C
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO32:
+          offset: 0x2C
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO31:
+          offset: 0x28
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO30:
+          offset: 0x28
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO29:
+          offset: 0x28
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO28:
+          offset: 0x28
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO27:
+          offset: 0x28
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO26:
+          offset: 0x28
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO25:
+          offset: 0x28
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO24:
+          offset: 0x28
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO23:
+          offset: 0x28
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO22:
+          offset: 0x28
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO21:
+          offset: 0x28
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO20:
+          offset: 0x28
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO19:
+          offset: 0x28
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO18:
+          offset: 0x28
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO17:
+          offset: 0x28
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO16:
+          offset: 0x28
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO15:
+          offset: 0x28
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO14:
+          offset: 0x28
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO13:
+          offset: 0x28
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO12:
+          offset: 0x28
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO11:
+          offset: 0x28
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO10:
+          offset: 0x28
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO09:
+          offset: 0x28
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO08:
+          offset: 0x28
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO07:
+          offset: 0x28
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO06:
+          offset: 0x28
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO05:
+          offset: 0x28
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO04:
+          offset: 0x28
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO03:
+          offset: 0x28
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO02:
+          offset: 0x28
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO01:
+          offset: 0x28
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "wo"
+
+      clr_GPIO00:
+          offset: 0x28
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "wo"
+
+
+
+      lvl_GPIO57:
+          offset: 0x38
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO56:
+          offset: 0x38
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO55:
+          offset: 0x38
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO54:
+          offset: 0x38
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO53:
+          offset: 0x38
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO52:
+          offset: 0x38
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO51:
+          offset: 0x38
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO50:
+          offset: 0x38
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO49:
+          offset: 0x38
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO48:
+          offset: 0x38
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO47:
+          offset: 0x38
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO46:
+          offset: 0x38
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO45:
+          offset: 0x38
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO44:
+          offset: 0x38
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO43:
+          offset: 0x38
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO42:
+          offset: 0x38
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO41:
+          offset: 0x38
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO40:
+          offset: 0x38
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO39:
+          offset: 0x38
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO38:
+          offset: 0x38
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO37:
+          offset: 0x38
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO36:
+          offset: 0x38
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO35:
+          offset: 0x38
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO34:
+          offset: 0x38
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO33:
+          offset: 0x38
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO32:
+          offset: 0x38
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO31:
+          offset: 0x34
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO30:
+          offset: 0x34
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO29:
+          offset: 0x34
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO28:
+          offset: 0x34
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO27:
+          offset: 0x34
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO26:
+          offset: 0x34
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO25:
+          offset: 0x34
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO24:
+          offset: 0x34
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO23:
+          offset: 0x34
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO22:
+          offset: 0x34
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO21:
+          offset: 0x34
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO20:
+          offset: 0x34
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO19:
+          offset: 0x34
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO18:
+          offset: 0x34
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO17:
+          offset: 0x34
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO16:
+          offset: 0x34
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO15:
+          offset: 0x34
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO14:
+          offset: 0x34
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO13:
+          offset: 0x34
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO12:
+          offset: 0x34
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO11:
+          offset: 0x34
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO10:
+          offset: 0x34
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO09:
+          offset: 0x34
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO08:
+          offset: 0x34
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO07:
+          offset: 0x34
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO06:
+          offset: 0x34
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO05:
+          offset: 0x34
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO04:
+          offset: 0x34
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO03:
+          offset: 0x34
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO02:
+          offset: 0x34
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO01:
+          offset: 0x34
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "ro"
+
+      lvl_GPIO00:
+          offset: 0x34
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "ro"
+
+
+
+      ed_GPIO57:
+          offset: 0x44
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO56:
+          offset: 0x44
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO55:
+          offset: 0x44
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO54:
+          offset: 0x44
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO53:
+          offset: 0x44
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO52:
+          offset: 0x44
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO51:
+          offset: 0x44
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO50:
+          offset: 0x44
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO49:
+          offset: 0x44
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO48:
+          offset: 0x44
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO47:
+          offset: 0x44
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO46:
+          offset: 0x44
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO45:
+          offset: 0x44
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO44:
+          offset: 0x44
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO43:
+          offset: 0x44
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO42:
+          offset: 0x44
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO41:
+          offset: 0x44
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO40:
+          offset: 0x44
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO39:
+          offset: 0x44
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO38:
+          offset: 0x44
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO37:
+          offset: 0x44
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO36:
+          offset: 0x44
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO35:
+          offset: 0x44
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO34:
+          offset: 0x44
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO33:
+          offset: 0x44
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO32:
+          offset: 0x44
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO31:
+          offset: 0x40
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO30:
+          offset: 0x40
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO29:
+          offset: 0x40
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO28:
+          offset: 0x40
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO27:
+          offset: 0x40
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO26:
+          offset: 0x40
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO25:
+          offset: 0x40
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO24:
+          offset: 0x40
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO23:
+          offset: 0x40
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO22:
+          offset: 0x40
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO21:
+          offset: 0x40
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO20:
+          offset: 0x40
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO19:
+          offset: 0x40
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO18:
+          offset: 0x40
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO17:
+          offset: 0x40
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO16:
+          offset: 0x40
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO15:
+          offset: 0x40
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO14:
+          offset: 0x40
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO13:
+          offset: 0x40
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO12:
+          offset: 0x40
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO11:
+          offset: 0x40
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO10:
+          offset: 0x40
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO09:
+          offset: 0x40
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO08:
+          offset: 0x40
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO07:
+          offset: 0x40
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO06:
+          offset: 0x40
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO05:
+          offset: 0x40
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO04:
+          offset: 0x40
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO03:
+          offset: 0x40
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO02:
+          offset: 0x40
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO01:
+          offset: 0x40
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ed_GPIO00:
+          offset: 0x40
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+
+
+      ren_GPIO57:
+          offset: 0x50
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO56:
+          offset: 0x50
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO55:
+          offset: 0x50
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO54:
+          offset: 0x50
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO53:
+          offset: 0x50
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO52:
+          offset: 0x50
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO51:
+          offset: 0x50
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO50:
+          offset: 0x50
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO49:
+          offset: 0x50
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO48:
+          offset: 0x50
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO47:
+          offset: 0x50
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO46:
+          offset: 0x50
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO45:
+          offset: 0x50
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO44:
+          offset: 0x50
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO43:
+          offset: 0x50
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO42:
+          offset: 0x50
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO41:
+          offset: 0x50
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO40:
+          offset: 0x50
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO39:
+          offset: 0x50
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO38:
+          offset: 0x50
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO37:
+          offset: 0x50
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO36:
+          offset: 0x50
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO35:
+          offset: 0x50
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO34:
+          offset: 0x50
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO33:
+          offset: 0x50
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO32:
+          offset: 0x50
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO31:
+          offset: 0x4C
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO30:
+          offset: 0x4C
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO29:
+          offset: 0x4C
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO28:
+          offset: 0x4C
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO27:
+          offset: 0x4C
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO26:
+          offset: 0x4C
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO25:
+          offset: 0x4C
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO24:
+          offset: 0x4C
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO23:
+          offset: 0x4C
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO22:
+          offset: 0x4C
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO21:
+          offset: 0x4C
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO20:
+          offset: 0x4C
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO19:
+          offset: 0x4C
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO18:
+          offset: 0x4C
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO17:
+          offset: 0x4C
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO16:
+          offset: 0x4C
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO15:
+          offset: 0x4C
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO14:
+          offset: 0x4C
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO13:
+          offset: 0x4C
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO12:
+          offset: 0x4C
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO11:
+          offset: 0x4C
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO10:
+          offset: 0x4C
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO09:
+          offset: 0x4C
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO08:
+          offset: 0x4C
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO07:
+          offset: 0x4C
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO06:
+          offset: 0x4C
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO05:
+          offset: 0x4C
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO04:
+          offset: 0x4C
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO03:
+          offset: 0x4C
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO02:
+          offset: 0x4C
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO01:
+          offset: 0x4C
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      ren_GPIO00:
+          offset: 0x4C
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+
+
+      fen_GPIO57:
+          offset: 0x5C
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO56:
+          offset: 0x5C
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO55:
+          offset: 0x5C
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO54:
+          offset: 0x5C
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO53:
+          offset: 0x5C
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO52:
+          offset: 0x5C
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO51:
+          offset: 0x5C
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO50:
+          offset: 0x5C
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO49:
+          offset: 0x5C
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO48:
+          offset: 0x5C
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO47:
+          offset: 0x5C
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO46:
+          offset: 0x5C
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO45:
+          offset: 0x5C
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO44:
+          offset: 0x5C
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO43:
+          offset: 0x5C
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO42:
+          offset: 0x5C
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO41:
+          offset: 0x5C
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO40:
+          offset: 0x5C
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO39:
+          offset: 0x5C
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO38:
+          offset: 0x5C
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO37:
+          offset: 0x5C
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO36:
+          offset: 0x5C
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO35:
+          offset: 0x5C
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO34:
+          offset: 0x5C
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO33:
+          offset: 0x5C
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO32:
+          offset: 0x5C
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO31:
+          offset: 0x58
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO30:
+          offset: 0x58
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO29:
+          offset: 0x58
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO28:
+          offset: 0x58
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO27:
+          offset: 0x58
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO26:
+          offset: 0x58
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO25:
+          offset: 0x58
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO24:
+          offset: 0x58
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO23:
+          offset: 0x58
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO22:
+          offset: 0x58
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO21:
+          offset: 0x58
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO20:
+          offset: 0x58
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO19:
+          offset: 0x58
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO18:
+          offset: 0x58
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO17:
+          offset: 0x58
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO16:
+          offset: 0x58
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO15:
+          offset: 0x58
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO14:
+          offset: 0x58
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO13:
+          offset: 0x58
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO12:
+          offset: 0x58
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO11:
+          offset: 0x58
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO10:
+          offset: 0x58
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO09:
+          offset: 0x58
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO08:
+          offset: 0x58
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO07:
+          offset: 0x58
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO06:
+          offset: 0x58
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO05:
+          offset: 0x58
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO04:
+          offset: 0x58
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO03:
+          offset: 0x58
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO02:
+          offset: 0x58
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO01:
+          offset: 0x58
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      fen_GPIO00:
+          offset: 0x58
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+
+
+      hen_GPIO57:
+          offset: 0x68
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO56:
+          offset: 0x68
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO55:
+          offset: 0x68
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO54:
+          offset: 0x68
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO53:
+          offset: 0x68
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO52:
+          offset: 0x68
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO51:
+          offset: 0x68
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO50:
+          offset: 0x68
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO49:
+          offset: 0x68
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO48:
+          offset: 0x68
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO47:
+          offset: 0x68
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO46:
+          offset: 0x68
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO45:
+          offset: 0x68
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO44:
+          offset: 0x68
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO43:
+          offset: 0x68
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO42:
+          offset: 0x68
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO41:
+          offset: 0x68
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO40:
+          offset: 0x68
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO39:
+          offset: 0x68
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO38:
+          offset: 0x68
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO37:
+          offset: 0x68
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO36:
+          offset: 0x68
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO35:
+          offset: 0x68
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO34:
+          offset: 0x68
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO33:
+          offset: 0x68
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO32:
+          offset: 0x68
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO31:
+          offset: 0x64
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO30:
+          offset: 0x64
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO29:
+          offset: 0x64
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO28:
+          offset: 0x64
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO27:
+          offset: 0x64
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO26:
+          offset: 0x64
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO25:
+          offset: 0x64
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO24:
+          offset: 0x64
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO23:
+          offset: 0x64
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO22:
+          offset: 0x64
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO21:
+          offset: 0x64
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO20:
+          offset: 0x64
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO19:
+          offset: 0x64
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO18:
+          offset: 0x64
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO17:
+          offset: 0x64
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO16:
+          offset: 0x64
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO15:
+          offset: 0x64
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO14:
+          offset: 0x64
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO13:
+          offset: 0x64
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO12:
+          offset: 0x64
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO11:
+          offset: 0x64
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO10:
+          offset: 0x64
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO09:
+          offset: 0x64
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO08:
+          offset: 0x64
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO07:
+          offset: 0x64
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO06:
+          offset: 0x64
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO05:
+          offset: 0x64
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO04:
+          offset: 0x64
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO03:
+          offset: 0x64
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO02:
+          offset: 0x64
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO01:
+          offset: 0x64
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      hen_GPIO00:
+          offset: 0x64
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+
+
+      len_GPIO57:
+          offset: 0x74
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO56:
+          offset: 0x74
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO55:
+          offset: 0x74
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO54:
+          offset: 0x74
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO53:
+          offset: 0x74
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO52:
+          offset: 0x74
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO51:
+          offset: 0x74
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO50:
+          offset: 0x74
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO49:
+          offset: 0x74
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO48:
+          offset: 0x74
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO47:
+          offset: 0x74
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO46:
+          offset: 0x74
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO45:
+          offset: 0x74
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO44:
+          offset: 0x74
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO43:
+          offset: 0x74
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO42:
+          offset: 0x74
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO41:
+          offset: 0x74
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO40:
+          offset: 0x74
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO39:
+          offset: 0x74
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO38:
+          offset: 0x74
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO37:
+          offset: 0x74
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO36:
+          offset: 0x74
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO35:
+          offset: 0x74
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO34:
+          offset: 0x74
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO33:
+          offset: 0x74
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO32:
+          offset: 0x74
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO31:
+          offset: 0x70
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO30:
+          offset: 0x70
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO29:
+          offset: 0x70
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO28:
+          offset: 0x70
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO27:
+          offset: 0x70
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO26:
+          offset: 0x70
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO25:
+          offset: 0x70
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO24:
+          offset: 0x70
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO23:
+          offset: 0x70
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO22:
+          offset: 0x70
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO21:
+          offset: 0x70
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO20:
+          offset: 0x70
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO19:
+          offset: 0x70
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO18:
+          offset: 0x70
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO17:
+          offset: 0x70
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO16:
+          offset: 0x70
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO15:
+          offset: 0x70
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO14:
+          offset: 0x70
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO13:
+          offset: 0x70
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO12:
+          offset: 0x70
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO11:
+          offset: 0x70
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO10:
+          offset: 0x70
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO09:
+          offset: 0x70
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO08:
+          offset: 0x70
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO07:
+          offset: 0x70
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO06:
+          offset: 0x70
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO05:
+          offset: 0x70
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO04:
+          offset: 0x70
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO03:
+          offset: 0x70
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO02:
+          offset: 0x70
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO01:
+          offset: 0x70
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      len_GPIO00:
+          offset: 0x70
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+
+
+      aren_GPIO57:
+          offset: 0x80
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO56:
+          offset: 0x80
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO55:
+          offset: 0x80
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO54:
+          offset: 0x80
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO53:
+          offset: 0x80
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO52:
+          offset: 0x80
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO51:
+          offset: 0x80
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO50:
+          offset: 0x80
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO49:
+          offset: 0x80
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO48:
+          offset: 0x80
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO47:
+          offset: 0x80
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO46:
+          offset: 0x80
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO45:
+          offset: 0x80
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO44:
+          offset: 0x80
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO43:
+          offset: 0x80
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO42:
+          offset: 0x80
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO41:
+          offset: 0x80
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO40:
+          offset: 0x80
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO39:
+          offset: 0x80
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO38:
+          offset: 0x80
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO37:
+          offset: 0x80
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO36:
+          offset: 0x80
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO35:
+          offset: 0x80
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO34:
+          offset: 0x80
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO33:
+          offset: 0x80
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO32:
+          offset: 0x80
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO31:
+          offset: 0x7C
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO30:
+          offset: 0x7C
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO29:
+          offset: 0x7C
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO28:
+          offset: 0x7C
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO27:
+          offset: 0x7C
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO26:
+          offset: 0x7C
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO25:
+          offset: 0x7C
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO24:
+          offset: 0x7C
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO23:
+          offset: 0x7C
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO22:
+          offset: 0x7C
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO21:
+          offset: 0x7C
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO20:
+          offset: 0x7C
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO19:
+          offset: 0x7C
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO18:
+          offset: 0x7C
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO17:
+          offset: 0x7C
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO16:
+          offset: 0x7C
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO15:
+          offset: 0x7C
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO14:
+          offset: 0x7C
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO13:
+          offset: 0x7C
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO12:
+          offset: 0x7C
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO11:
+          offset: 0x7C
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO10:
+          offset: 0x7C
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO09:
+          offset: 0x7C
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO08:
+          offset: 0x7C
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO07:
+          offset: 0x7C
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO06:
+          offset: 0x7C
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO05:
+          offset: 0x7C
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO04:
+          offset: 0x7C
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO03:
+          offset: 0x7C
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO02:
+          offset: 0x7C
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO01:
+          offset: 0x7C
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      aren_GPIO00:
+          offset: 0x7C
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+
+
+      afen_GPIO57:
+          offset: 0x8C
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO56:
+          offset: 0x8C
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO55:
+          offset: 0x8C
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO54:
+          offset: 0x8C
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO53:
+          offset: 0x8C
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO52:
+          offset: 0x8C
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO51:
+          offset: 0x8C
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO50:
+          offset: 0x8C
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO49:
+          offset: 0x8C
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO48:
+          offset: 0x8C
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO47:
+          offset: 0x8C
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO46:
+          offset: 0x8C
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO45:
+          offset: 0x8C
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO44:
+          offset: 0x8C
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO43:
+          offset: 0x8C
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO42:
+          offset: 0x8C
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO41:
+          offset: 0x8C
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO40:
+          offset: 0x8C
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO39:
+          offset: 0x8C
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO38:
+          offset: 0x8C
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO37:
+          offset: 0x8C
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO36:
+          offset: 0x8C
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO35:
+          offset: 0x8C
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO34:
+          offset: 0x8C
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO33:
+          offset: 0x8C
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO32:
+          offset: 0x8C
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO31:
+          offset: 0x88
+          bits:   31:31
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO30:
+          offset: 0x88
+          bits:   30:30
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO29:
+          offset: 0x88
+          bits:   29:29
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO28:
+          offset: 0x88
+          bits:   28:28
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO27:
+          offset: 0x88
+          bits:   27:27
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO26:
+          offset: 0x88
+          bits:   26:26
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO25:
+          offset: 0x88
+          bits:   25:25
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO24:
+          offset: 0x88
+          bits:   24:24
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO23:
+          offset: 0x88
+          bits:   23:23
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO22:
+          offset: 0x88
+          bits:   22:22
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO21:
+          offset: 0x88
+          bits:   21:21
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO20:
+          offset: 0x88
+          bits:   20:20
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO19:
+          offset: 0x88
+          bits:   19:19
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO18:
+          offset: 0x88
+          bits:   18:18
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO17:
+          offset: 0x88
+          bits:   17:17
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO16:
+          offset: 0x88
+          bits:   16:16
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO15:
+          offset: 0x88
+          bits:   15:15
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO14:
+          offset: 0x88
+          bits:   14:14
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO13:
+          offset: 0x88
+          bits:   13:13
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO12:
+          offset: 0x88
+          bits:   12:12
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO11:
+          offset: 0x88
+          bits:   11:11
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO10:
+          offset: 0x88
+          bits:   10:10
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO09:
+          offset: 0x88
+          bits:   9:9
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO08:
+          offset: 0x88
+          bits:   8:8
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO07:
+          offset: 0x88
+          bits:   7:7
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO06:
+          offset: 0x88
+          bits:   6:6
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO05:
+          offset: 0x88
+          bits:   5:5
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO04:
+          offset: 0x88
+          bits:   4:4
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO03:
+          offset: 0x88
+          bits:   3:3
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO02:
+          offset: 0x88
+          bits:   2:2
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO01:
+          offset: 0x88
+          bits:   1:1
+          reset: 0x00000000
+          read-write: "w1c"
+
+      afen_GPIO00:
+          offset: 0x88
+          bits:   0:0
+          reset: 0x00000000
+          read-write: "w1c"
+
+
+    GPPULL_UP_DOWN_CTRL0:
+        offset: 0x00
+        reset: 0x0000
+        read-write: "rw"
+        width: 32
+    GPULL_UP_DOWN_CTRL0_bits:
+
+        PULL_UP_DOWN_CTRL04:
+            offset: 0x00
+            reset: 0x0000
+            read-write: "rw"
+            bits: 9:8
+        PULL_UP_DOWN_CTRL03:
+            offset: 0x00
+            reset: 0x0000
+            read-write: "rw"
+            bits: 7:6
+        PULL_UP_DOWN_CTRL02:
+            offset: 0x00
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:4
+        PULL_UP_DOWN_CTRL01:
+            offset: 0x00
+            reset: 0x0000
+            read-write: "rw"
+            bits: 3:2
+        PULL_UP_DOWN_CTRL00:
+            offset: 0x00
+            reset: 0x0000
+            read-write: "rw"
+            bits: 1:0
+
+
+    GPPULL_UP_DOWN_CTRL1:
+        offset: 0x04
+        reset: 0x0000
+        read-write: "rw"
+        width: 32
+    GPULL_UP_DOWN_CTRL1_bits:
+
+        PULL_UP_DOWN_CTRL14:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 9:8
+        PULL_UP_DOWN_CTRL13:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 7:6
+        PULL_UP_DOWN_CTRL12:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:4
+        PULL_UP_DOWN_CTRL11:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 3:2
+        PULL_UP_DOWN_CTRL10:
+            offset: 0x04
+            reset: 0x0000
+            read-write: "rw"
+            bits: 1:0
+
+
+    GPPULL_UP_DOWN_CTRL2:
+        offset: 0x08
+        reset: 0x0000
+        read-write: "rw"
+        width: 32
+    GPULL_UP_DOWN_CTRL2_bits:
+
+        PULL_UP_DOWN_CTRL24:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 9:8
+        PULL_UP_DOWN_CTRL23:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 7:6
+        PULL_UP_DOWN_CTRL22:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:4
+        PULL_UP_DOWN_CTRL21:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 3:2
+        PULL_UP_DOWN_CTRL20:
+            offset: 0x08
+            reset: 0x0000
+            read-write: "rw"
+            bits: 1:0
+
+
+    GPPULL_UP_DOWN_CTRL3:
+        offset: 0x0c
+        reset: 0x0000
+        read-write: "rw"
+        width: 32
+    GPULL_UP_DOWN_CTRL3_bits:
+
+        PULL_UP_DOWN_CTRL34:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 9:8
+        PULL_UP_DOWN_CTRL33:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 7:6
+        PULL_UP_DOWN_CTRL32:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 5:4
+        PULL_UP_DOWN_CTRL31:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 3:2
+        PULL_UP_DOWN_CTRL30:
+            offset: 0x0c
+            reset: 0x0000
+            read-write: "rw"
+            bits: 1:0

@@ -1,0 +1,8 @@
+[package]
+name = "register_tool"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = "4.5.40"
+yaml-rust = "0.4.5"
