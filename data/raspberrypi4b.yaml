@@ -4,11 +4,12 @@
 ##
 
 # Data for ucompleter tool
-completion=metadata:
+completion-metadata:
     root: "registers"
     terminus:  "offset"
 
 base: 0x7e200000
+length: 0x
 
 registers:
     ##
