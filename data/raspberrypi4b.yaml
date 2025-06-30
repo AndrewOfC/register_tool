@@ -9,7 +9,7 @@ completion-metadata:
     terminus:  "offset"
 
 base: 0x7e200000
-length: 0x
+length: 0x2000
 
 registers:
     ##

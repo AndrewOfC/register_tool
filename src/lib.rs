@@ -1,6 +1,9 @@
 
 
 use std::ptr;
+use libc::{mmap, MAP_FIXED, MAP_SHARED, PROT_READ, PROT_WRITE};
+
+
 mod unittests;
 /// Reads a 32-bit word from the specified memory address
 ///
@@ -67,3 +70,30 @@ pub fn parse_bits(bitsstr: &str) -> Result<u32, &'static str> {
 
     Ok(mask)
 }
+
+/// Maps a memory region using mmap system call
+///
+/// # Safety
+///
+/// This function is unsafe because it performs system memory mapping.
+/// The caller must ensure that:
+/// - The address and length are valid for memory mapping
+/// - The resulting mapped memory is accessed properly
+/// - The mapping is properly unmapped when no longer needed
+pub unsafe fn mmap_memory(address: u64, length: u64) -> Result<*mut u8, &'static str> {
+    let addr = mmap(
+        address as *mut libc::c_void,
+        length as usize,
+        PROT_READ | PROT_WRITE,
+        MAP_SHARED | MAP_FIXED,
+        -1,
+        0,
+    );
+
+    if addr == libc::MAP_FAILED {
+        return Err("Memory mapping failed");
+    }
+
+    Ok(addr as *mut u8)
+}
+
