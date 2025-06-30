@@ -1,8 +1,8 @@
 use std::env;
 use std::fs::File;
 use std::io::Read;
-use clap::{Command, Arg};
-use yaml_rust::{YamlLoader, Yaml};
+use clap::{Command, Arg, ArgAction};
+use yaml_rust::{YamlLoader, Yaml, YamlEmitter};
 use regex::Regex;
 
 const  WHOLE_MATCH: usize = 0 ;
@@ -13,7 +13,7 @@ const INDEX_MATCH: usize = 2 ;
 /// todo consolodate with ucompleter
 fn find_config_file(arg0: &str, env_var: &str) -> Result<String, String> {
     let home = env::var("HOME").unwrap_or("".to_string());
-    let default_path = format!(".:{}/.config/register_tool:/etc/register_tool", home);
+    let default_path = format!(".:{home}/.config/{arg0}:/etc/{arg0}");
     let path = env::var(env_var).unwrap_or(default_path);
     let paths: Vec<&str> = path.split(':').collect();
     let target = format!("{}.yaml", arg0) ;
@@ -27,41 +27,33 @@ fn find_config_file(arg0: &str, env_var: &str) -> Result<String, String> {
     Err(format!("no config file not found for {}", arg0))
 }
 
-struct RToolConfig<'a> {
+struct RToolConfig {
     docs: Vec<Yaml>,
     re: Regex,
-    registers: &'a Yaml,
     
     base: u64,
-    length: u64
+    length: u64,
+    registers_key: String
 }
 
-impl RToolConfig<'_> {
+impl RToolConfig {
     /// ctor
     pub fn new<R: Read>(reader:&mut R) -> RToolConfig {
         let mut contents = String::new();
         reader.read_to_string(&mut contents).expect("Failed to read config file");
         let docs = YamlLoader::load_from_str(&contents).expect("Failed to parse YAML");
         let re = Regex::new(r"([^\.\[\]]+)|(?:(?:\[(\d+)\]))").unwrap() ;
-        let config = &docs[0];
         
-        let base = config["base"].as_i64().expect("base not found") as u64;
-        let length = config["length"].as_i64().expect("length not found") as u64;
+        let base = docs[0]["base"].as_i64().expect("base not found") as u64;
+        let length = docs[0]["length"].as_i64().expect("length not found") as u64;
 
-
-        let mut registers_key = "registers";
-        let yroot = &config["completion-metadata"]["root"] ;
-        if !matches!(yroot, Yaml::BadValue) {
-            registers_key = yroot.as_str().unwrap();
-        }
-        let registers = &config[registers_key];
-        assert!(!matches!(current, Yaml::BadValue), format!("{}} section not found in config", registers_key));
-
-        RToolConfig { re: re , docs: docs, base: base, length: length, registers: registers}
+        //let key = docs[0]["completion-metadata"]["root"].as_str().unwrap_or("registers");
+        
+        RToolConfig { re: re , docs: docs, base: base, length: length, registers_key: "registers".to_string()}
     }
     
     pub fn get_register(&self, name: &str) -> Result<&Yaml, String> {
-        let mut current = self.registers;
+        let mut current = &self.docs[0][self.registers_key.as_str()] ;
         let captures = self.re.captures(name).expect("invalid register name");
         if  captures.len() !=3  {
             panic!("invalid register name: {}", name);
@@ -91,14 +83,13 @@ fn main() {
         .about("Memory register read/write utility")
         .arg(Arg::new("file")
             .short('f').help("File of reg definitions, overriding defaults"))
-        .arg(Arg::new("value")
+        .arg(Arg::new("verbose")
             .short('v')
-            .long("value")
-            .help("Value to write (in hex)")
+            .action(ArgAction::SetTrue)
             .required(false))
         .arg(Arg::new("dump")
             .short('d')
-            .help("Dump the properties of this register"))
+            .help("Dump the properties of this register, do not set or read"))
         .arg(Arg::new("registers")
             .help("Register names to access")
             .required(true)
@@ -111,7 +102,13 @@ fn main() {
     
     if let Some(registers) = matches.get_many::<String>("registers") {
         for register in registers {
-            println!("Processing register: {}", register);
+            let reg = config.get_register(&register).expect("register not found");
+            let mut out_str = String::new();
+            {
+                let mut emitter = YamlEmitter::new(&mut out_str);
+                emitter.dump(reg).unwrap();
+            }
+            println!("{}", out_str);
         }
     }
 

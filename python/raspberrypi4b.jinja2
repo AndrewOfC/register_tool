@@ -1,0 +1,98 @@
+{%- macro SetClear(field, offset, rw, description)  %}
+        ##
+        ## {{ field|capitalize }}
+        ##
+        {%- for setclr_n in range(2) %}
+        GP{{ field|upper }}{{setclr_n}}:
+            description: "{{ description }}"
+            offset: 0x{{"%02X" % (offset+4*setclr_n)}}
+            read-write: "wo"
+            width: 32
+        # bits
+        {% endfor %}
+        GP{{ field|upper }}_bits:
+        {% for setclr_n in range(2) -%}
+        {%- for i in range(32) %}{% if setclr_n*32+i <=57 %}
+            gp{{ "%02d" % (setclr_n*32+i) }}:
+                offset: 0x{{"%02X" % (offset+4*setclr_n)}}
+                bits: {{i}}:{{i}}
+                read-write: "{{ rw }}"
+            {% endif %}
+        {% endfor %}{% endfor -%}
+{% endmacro -%}
+##
+## Register map for a Raspberry Pi 4B
+## Mappings taken from bcm2711-peripherals.pdf
+##
+
+# Data for ucompleter tool
+completion-metadata:
+    root: "registers"
+    terminus:  "offset"
+
+base: 0x7e200000
+length: 0x2000
+
+
+registers:
+    GPIO:
+        # reference section 5.2 of the BCM2837 ARM Peripherals manual
+        ##
+        ## Function select
+        ##
+        ## 000 = GPIO Pin is an input
+        ## 001 = GPIO Pin is an output
+        ## 100 = GPIO Pin takes alternate function 0
+        ## 101 = GPIO Pin takes alternate function 1
+        ## 110 = GPIO Pin takes alternate function 2
+        ## 111 = GPIO Pin takes alternate function 3
+        ## 011 = GPIO Pin takes alternate function 4
+        ## 010 = GPIO Pin takes alternate function 5
+        {%- for gpio_n in range(6)%}
+        GPFSEL{{gpio_n}}:
+            offset: 0x{{'%02x' % (gpio_n*4)}}
+            reset: 0x0000
+            read-write: "rw"
+            width: 32
+        {%  endfor -%}
+        FSEL{{gpio_n}}_bits:
+        {%- for gpio_n in range(6)%}
+        {%- for i in range(9, -1, -1) %}{% if gpio_n*10+i<=57 %}
+            gp{{"%02d" % (gpio_n*10+i)}}:
+                offset: 0x{{'%02x' % (gpio_n*4)}}
+                reset: 0x0000
+                read-write: "rw"
+                bits: {{i*3+2}}:{{i*3}}
+                shadow: "GPIO.GPFSEL{{gpio_n}}"{% endif -%}
+
+        {%- endfor %}
+        {%-endfor %}
+        {{  SetClear("set", 0x1c, "wo", "Output Set") }}
+        {{  SetClear("clear", 0x28, "wo", "Output Clear") }}
+        {{  SetClear("level", 0x34, "ro", "0 = GPIO pin is low 1 = GPIO pin is high") }}
+        {{  SetClear("EventDetect", 0x40, "w1c", "Event Detected") }}
+        {{  SetClear("RisingEdgeEnable", 0x4C, "rw", "0 = Rising edge detect disabled, 1 = enabled") }}
+        {{  SetClear("FallingEdgeEnable", 0x58, "rw", "0 = Falling edge detect disabled, 1 = enabled") }}
+        {{  SetClear("HighDetectEnable", 0x64, "rw", "0 = detect disabled, 1 = enabled") }}
+        {{  SetClear("LowDetectEnable", 0x70, "rw", "0 = detect disabled, 1 = enabled") }}
+        {{  SetClear("AsyncRisingDetect", 0x7C, "rw", "0 = detect disabled, 1 = enabled") }}
+        {{  SetClear("AsyncFallingDetect", 0x88, "rw", "0 = detect disabled, 1 = enabled") }}
+
+        {%- for gpio_n in range(4) %}
+        GPPULL_UP_DOWN_CTRL{{gpio_n}}:
+            offset: 0x{{'%02x' % (0xe4+(gpio_n*4))}}
+            reset: 0x0000
+            read-write: "rw"
+            width: 32
+        # bits
+        {%  endfor -%}
+        GPPULL_UP_DOWN_CTRL_bits:
+        {%- for gpio_n in range(4) %}
+        {% for i in range(15, -1, -1) %}{% if gpio_n*16+i <=57 %}
+            PULL_UP_DOWN_CTRL{{gpio_n*16+i}}:
+                offset: 0x{{'%02x' % (0xe4+(gpio_n*4))}}
+                reset: 0x1
+                read-write: "rw"
+                bits: {{i*2+1}}:{{i*2}}
+        {%  endif %}{% endfor %}{% endfor -%}
+
