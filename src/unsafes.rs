@@ -34,7 +34,6 @@ pub fn mmap_memory(device: &str, address: u64, length: u64) -> Result<*mut u8, S
                 .unwrap_or("Invalid error message");
             return Err(format!("Memory mapping failed: {err_msg} (errno: {errno})"));
         }
-    
         Ok(addr as *mut u8)
     }
 }

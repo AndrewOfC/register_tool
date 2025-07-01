@@ -1,7 +1,7 @@
 mod unittests;
 pub mod unsafes;
 
-pub fn parse_bits(bitsstr: &str) -> Result<(u32, u32, u32), &'static str> {
+pub fn parse_bits(bitsstr: &str) -> Result<(u32, u32), &'static str> {
     let parts: Vec<&str> = bitsstr.split(':').collect();
 
     if parts.len() != 2 {
@@ -28,7 +28,8 @@ pub fn parse_bits(bitsstr: &str) -> Result<(u32, u32, u32), &'static str> {
 
     let width = hi - lo + 1;
     let mask = ((1u32 << width) - 1) << lo;
-
-    Ok((mask, width, lo))
+    
+    Ok((mask, lo))
+    
 }
 
