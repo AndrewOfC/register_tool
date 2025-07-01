@@ -1,10 +1,11 @@
 use std::env;
 use std::fs::File;
 use std::io::Read;
-use clap::{Command, Arg, ArgAction};
-use yaml_rust::{YamlLoader, Yaml, YamlEmitter};
+use clap::{Arg, ArgAction, Command};
+use yaml_rust::{Yaml, YamlLoader};
 use regex::Regex;
-use register_tool::{mmap_memory, parse_bits};
+use register_tool::parse_bits;
+use register_tool::unsafes::mmap_memory;
 
 const  WHOLE_MATCH: usize = 0 ;
 const KEY_MATCH: usize = 1 ;
@@ -60,7 +61,8 @@ impl Register {
 struct RToolConfig {
     docs: Vec<Yaml>,
     re: Regex,
-    
+
+    pub device: String,
     pub base: u64,
     pub length: u64,
     registers_key: String
@@ -72,14 +74,15 @@ impl RToolConfig {
         let mut contents = String::new();
         reader.read_to_string(&mut contents).expect("Failed to read config file");
         let docs = YamlLoader::load_from_str(&contents).expect("Failed to parse YAML");
-        let re = Regex::new(r"([^\.\[\]=]+)|(?:(?:\[(\d+)\]))|=?(?:0x)?([0-9A-Fa-f]+)?$").unwrap() ;
+        let re = Regex::new(r"([^.\[\]=]+)|\[(\d+)]|=?(?:0x)?([0-9A-Fa-f]+)?$").unwrap() ;
         
         let base = docs[0]["base"].as_i64().expect("base not found") as u64;
         let length = docs[0]["length"].as_i64().expect("length not found") as u64;
 
         //let key = docs[0]["completion-metadata"]["root"].as_str().unwrap_or("registers");
+        let device = docs[0]["device"].as_str().unwrap_or("/dev/mem").to_string();
         
-        RToolConfig { re: re , docs: docs, base: base, length: length, registers_key: "registers".to_string()}
+        RToolConfig { device: device, re: re , docs, base: base, length: length, registers_key: "registers".to_string()}
     }
     
     pub fn get_register(&self, name: &str) -> Result<Register, String> {
@@ -143,7 +146,7 @@ fn main() {
     let config = RToolConfig::new(&mut File::open(path).expect("Failed to open config file"));
 
     let addr = if !matches.get_flag("dump") {
-         unsafe { mmap_memory(config.base, config.length) }.expect("mmap failed") 
+         unsafe { mmap_memory(config.device.as_str(), config.base, config.length) }.expect("mmap failed")
     } else {
         println!("no set") ;
         0 as *mut u8

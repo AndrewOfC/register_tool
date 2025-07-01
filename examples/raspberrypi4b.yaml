@@ -10,6 +10,7 @@ completion-metadata:
 
 base: 0x7e200000
 length: 0x2000
+device: "/dev/mem"
 
 
 registers:
@@ -26,37 +27,37 @@ registers:
         ## 111 = GPIO Pin takes alternate function 3
         ## 011 = GPIO Pin takes alternate function 4
         ## 010 = GPIO Pin takes alternate function 5
-        GPFSEL0:
+        FSEL0:
             offset: 0x00
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        GPFSEL1:
+        FSEL1:
             offset: 0x04
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        GPFSEL2:
+        FSEL2:
             offset: 0x08
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        GPFSEL3:
+        FSEL3:
             offset: 0x0c
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        GPFSEL4:
+        FSEL4:
             offset: 0x10
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        GPFSEL5:
+        FSEL5:
             offset: 0x14
             reset: 0x0000
             read-write: "rw"
@@ -66,4112 +67,3442 @@ registers:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 29:27
+                bits: "29:27"
                 shadow: "GPIO.GPFSEL0"
             gp08:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 26:24
+                bits: "26:24"
                 shadow: "GPIO.GPFSEL0"
             gp07:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 23:21
+                bits: "23:21"
                 shadow: "GPIO.GPFSEL0"
             gp06:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 20:18
+                bits: "20:18"
                 shadow: "GPIO.GPFSEL0"
             gp05:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 17:15
+                bits: "17:15"
                 shadow: "GPIO.GPFSEL0"
             gp04:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 14:12
+                bits: "14:12"
                 shadow: "GPIO.GPFSEL0"
             gp03:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 11:9
+                bits: "11:9"
                 shadow: "GPIO.GPFSEL0"
             gp02:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 8:6
+                bits: "8:6"
                 shadow: "GPIO.GPFSEL0"
             gp01:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 5:3
+                bits: "5:3"
                 shadow: "GPIO.GPFSEL0"
             gp00:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
-                bits: 2:0
+                bits: "2:0"
                 shadow: "GPIO.GPFSEL0"
             gp19:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 29:27
+                bits: "29:27"
                 shadow: "GPIO.GPFSEL1"
             gp18:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 26:24
+                bits: "26:24"
                 shadow: "GPIO.GPFSEL1"
             gp17:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 23:21
+                bits: "23:21"
                 shadow: "GPIO.GPFSEL1"
             gp16:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 20:18
+                bits: "20:18"
                 shadow: "GPIO.GPFSEL1"
             gp15:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 17:15
+                bits: "17:15"
                 shadow: "GPIO.GPFSEL1"
             gp14:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 14:12
+                bits: "14:12"
                 shadow: "GPIO.GPFSEL1"
             gp13:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 11:9
+                bits: "11:9"
                 shadow: "GPIO.GPFSEL1"
             gp12:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 8:6
+                bits: "8:6"
                 shadow: "GPIO.GPFSEL1"
             gp11:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 5:3
+                bits: "5:3"
                 shadow: "GPIO.GPFSEL1"
             gp10:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
-                bits: 2:0
+                bits: "2:0"
                 shadow: "GPIO.GPFSEL1"
             gp29:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 29:27
+                bits: "29:27"
                 shadow: "GPIO.GPFSEL2"
             gp28:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 26:24
+                bits: "26:24"
                 shadow: "GPIO.GPFSEL2"
             gp27:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 23:21
+                bits: "23:21"
                 shadow: "GPIO.GPFSEL2"
             gp26:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 20:18
+                bits: "20:18"
                 shadow: "GPIO.GPFSEL2"
             gp25:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 17:15
+                bits: "17:15"
                 shadow: "GPIO.GPFSEL2"
             gp24:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 14:12
+                bits: "14:12"
                 shadow: "GPIO.GPFSEL2"
             gp23:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 11:9
+                bits: "11:9"
                 shadow: "GPIO.GPFSEL2"
             gp22:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 8:6
+                bits: "8:6"
                 shadow: "GPIO.GPFSEL2"
             gp21:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 5:3
+                bits: "5:3"
                 shadow: "GPIO.GPFSEL2"
             gp20:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
-                bits: 2:0
+                bits: "2:0"
                 shadow: "GPIO.GPFSEL2"
             gp39:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 29:27
+                bits: "29:27"
                 shadow: "GPIO.GPFSEL3"
             gp38:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 26:24
+                bits: "26:24"
                 shadow: "GPIO.GPFSEL3"
             gp37:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 23:21
+                bits: "23:21"
                 shadow: "GPIO.GPFSEL3"
             gp36:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 20:18
+                bits: "20:18"
                 shadow: "GPIO.GPFSEL3"
             gp35:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 17:15
+                bits: "17:15"
                 shadow: "GPIO.GPFSEL3"
             gp34:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 14:12
+                bits: "14:12"
                 shadow: "GPIO.GPFSEL3"
             gp33:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 11:9
+                bits: "11:9"
                 shadow: "GPIO.GPFSEL3"
             gp32:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 8:6
+                bits: "8:6"
                 shadow: "GPIO.GPFSEL3"
             gp31:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 5:3
+                bits: "5:3"
                 shadow: "GPIO.GPFSEL3"
             gp30:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
-                bits: 2:0
+                bits: "2:0"
                 shadow: "GPIO.GPFSEL3"
             gp49:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 29:27
+                bits: "29:27"
                 shadow: "GPIO.GPFSEL4"
             gp48:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 26:24
+                bits: "26:24"
                 shadow: "GPIO.GPFSEL4"
             gp47:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 23:21
+                bits: "23:21"
                 shadow: "GPIO.GPFSEL4"
             gp46:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 20:18
+                bits: "20:18"
                 shadow: "GPIO.GPFSEL4"
             gp45:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 17:15
+                bits: "17:15"
                 shadow: "GPIO.GPFSEL4"
             gp44:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 14:12
+                bits: "14:12"
                 shadow: "GPIO.GPFSEL4"
             gp43:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 11:9
+                bits: "11:9"
                 shadow: "GPIO.GPFSEL4"
             gp42:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 8:6
+                bits: "8:6"
                 shadow: "GPIO.GPFSEL4"
             gp41:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 5:3
+                bits: "5:3"
                 shadow: "GPIO.GPFSEL4"
             gp40:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
-                bits: 2:0
+                bits: "2:0"
                 shadow: "GPIO.GPFSEL4"
             gp57:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 23:21
+                bits: "23:21"
                 shadow: "GPIO.GPFSEL5"
             gp56:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 20:18
+                bits: "20:18"
                 shadow: "GPIO.GPFSEL5"
             gp55:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 17:15
+                bits: "17:15"
                 shadow: "GPIO.GPFSEL5"
             gp54:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 14:12
+                bits: "14:12"
                 shadow: "GPIO.GPFSEL5"
             gp53:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 11:9
+                bits: "11:9"
                 shadow: "GPIO.GPFSEL5"
             gp52:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 8:6
+                bits: "8:6"
                 shadow: "GPIO.GPFSEL5"
             gp51:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 5:3
+                bits: "5:3"
                 shadow: "GPIO.GPFSEL5"
             gp50:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
-                bits: 2:0
+                bits: "2:0"
                 shadow: "GPIO.GPFSEL5"
         
         ##
         ## Set
         ##
-        GPSET0:
+        set0:
             description: "Output Set"
             offset: 0x1C
             read-write: "wo"
             width: 32
         # bits
-        
-        GPSET1:
+        set1:
             description: "Output Set"
             offset: 0x20
             read-write: "wo"
             width: 32
         # bits
-        
-        GPSET_bits:
-        
+        set_bits:
             gp00:
                 offset: 0x1C
-                bits: 0:0
+                bits: "0:0"
                 read-write: "wo"
             
-        
             gp01:
                 offset: 0x1C
-                bits: 1:1
+                bits: "1:1"
                 read-write: "wo"
             
-        
             gp02:
                 offset: 0x1C
-                bits: 2:2
+                bits: "2:2"
                 read-write: "wo"
             
-        
             gp03:
                 offset: 0x1C
-                bits: 3:3
+                bits: "3:3"
                 read-write: "wo"
             
-        
             gp04:
                 offset: 0x1C
-                bits: 4:4
+                bits: "4:4"
                 read-write: "wo"
             
-        
             gp05:
                 offset: 0x1C
-                bits: 5:5
+                bits: "5:5"
                 read-write: "wo"
             
-        
             gp06:
                 offset: 0x1C
-                bits: 6:6
+                bits: "6:6"
                 read-write: "wo"
             
-        
             gp07:
                 offset: 0x1C
-                bits: 7:7
+                bits: "7:7"
                 read-write: "wo"
             
-        
             gp08:
                 offset: 0x1C
-                bits: 8:8
+                bits: "8:8"
                 read-write: "wo"
             
-        
             gp09:
                 offset: 0x1C
-                bits: 9:9
+                bits: "9:9"
                 read-write: "wo"
             
-        
             gp10:
                 offset: 0x1C
-                bits: 10:10
+                bits: "10:10"
                 read-write: "wo"
             
-        
             gp11:
                 offset: 0x1C
-                bits: 11:11
+                bits: "11:11"
                 read-write: "wo"
             
-        
             gp12:
                 offset: 0x1C
-                bits: 12:12
+                bits: "12:12"
                 read-write: "wo"
             
-        
             gp13:
                 offset: 0x1C
-                bits: 13:13
+                bits: "13:13"
                 read-write: "wo"
             
-        
             gp14:
                 offset: 0x1C
-                bits: 14:14
+                bits: "14:14"
                 read-write: "wo"
             
-        
             gp15:
                 offset: 0x1C
-                bits: 15:15
+                bits: "15:15"
                 read-write: "wo"
             
-        
             gp16:
                 offset: 0x1C
-                bits: 16:16
+                bits: "16:16"
                 read-write: "wo"
             
-        
             gp17:
                 offset: 0x1C
-                bits: 17:17
+                bits: "17:17"
                 read-write: "wo"
             
-        
             gp18:
                 offset: 0x1C
-                bits: 18:18
+                bits: "18:18"
                 read-write: "wo"
             
-        
             gp19:
                 offset: 0x1C
-                bits: 19:19
+                bits: "19:19"
                 read-write: "wo"
             
-        
             gp20:
                 offset: 0x1C
-                bits: 20:20
+                bits: "20:20"
                 read-write: "wo"
             
-        
             gp21:
                 offset: 0x1C
-                bits: 21:21
+                bits: "21:21"
                 read-write: "wo"
             
-        
             gp22:
                 offset: 0x1C
-                bits: 22:22
+                bits: "22:22"
                 read-write: "wo"
             
-        
             gp23:
                 offset: 0x1C
-                bits: 23:23
+                bits: "23:23"
                 read-write: "wo"
             
-        
             gp24:
                 offset: 0x1C
-                bits: 24:24
+                bits: "24:24"
                 read-write: "wo"
             
-        
             gp25:
                 offset: 0x1C
-                bits: 25:25
+                bits: "25:25"
                 read-write: "wo"
             
-        
             gp26:
                 offset: 0x1C
-                bits: 26:26
+                bits: "26:26"
                 read-write: "wo"
             
-        
             gp27:
                 offset: 0x1C
-                bits: 27:27
+                bits: "27:27"
                 read-write: "wo"
             
-        
             gp28:
                 offset: 0x1C
-                bits: 28:28
+                bits: "28:28"
                 read-write: "wo"
             
-        
             gp29:
                 offset: 0x1C
-                bits: 29:29
+                bits: "29:29"
                 read-write: "wo"
             
-        
             gp30:
                 offset: 0x1C
-                bits: 30:30
+                bits: "30:30"
                 read-write: "wo"
             
-        
             gp31:
                 offset: 0x1C
-                bits: 31:31
+                bits: "31:31"
                 read-write: "wo"
             
-        
             gp32:
                 offset: 0x20
-                bits: 0:0
+                bits: "0:0"
                 read-write: "wo"
             
-        
             gp33:
                 offset: 0x20
-                bits: 1:1
+                bits: "1:1"
                 read-write: "wo"
             
-        
             gp34:
                 offset: 0x20
-                bits: 2:2
+                bits: "2:2"
                 read-write: "wo"
             
-        
             gp35:
                 offset: 0x20
-                bits: 3:3
+                bits: "3:3"
                 read-write: "wo"
             
-        
             gp36:
                 offset: 0x20
-                bits: 4:4
+                bits: "4:4"
                 read-write: "wo"
             
-        
             gp37:
                 offset: 0x20
-                bits: 5:5
+                bits: "5:5"
                 read-write: "wo"
             
-        
             gp38:
                 offset: 0x20
-                bits: 6:6
+                bits: "6:6"
                 read-write: "wo"
             
-        
             gp39:
                 offset: 0x20
-                bits: 7:7
+                bits: "7:7"
                 read-write: "wo"
             
-        
             gp40:
                 offset: 0x20
-                bits: 8:8
+                bits: "8:8"
                 read-write: "wo"
             
-        
             gp41:
                 offset: 0x20
-                bits: 9:9
+                bits: "9:9"
                 read-write: "wo"
             
-        
             gp42:
                 offset: 0x20
-                bits: 10:10
+                bits: "10:10"
                 read-write: "wo"
             
-        
             gp43:
                 offset: 0x20
-                bits: 11:11
+                bits: "11:11"
                 read-write: "wo"
             
-        
             gp44:
                 offset: 0x20
-                bits: 12:12
+                bits: "12:12"
                 read-write: "wo"
             
-        
             gp45:
                 offset: 0x20
-                bits: 13:13
+                bits: "13:13"
                 read-write: "wo"
             
-        
             gp46:
                 offset: 0x20
-                bits: 14:14
+                bits: "14:14"
                 read-write: "wo"
             
-        
             gp47:
                 offset: 0x20
-                bits: 15:15
+                bits: "15:15"
                 read-write: "wo"
             
-        
             gp48:
                 offset: 0x20
-                bits: 16:16
+                bits: "16:16"
                 read-write: "wo"
             
-        
             gp49:
                 offset: 0x20
-                bits: 17:17
+                bits: "17:17"
                 read-write: "wo"
             
-        
             gp50:
                 offset: 0x20
-                bits: 18:18
+                bits: "18:18"
                 read-write: "wo"
             
-        
             gp51:
                 offset: 0x20
-                bits: 19:19
+                bits: "19:19"
                 read-write: "wo"
             
-        
             gp52:
                 offset: 0x20
-                bits: 20:20
+                bits: "20:20"
                 read-write: "wo"
             
-        
             gp53:
                 offset: 0x20
-                bits: 21:21
+                bits: "21:21"
                 read-write: "wo"
             
-        
             gp54:
                 offset: 0x20
-                bits: 22:22
+                bits: "22:22"
                 read-write: "wo"
             
-        
             gp55:
                 offset: 0x20
-                bits: 23:23
+                bits: "23:23"
                 read-write: "wo"
             
-        
             gp56:
                 offset: 0x20
-                bits: 24:24
+                bits: "24:24"
                 read-write: "wo"
             
-        
             gp57:
                 offset: 0x20
-                bits: 25:25
+                bits: "25:25"
                 read-write: "wo"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Clear
         ##
-        GPCLEAR0:
+        clear0:
             description: "Output Clear"
             offset: 0x28
             read-write: "wo"
             width: 32
         # bits
-        
-        GPCLEAR1:
+        clear1:
             description: "Output Clear"
             offset: 0x2C
             read-write: "wo"
             width: 32
         # bits
-        
-        GPCLEAR_bits:
-        
+        clear_bits:
             gp00:
                 offset: 0x28
-                bits: 0:0
+                bits: "0:0"
                 read-write: "wo"
             
-        
             gp01:
                 offset: 0x28
-                bits: 1:1
+                bits: "1:1"
                 read-write: "wo"
             
-        
             gp02:
                 offset: 0x28
-                bits: 2:2
+                bits: "2:2"
                 read-write: "wo"
             
-        
             gp03:
                 offset: 0x28
-                bits: 3:3
+                bits: "3:3"
                 read-write: "wo"
             
-        
             gp04:
                 offset: 0x28
-                bits: 4:4
+                bits: "4:4"
                 read-write: "wo"
             
-        
             gp05:
                 offset: 0x28
-                bits: 5:5
+                bits: "5:5"
                 read-write: "wo"
             
-        
             gp06:
                 offset: 0x28
-                bits: 6:6
+                bits: "6:6"
                 read-write: "wo"
             
-        
             gp07:
                 offset: 0x28
-                bits: 7:7
+                bits: "7:7"
                 read-write: "wo"
             
-        
             gp08:
                 offset: 0x28
-                bits: 8:8
+                bits: "8:8"
                 read-write: "wo"
             
-        
             gp09:
                 offset: 0x28
-                bits: 9:9
+                bits: "9:9"
                 read-write: "wo"
             
-        
             gp10:
                 offset: 0x28
-                bits: 10:10
+                bits: "10:10"
                 read-write: "wo"
             
-        
             gp11:
                 offset: 0x28
-                bits: 11:11
+                bits: "11:11"
                 read-write: "wo"
             
-        
             gp12:
                 offset: 0x28
-                bits: 12:12
+                bits: "12:12"
                 read-write: "wo"
             
-        
             gp13:
                 offset: 0x28
-                bits: 13:13
+                bits: "13:13"
                 read-write: "wo"
             
-        
             gp14:
                 offset: 0x28
-                bits: 14:14
+                bits: "14:14"
                 read-write: "wo"
             
-        
             gp15:
                 offset: 0x28
-                bits: 15:15
+                bits: "15:15"
                 read-write: "wo"
             
-        
             gp16:
                 offset: 0x28
-                bits: 16:16
+                bits: "16:16"
                 read-write: "wo"
             
-        
             gp17:
                 offset: 0x28
-                bits: 17:17
+                bits: "17:17"
                 read-write: "wo"
             
-        
             gp18:
                 offset: 0x28
-                bits: 18:18
+                bits: "18:18"
                 read-write: "wo"
             
-        
             gp19:
                 offset: 0x28
-                bits: 19:19
+                bits: "19:19"
                 read-write: "wo"
             
-        
             gp20:
                 offset: 0x28
-                bits: 20:20
+                bits: "20:20"
                 read-write: "wo"
             
-        
             gp21:
                 offset: 0x28
-                bits: 21:21
+                bits: "21:21"
                 read-write: "wo"
             
-        
             gp22:
                 offset: 0x28
-                bits: 22:22
+                bits: "22:22"
                 read-write: "wo"
             
-        
             gp23:
                 offset: 0x28
-                bits: 23:23
+                bits: "23:23"
                 read-write: "wo"
             
-        
             gp24:
                 offset: 0x28
-                bits: 24:24
+                bits: "24:24"
                 read-write: "wo"
             
-        
             gp25:
                 offset: 0x28
-                bits: 25:25
+                bits: "25:25"
                 read-write: "wo"
             
-        
             gp26:
                 offset: 0x28
-                bits: 26:26
+                bits: "26:26"
                 read-write: "wo"
             
-        
             gp27:
                 offset: 0x28
-                bits: 27:27
+                bits: "27:27"
                 read-write: "wo"
             
-        
             gp28:
                 offset: 0x28
-                bits: 28:28
+                bits: "28:28"
                 read-write: "wo"
             
-        
             gp29:
                 offset: 0x28
-                bits: 29:29
+                bits: "29:29"
                 read-write: "wo"
             
-        
             gp30:
                 offset: 0x28
-                bits: 30:30
+                bits: "30:30"
                 read-write: "wo"
             
-        
             gp31:
                 offset: 0x28
-                bits: 31:31
+                bits: "31:31"
                 read-write: "wo"
             
-        
             gp32:
                 offset: 0x2C
-                bits: 0:0
+                bits: "0:0"
                 read-write: "wo"
             
-        
             gp33:
                 offset: 0x2C
-                bits: 1:1
+                bits: "1:1"
                 read-write: "wo"
             
-        
             gp34:
                 offset: 0x2C
-                bits: 2:2
+                bits: "2:2"
                 read-write: "wo"
             
-        
             gp35:
                 offset: 0x2C
-                bits: 3:3
+                bits: "3:3"
                 read-write: "wo"
             
-        
             gp36:
                 offset: 0x2C
-                bits: 4:4
+                bits: "4:4"
                 read-write: "wo"
             
-        
             gp37:
                 offset: 0x2C
-                bits: 5:5
+                bits: "5:5"
                 read-write: "wo"
             
-        
             gp38:
                 offset: 0x2C
-                bits: 6:6
+                bits: "6:6"
                 read-write: "wo"
             
-        
             gp39:
                 offset: 0x2C
-                bits: 7:7
+                bits: "7:7"
                 read-write: "wo"
             
-        
             gp40:
                 offset: 0x2C
-                bits: 8:8
+                bits: "8:8"
                 read-write: "wo"
             
-        
             gp41:
                 offset: 0x2C
-                bits: 9:9
+                bits: "9:9"
                 read-write: "wo"
             
-        
             gp42:
                 offset: 0x2C
-                bits: 10:10
+                bits: "10:10"
                 read-write: "wo"
             
-        
             gp43:
                 offset: 0x2C
-                bits: 11:11
+                bits: "11:11"
                 read-write: "wo"
             
-        
             gp44:
                 offset: 0x2C
-                bits: 12:12
+                bits: "12:12"
                 read-write: "wo"
             
-        
             gp45:
                 offset: 0x2C
-                bits: 13:13
+                bits: "13:13"
                 read-write: "wo"
             
-        
             gp46:
                 offset: 0x2C
-                bits: 14:14
+                bits: "14:14"
                 read-write: "wo"
             
-        
             gp47:
                 offset: 0x2C
-                bits: 15:15
+                bits: "15:15"
                 read-write: "wo"
             
-        
             gp48:
                 offset: 0x2C
-                bits: 16:16
+                bits: "16:16"
                 read-write: "wo"
             
-        
             gp49:
                 offset: 0x2C
-                bits: 17:17
+                bits: "17:17"
                 read-write: "wo"
             
-        
             gp50:
                 offset: 0x2C
-                bits: 18:18
+                bits: "18:18"
                 read-write: "wo"
             
-        
             gp51:
                 offset: 0x2C
-                bits: 19:19
+                bits: "19:19"
                 read-write: "wo"
             
-        
             gp52:
                 offset: 0x2C
-                bits: 20:20
+                bits: "20:20"
                 read-write: "wo"
             
-        
             gp53:
                 offset: 0x2C
-                bits: 21:21
+                bits: "21:21"
                 read-write: "wo"
             
-        
             gp54:
                 offset: 0x2C
-                bits: 22:22
+                bits: "22:22"
                 read-write: "wo"
             
-        
             gp55:
                 offset: 0x2C
-                bits: 23:23
+                bits: "23:23"
                 read-write: "wo"
             
-        
             gp56:
                 offset: 0x2C
-                bits: 24:24
+                bits: "24:24"
                 read-write: "wo"
             
-        
             gp57:
                 offset: 0x2C
-                bits: 25:25
+                bits: "25:25"
                 read-write: "wo"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Level
         ##
-        GPLEVEL0:
+        level0:
             description: "0 = GPIO pin is low 1 = GPIO pin is high"
             offset: 0x34
-            read-write: "wo"
+            read-write: "ro"
             width: 32
         # bits
-        
-        GPLEVEL1:
+        level1:
             description: "0 = GPIO pin is low 1 = GPIO pin is high"
             offset: 0x38
-            read-write: "wo"
+            read-write: "ro"
             width: 32
         # bits
-        
-        GPLEVEL_bits:
-        
+        level_bits:
             gp00:
                 offset: 0x34
-                bits: 0:0
+                bits: "0:0"
                 read-write: "ro"
             
-        
             gp01:
                 offset: 0x34
-                bits: 1:1
+                bits: "1:1"
                 read-write: "ro"
             
-        
             gp02:
                 offset: 0x34
-                bits: 2:2
+                bits: "2:2"
                 read-write: "ro"
             
-        
             gp03:
                 offset: 0x34
-                bits: 3:3
+                bits: "3:3"
                 read-write: "ro"
             
-        
             gp04:
                 offset: 0x34
-                bits: 4:4
+                bits: "4:4"
                 read-write: "ro"
             
-        
             gp05:
                 offset: 0x34
-                bits: 5:5
+                bits: "5:5"
                 read-write: "ro"
             
-        
             gp06:
                 offset: 0x34
-                bits: 6:6
+                bits: "6:6"
                 read-write: "ro"
             
-        
             gp07:
                 offset: 0x34
-                bits: 7:7
+                bits: "7:7"
                 read-write: "ro"
             
-        
             gp08:
                 offset: 0x34
-                bits: 8:8
+                bits: "8:8"
                 read-write: "ro"
             
-        
             gp09:
                 offset: 0x34
-                bits: 9:9
+                bits: "9:9"
                 read-write: "ro"
             
-        
             gp10:
                 offset: 0x34
-                bits: 10:10
+                bits: "10:10"
                 read-write: "ro"
             
-        
             gp11:
                 offset: 0x34
-                bits: 11:11
+                bits: "11:11"
                 read-write: "ro"
             
-        
             gp12:
                 offset: 0x34
-                bits: 12:12
+                bits: "12:12"
                 read-write: "ro"
             
-        
             gp13:
                 offset: 0x34
-                bits: 13:13
+                bits: "13:13"
                 read-write: "ro"
             
-        
             gp14:
                 offset: 0x34
-                bits: 14:14
+                bits: "14:14"
                 read-write: "ro"
             
-        
             gp15:
                 offset: 0x34
-                bits: 15:15
+                bits: "15:15"
                 read-write: "ro"
             
-        
             gp16:
                 offset: 0x34
-                bits: 16:16
+                bits: "16:16"
                 read-write: "ro"
             
-        
             gp17:
                 offset: 0x34
-                bits: 17:17
+                bits: "17:17"
                 read-write: "ro"
             
-        
             gp18:
                 offset: 0x34
-                bits: 18:18
+                bits: "18:18"
                 read-write: "ro"
             
-        
             gp19:
                 offset: 0x34
-                bits: 19:19
+                bits: "19:19"
                 read-write: "ro"
             
-        
             gp20:
                 offset: 0x34
-                bits: 20:20
+                bits: "20:20"
                 read-write: "ro"
             
-        
             gp21:
                 offset: 0x34
-                bits: 21:21
+                bits: "21:21"
                 read-write: "ro"
             
-        
             gp22:
                 offset: 0x34
-                bits: 22:22
+                bits: "22:22"
                 read-write: "ro"
             
-        
             gp23:
                 offset: 0x34
-                bits: 23:23
+                bits: "23:23"
                 read-write: "ro"
             
-        
             gp24:
                 offset: 0x34
-                bits: 24:24
+                bits: "24:24"
                 read-write: "ro"
             
-        
             gp25:
                 offset: 0x34
-                bits: 25:25
+                bits: "25:25"
                 read-write: "ro"
             
-        
             gp26:
                 offset: 0x34
-                bits: 26:26
+                bits: "26:26"
                 read-write: "ro"
             
-        
             gp27:
                 offset: 0x34
-                bits: 27:27
+                bits: "27:27"
                 read-write: "ro"
             
-        
             gp28:
                 offset: 0x34
-                bits: 28:28
+                bits: "28:28"
                 read-write: "ro"
             
-        
             gp29:
                 offset: 0x34
-                bits: 29:29
+                bits: "29:29"
                 read-write: "ro"
             
-        
             gp30:
                 offset: 0x34
-                bits: 30:30
+                bits: "30:30"
                 read-write: "ro"
             
-        
             gp31:
                 offset: 0x34
-                bits: 31:31
+                bits: "31:31"
                 read-write: "ro"
             
-        
             gp32:
                 offset: 0x38
-                bits: 0:0
+                bits: "0:0"
                 read-write: "ro"
             
-        
             gp33:
                 offset: 0x38
-                bits: 1:1
+                bits: "1:1"
                 read-write: "ro"
             
-        
             gp34:
                 offset: 0x38
-                bits: 2:2
+                bits: "2:2"
                 read-write: "ro"
             
-        
             gp35:
                 offset: 0x38
-                bits: 3:3
+                bits: "3:3"
                 read-write: "ro"
             
-        
             gp36:
                 offset: 0x38
-                bits: 4:4
+                bits: "4:4"
                 read-write: "ro"
             
-        
             gp37:
                 offset: 0x38
-                bits: 5:5
+                bits: "5:5"
                 read-write: "ro"
             
-        
             gp38:
                 offset: 0x38
-                bits: 6:6
+                bits: "6:6"
                 read-write: "ro"
             
-        
             gp39:
                 offset: 0x38
-                bits: 7:7
+                bits: "7:7"
                 read-write: "ro"
             
-        
             gp40:
                 offset: 0x38
-                bits: 8:8
+                bits: "8:8"
                 read-write: "ro"
             
-        
             gp41:
                 offset: 0x38
-                bits: 9:9
+                bits: "9:9"
                 read-write: "ro"
             
-        
             gp42:
                 offset: 0x38
-                bits: 10:10
+                bits: "10:10"
                 read-write: "ro"
             
-        
             gp43:
                 offset: 0x38
-                bits: 11:11
+                bits: "11:11"
                 read-write: "ro"
             
-        
             gp44:
                 offset: 0x38
-                bits: 12:12
+                bits: "12:12"
                 read-write: "ro"
             
-        
             gp45:
                 offset: 0x38
-                bits: 13:13
+                bits: "13:13"
                 read-write: "ro"
             
-        
             gp46:
                 offset: 0x38
-                bits: 14:14
+                bits: "14:14"
                 read-write: "ro"
             
-        
             gp47:
                 offset: 0x38
-                bits: 15:15
+                bits: "15:15"
                 read-write: "ro"
             
-        
             gp48:
                 offset: 0x38
-                bits: 16:16
+                bits: "16:16"
                 read-write: "ro"
             
-        
             gp49:
                 offset: 0x38
-                bits: 17:17
+                bits: "17:17"
                 read-write: "ro"
             
-        
             gp50:
                 offset: 0x38
-                bits: 18:18
+                bits: "18:18"
                 read-write: "ro"
             
-        
             gp51:
                 offset: 0x38
-                bits: 19:19
+                bits: "19:19"
                 read-write: "ro"
             
-        
             gp52:
                 offset: 0x38
-                bits: 20:20
+                bits: "20:20"
                 read-write: "ro"
             
-        
             gp53:
                 offset: 0x38
-                bits: 21:21
+                bits: "21:21"
                 read-write: "ro"
             
-        
             gp54:
                 offset: 0x38
-                bits: 22:22
+                bits: "22:22"
                 read-write: "ro"
             
-        
             gp55:
                 offset: 0x38
-                bits: 23:23
+                bits: "23:23"
                 read-write: "ro"
             
-        
             gp56:
                 offset: 0x38
-                bits: 24:24
+                bits: "24:24"
                 read-write: "ro"
             
-        
             gp57:
                 offset: 0x38
-                bits: 25:25
+                bits: "25:25"
                 read-write: "ro"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Eventdetect
         ##
-        GPEVENTDETECT0:
+        EventDetect0:
             description: "Event Detected"
             offset: 0x40
-            read-write: "wo"
+            read-write: "w1c"
             width: 32
         # bits
-        
-        GPEVENTDETECT1:
+        EventDetect1:
             description: "Event Detected"
             offset: 0x44
-            read-write: "wo"
+            read-write: "w1c"
             width: 32
         # bits
-        
-        GPEVENTDETECT_bits:
-        
+        eventdetect_bits:
             gp00:
                 offset: 0x40
-                bits: 0:0
+                bits: "0:0"
                 read-write: "w1c"
             
-        
             gp01:
                 offset: 0x40
-                bits: 1:1
+                bits: "1:1"
                 read-write: "w1c"
             
-        
             gp02:
                 offset: 0x40
-                bits: 2:2
+                bits: "2:2"
                 read-write: "w1c"
             
-        
             gp03:
                 offset: 0x40
-                bits: 3:3
+                bits: "3:3"
                 read-write: "w1c"
             
-        
             gp04:
                 offset: 0x40
-                bits: 4:4
+                bits: "4:4"
                 read-write: "w1c"
             
-        
             gp05:
                 offset: 0x40
-                bits: 5:5
+                bits: "5:5"
                 read-write: "w1c"
             
-        
             gp06:
                 offset: 0x40
-                bits: 6:6
+                bits: "6:6"
                 read-write: "w1c"
             
-        
             gp07:
                 offset: 0x40
-                bits: 7:7
+                bits: "7:7"
                 read-write: "w1c"
             
-        
             gp08:
                 offset: 0x40
-                bits: 8:8
+                bits: "8:8"
                 read-write: "w1c"
             
-        
             gp09:
                 offset: 0x40
-                bits: 9:9
+                bits: "9:9"
                 read-write: "w1c"
             
-        
             gp10:
                 offset: 0x40
-                bits: 10:10
+                bits: "10:10"
                 read-write: "w1c"
             
-        
             gp11:
                 offset: 0x40
-                bits: 11:11
+                bits: "11:11"
                 read-write: "w1c"
             
-        
             gp12:
                 offset: 0x40
-                bits: 12:12
+                bits: "12:12"
                 read-write: "w1c"
             
-        
             gp13:
                 offset: 0x40
-                bits: 13:13
+                bits: "13:13"
                 read-write: "w1c"
             
-        
             gp14:
                 offset: 0x40
-                bits: 14:14
+                bits: "14:14"
                 read-write: "w1c"
             
-        
             gp15:
                 offset: 0x40
-                bits: 15:15
+                bits: "15:15"
                 read-write: "w1c"
             
-        
             gp16:
                 offset: 0x40
-                bits: 16:16
+                bits: "16:16"
                 read-write: "w1c"
             
-        
             gp17:
                 offset: 0x40
-                bits: 17:17
+                bits: "17:17"
                 read-write: "w1c"
             
-        
             gp18:
                 offset: 0x40
-                bits: 18:18
+                bits: "18:18"
                 read-write: "w1c"
             
-        
             gp19:
                 offset: 0x40
-                bits: 19:19
+                bits: "19:19"
                 read-write: "w1c"
             
-        
             gp20:
                 offset: 0x40
-                bits: 20:20
+                bits: "20:20"
                 read-write: "w1c"
             
-        
             gp21:
                 offset: 0x40
-                bits: 21:21
+                bits: "21:21"
                 read-write: "w1c"
             
-        
             gp22:
                 offset: 0x40
-                bits: 22:22
+                bits: "22:22"
                 read-write: "w1c"
             
-        
             gp23:
                 offset: 0x40
-                bits: 23:23
+                bits: "23:23"
                 read-write: "w1c"
             
-        
             gp24:
                 offset: 0x40
-                bits: 24:24
+                bits: "24:24"
                 read-write: "w1c"
             
-        
             gp25:
                 offset: 0x40
-                bits: 25:25
+                bits: "25:25"
                 read-write: "w1c"
             
-        
             gp26:
                 offset: 0x40
-                bits: 26:26
+                bits: "26:26"
                 read-write: "w1c"
             
-        
             gp27:
                 offset: 0x40
-                bits: 27:27
+                bits: "27:27"
                 read-write: "w1c"
             
-        
             gp28:
                 offset: 0x40
-                bits: 28:28
+                bits: "28:28"
                 read-write: "w1c"
             
-        
             gp29:
                 offset: 0x40
-                bits: 29:29
+                bits: "29:29"
                 read-write: "w1c"
             
-        
             gp30:
                 offset: 0x40
-                bits: 30:30
+                bits: "30:30"
                 read-write: "w1c"
             
-        
             gp31:
                 offset: 0x40
-                bits: 31:31
+                bits: "31:31"
                 read-write: "w1c"
             
-        
             gp32:
                 offset: 0x44
-                bits: 0:0
+                bits: "0:0"
                 read-write: "w1c"
             
-        
             gp33:
                 offset: 0x44
-                bits: 1:1
+                bits: "1:1"
                 read-write: "w1c"
             
-        
             gp34:
                 offset: 0x44
-                bits: 2:2
+                bits: "2:2"
                 read-write: "w1c"
             
-        
             gp35:
                 offset: 0x44
-                bits: 3:3
+                bits: "3:3"
                 read-write: "w1c"
             
-        
             gp36:
                 offset: 0x44
-                bits: 4:4
+                bits: "4:4"
                 read-write: "w1c"
             
-        
             gp37:
                 offset: 0x44
-                bits: 5:5
+                bits: "5:5"
                 read-write: "w1c"
             
-        
             gp38:
                 offset: 0x44
-                bits: 6:6
+                bits: "6:6"
                 read-write: "w1c"
             
-        
             gp39:
                 offset: 0x44
-                bits: 7:7
+                bits: "7:7"
                 read-write: "w1c"
             
-        
             gp40:
                 offset: 0x44
-                bits: 8:8
+                bits: "8:8"
                 read-write: "w1c"
             
-        
             gp41:
                 offset: 0x44
-                bits: 9:9
+                bits: "9:9"
                 read-write: "w1c"
             
-        
             gp42:
                 offset: 0x44
-                bits: 10:10
+                bits: "10:10"
                 read-write: "w1c"
             
-        
             gp43:
                 offset: 0x44
-                bits: 11:11
+                bits: "11:11"
                 read-write: "w1c"
             
-        
             gp44:
                 offset: 0x44
-                bits: 12:12
+                bits: "12:12"
                 read-write: "w1c"
             
-        
             gp45:
                 offset: 0x44
-                bits: 13:13
+                bits: "13:13"
                 read-write: "w1c"
             
-        
             gp46:
                 offset: 0x44
-                bits: 14:14
+                bits: "14:14"
                 read-write: "w1c"
             
-        
             gp47:
                 offset: 0x44
-                bits: 15:15
+                bits: "15:15"
                 read-write: "w1c"
             
-        
             gp48:
                 offset: 0x44
-                bits: 16:16
+                bits: "16:16"
                 read-write: "w1c"
             
-        
             gp49:
                 offset: 0x44
-                bits: 17:17
+                bits: "17:17"
                 read-write: "w1c"
             
-        
             gp50:
                 offset: 0x44
-                bits: 18:18
+                bits: "18:18"
                 read-write: "w1c"
             
-        
             gp51:
                 offset: 0x44
-                bits: 19:19
+                bits: "19:19"
                 read-write: "w1c"
             
-        
             gp52:
                 offset: 0x44
-                bits: 20:20
+                bits: "20:20"
                 read-write: "w1c"
             
-        
             gp53:
                 offset: 0x44
-                bits: 21:21
+                bits: "21:21"
                 read-write: "w1c"
             
-        
             gp54:
                 offset: 0x44
-                bits: 22:22
+                bits: "22:22"
                 read-write: "w1c"
             
-        
             gp55:
                 offset: 0x44
-                bits: 23:23
+                bits: "23:23"
                 read-write: "w1c"
             
-        
             gp56:
                 offset: 0x44
-                bits: 24:24
+                bits: "24:24"
                 read-write: "w1c"
             
-        
             gp57:
                 offset: 0x44
-                bits: 25:25
+                bits: "25:25"
                 read-write: "w1c"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Risingedgeenable
         ##
-        GPRISINGEDGEENABLE0:
+        RisingEdgeEnable0:
             description: "0 = Rising edge detect disabled, 1 = enabled"
             offset: 0x4C
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPRISINGEDGEENABLE1:
+        RisingEdgeEnable1:
             description: "0 = Rising edge detect disabled, 1 = enabled"
             offset: 0x50
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPRISINGEDGEENABLE_bits:
-        
+        risingedgeenable_bits:
             gp00:
                 offset: 0x4C
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp01:
                 offset: 0x4C
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp02:
                 offset: 0x4C
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp03:
                 offset: 0x4C
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp04:
                 offset: 0x4C
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp05:
                 offset: 0x4C
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp06:
                 offset: 0x4C
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp07:
                 offset: 0x4C
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp08:
                 offset: 0x4C
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp09:
                 offset: 0x4C
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp10:
                 offset: 0x4C
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp11:
                 offset: 0x4C
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp12:
                 offset: 0x4C
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp13:
                 offset: 0x4C
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp14:
                 offset: 0x4C
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp15:
                 offset: 0x4C
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp16:
                 offset: 0x4C
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp17:
                 offset: 0x4C
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp18:
                 offset: 0x4C
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp19:
                 offset: 0x4C
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp20:
                 offset: 0x4C
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp21:
                 offset: 0x4C
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp22:
                 offset: 0x4C
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp23:
                 offset: 0x4C
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp24:
                 offset: 0x4C
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp25:
                 offset: 0x4C
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
             gp26:
                 offset: 0x4C
-                bits: 26:26
+                bits: "26:26"
                 read-write: "rw"
             
-        
             gp27:
                 offset: 0x4C
-                bits: 27:27
+                bits: "27:27"
                 read-write: "rw"
             
-        
             gp28:
                 offset: 0x4C
-                bits: 28:28
+                bits: "28:28"
                 read-write: "rw"
             
-        
             gp29:
                 offset: 0x4C
-                bits: 29:29
+                bits: "29:29"
                 read-write: "rw"
             
-        
             gp30:
                 offset: 0x4C
-                bits: 30:30
+                bits: "30:30"
                 read-write: "rw"
             
-        
             gp31:
                 offset: 0x4C
-                bits: 31:31
+                bits: "31:31"
                 read-write: "rw"
             
-        
             gp32:
                 offset: 0x50
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp33:
                 offset: 0x50
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp34:
                 offset: 0x50
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp35:
                 offset: 0x50
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp36:
                 offset: 0x50
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp37:
                 offset: 0x50
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp38:
                 offset: 0x50
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp39:
                 offset: 0x50
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp40:
                 offset: 0x50
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp41:
                 offset: 0x50
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp42:
                 offset: 0x50
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp43:
                 offset: 0x50
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp44:
                 offset: 0x50
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp45:
                 offset: 0x50
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp46:
                 offset: 0x50
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp47:
                 offset: 0x50
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp48:
                 offset: 0x50
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp49:
                 offset: 0x50
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp50:
                 offset: 0x50
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp51:
                 offset: 0x50
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp52:
                 offset: 0x50
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp53:
                 offset: 0x50
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp54:
                 offset: 0x50
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp55:
                 offset: 0x50
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp56:
                 offset: 0x50
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp57:
                 offset: 0x50
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Fallingedgeenable
         ##
-        GPFALLINGEDGEENABLE0:
+        FallingEdgeEnable0:
             description: "0 = Falling edge detect disabled, 1 = enabled"
             offset: 0x58
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPFALLINGEDGEENABLE1:
+        FallingEdgeEnable1:
             description: "0 = Falling edge detect disabled, 1 = enabled"
             offset: 0x5C
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPFALLINGEDGEENABLE_bits:
-        
+        fallingedgeenable_bits:
             gp00:
                 offset: 0x58
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp01:
                 offset: 0x58
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp02:
                 offset: 0x58
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp03:
                 offset: 0x58
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp04:
                 offset: 0x58
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp05:
                 offset: 0x58
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp06:
                 offset: 0x58
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp07:
                 offset: 0x58
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp08:
                 offset: 0x58
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp09:
                 offset: 0x58
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp10:
                 offset: 0x58
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp11:
                 offset: 0x58
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp12:
                 offset: 0x58
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp13:
                 offset: 0x58
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp14:
                 offset: 0x58
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp15:
                 offset: 0x58
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp16:
                 offset: 0x58
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp17:
                 offset: 0x58
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp18:
                 offset: 0x58
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp19:
                 offset: 0x58
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp20:
                 offset: 0x58
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp21:
                 offset: 0x58
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp22:
                 offset: 0x58
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp23:
                 offset: 0x58
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp24:
                 offset: 0x58
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp25:
                 offset: 0x58
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
             gp26:
                 offset: 0x58
-                bits: 26:26
+                bits: "26:26"
                 read-write: "rw"
             
-        
             gp27:
                 offset: 0x58
-                bits: 27:27
+                bits: "27:27"
                 read-write: "rw"
             
-        
             gp28:
                 offset: 0x58
-                bits: 28:28
+                bits: "28:28"
                 read-write: "rw"
             
-        
             gp29:
                 offset: 0x58
-                bits: 29:29
+                bits: "29:29"
                 read-write: "rw"
             
-        
             gp30:
                 offset: 0x58
-                bits: 30:30
+                bits: "30:30"
                 read-write: "rw"
             
-        
             gp31:
                 offset: 0x58
-                bits: 31:31
+                bits: "31:31"
                 read-write: "rw"
             
-        
             gp32:
                 offset: 0x5C
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp33:
                 offset: 0x5C
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp34:
                 offset: 0x5C
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp35:
                 offset: 0x5C
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp36:
                 offset: 0x5C
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp37:
                 offset: 0x5C
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp38:
                 offset: 0x5C
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp39:
                 offset: 0x5C
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp40:
                 offset: 0x5C
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp41:
                 offset: 0x5C
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp42:
                 offset: 0x5C
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp43:
                 offset: 0x5C
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp44:
                 offset: 0x5C
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp45:
                 offset: 0x5C
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp46:
                 offset: 0x5C
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp47:
                 offset: 0x5C
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp48:
                 offset: 0x5C
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp49:
                 offset: 0x5C
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp50:
                 offset: 0x5C
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp51:
                 offset: 0x5C
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp52:
                 offset: 0x5C
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp53:
                 offset: 0x5C
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp54:
                 offset: 0x5C
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp55:
                 offset: 0x5C
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp56:
                 offset: 0x5C
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp57:
                 offset: 0x5C
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Highdetectenable
         ##
-        GPHIGHDETECTENABLE0:
+        HighDetectEnable0:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x64
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPHIGHDETECTENABLE1:
+        HighDetectEnable1:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x68
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPHIGHDETECTENABLE_bits:
-        
+        highdetectenable_bits:
             gp00:
                 offset: 0x64
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp01:
                 offset: 0x64
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp02:
                 offset: 0x64
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp03:
                 offset: 0x64
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp04:
                 offset: 0x64
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp05:
                 offset: 0x64
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp06:
                 offset: 0x64
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp07:
                 offset: 0x64
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp08:
                 offset: 0x64
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp09:
                 offset: 0x64
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp10:
                 offset: 0x64
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp11:
                 offset: 0x64
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp12:
                 offset: 0x64
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp13:
                 offset: 0x64
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp14:
                 offset: 0x64
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp15:
                 offset: 0x64
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp16:
                 offset: 0x64
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp17:
                 offset: 0x64
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp18:
                 offset: 0x64
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp19:
                 offset: 0x64
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp20:
                 offset: 0x64
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp21:
                 offset: 0x64
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp22:
                 offset: 0x64
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp23:
                 offset: 0x64
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp24:
                 offset: 0x64
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp25:
                 offset: 0x64
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
             gp26:
                 offset: 0x64
-                bits: 26:26
+                bits: "26:26"
                 read-write: "rw"
             
-        
             gp27:
                 offset: 0x64
-                bits: 27:27
+                bits: "27:27"
                 read-write: "rw"
             
-        
             gp28:
                 offset: 0x64
-                bits: 28:28
+                bits: "28:28"
                 read-write: "rw"
             
-        
             gp29:
                 offset: 0x64
-                bits: 29:29
+                bits: "29:29"
                 read-write: "rw"
             
-        
             gp30:
                 offset: 0x64
-                bits: 30:30
+                bits: "30:30"
                 read-write: "rw"
             
-        
             gp31:
                 offset: 0x64
-                bits: 31:31
+                bits: "31:31"
                 read-write: "rw"
             
-        
             gp32:
                 offset: 0x68
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp33:
                 offset: 0x68
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp34:
                 offset: 0x68
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp35:
                 offset: 0x68
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp36:
                 offset: 0x68
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp37:
                 offset: 0x68
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp38:
                 offset: 0x68
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp39:
                 offset: 0x68
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp40:
                 offset: 0x68
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp41:
                 offset: 0x68
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp42:
                 offset: 0x68
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp43:
                 offset: 0x68
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp44:
                 offset: 0x68
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp45:
                 offset: 0x68
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp46:
                 offset: 0x68
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp47:
                 offset: 0x68
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp48:
                 offset: 0x68
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp49:
                 offset: 0x68
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp50:
                 offset: 0x68
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp51:
                 offset: 0x68
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp52:
                 offset: 0x68
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp53:
                 offset: 0x68
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp54:
                 offset: 0x68
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp55:
                 offset: 0x68
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp56:
                 offset: 0x68
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp57:
                 offset: 0x68
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Lowdetectenable
         ##
-        GPLOWDETECTENABLE0:
+        LowDetectEnable0:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x70
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPLOWDETECTENABLE1:
+        LowDetectEnable1:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x74
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPLOWDETECTENABLE_bits:
-        
+        lowdetectenable_bits:
             gp00:
                 offset: 0x70
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp01:
                 offset: 0x70
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp02:
                 offset: 0x70
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp03:
                 offset: 0x70
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp04:
                 offset: 0x70
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp05:
                 offset: 0x70
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp06:
                 offset: 0x70
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp07:
                 offset: 0x70
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp08:
                 offset: 0x70
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp09:
                 offset: 0x70
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp10:
                 offset: 0x70
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp11:
                 offset: 0x70
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp12:
                 offset: 0x70
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp13:
                 offset: 0x70
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp14:
                 offset: 0x70
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp15:
                 offset: 0x70
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp16:
                 offset: 0x70
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp17:
                 offset: 0x70
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp18:
                 offset: 0x70
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp19:
                 offset: 0x70
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp20:
                 offset: 0x70
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp21:
                 offset: 0x70
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp22:
                 offset: 0x70
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp23:
                 offset: 0x70
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp24:
                 offset: 0x70
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp25:
                 offset: 0x70
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
             gp26:
                 offset: 0x70
-                bits: 26:26
+                bits: "26:26"
                 read-write: "rw"
             
-        
             gp27:
                 offset: 0x70
-                bits: 27:27
+                bits: "27:27"
                 read-write: "rw"
             
-        
             gp28:
                 offset: 0x70
-                bits: 28:28
+                bits: "28:28"
                 read-write: "rw"
             
-        
             gp29:
                 offset: 0x70
-                bits: 29:29
+                bits: "29:29"
                 read-write: "rw"
             
-        
             gp30:
                 offset: 0x70
-                bits: 30:30
+                bits: "30:30"
                 read-write: "rw"
             
-        
             gp31:
                 offset: 0x70
-                bits: 31:31
+                bits: "31:31"
                 read-write: "rw"
             
-        
             gp32:
                 offset: 0x74
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp33:
                 offset: 0x74
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp34:
                 offset: 0x74
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp35:
                 offset: 0x74
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp36:
                 offset: 0x74
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp37:
                 offset: 0x74
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp38:
                 offset: 0x74
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp39:
                 offset: 0x74
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp40:
                 offset: 0x74
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp41:
                 offset: 0x74
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp42:
                 offset: 0x74
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp43:
                 offset: 0x74
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp44:
                 offset: 0x74
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp45:
                 offset: 0x74
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp46:
                 offset: 0x74
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp47:
                 offset: 0x74
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp48:
                 offset: 0x74
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp49:
                 offset: 0x74
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp50:
                 offset: 0x74
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp51:
                 offset: 0x74
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp52:
                 offset: 0x74
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp53:
                 offset: 0x74
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp54:
                 offset: 0x74
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp55:
                 offset: 0x74
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp56:
                 offset: 0x74
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp57:
                 offset: 0x74
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Asyncrisingdetect
         ##
-        GPASYNCRISINGDETECT0:
+        AsyncRisingDetect0:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x7C
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPASYNCRISINGDETECT1:
+        AsyncRisingDetect1:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x80
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPASYNCRISINGDETECT_bits:
-        
+        asyncrisingdetect_bits:
             gp00:
                 offset: 0x7C
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp01:
                 offset: 0x7C
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp02:
                 offset: 0x7C
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp03:
                 offset: 0x7C
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp04:
                 offset: 0x7C
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp05:
                 offset: 0x7C
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp06:
                 offset: 0x7C
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp07:
                 offset: 0x7C
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp08:
                 offset: 0x7C
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp09:
                 offset: 0x7C
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp10:
                 offset: 0x7C
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp11:
                 offset: 0x7C
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp12:
                 offset: 0x7C
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp13:
                 offset: 0x7C
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp14:
                 offset: 0x7C
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp15:
                 offset: 0x7C
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp16:
                 offset: 0x7C
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp17:
                 offset: 0x7C
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp18:
                 offset: 0x7C
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp19:
                 offset: 0x7C
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp20:
                 offset: 0x7C
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp21:
                 offset: 0x7C
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp22:
                 offset: 0x7C
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp23:
                 offset: 0x7C
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp24:
                 offset: 0x7C
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp25:
                 offset: 0x7C
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
             gp26:
                 offset: 0x7C
-                bits: 26:26
+                bits: "26:26"
                 read-write: "rw"
             
-        
             gp27:
                 offset: 0x7C
-                bits: 27:27
+                bits: "27:27"
                 read-write: "rw"
             
-        
             gp28:
                 offset: 0x7C
-                bits: 28:28
+                bits: "28:28"
                 read-write: "rw"
             
-        
             gp29:
                 offset: 0x7C
-                bits: 29:29
+                bits: "29:29"
                 read-write: "rw"
             
-        
             gp30:
                 offset: 0x7C
-                bits: 30:30
+                bits: "30:30"
                 read-write: "rw"
             
-        
             gp31:
                 offset: 0x7C
-                bits: 31:31
+                bits: "31:31"
                 read-write: "rw"
             
-        
             gp32:
                 offset: 0x80
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp33:
                 offset: 0x80
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp34:
                 offset: 0x80
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp35:
                 offset: 0x80
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp36:
                 offset: 0x80
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp37:
                 offset: 0x80
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp38:
                 offset: 0x80
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp39:
                 offset: 0x80
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp40:
                 offset: 0x80
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp41:
                 offset: 0x80
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp42:
                 offset: 0x80
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp43:
                 offset: 0x80
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp44:
                 offset: 0x80
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp45:
                 offset: 0x80
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp46:
                 offset: 0x80
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp47:
                 offset: 0x80
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp48:
                 offset: 0x80
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp49:
                 offset: 0x80
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp50:
                 offset: 0x80
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp51:
                 offset: 0x80
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp52:
                 offset: 0x80
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp53:
                 offset: 0x80
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp54:
                 offset: 0x80
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp55:
                 offset: 0x80
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp56:
                 offset: 0x80
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp57:
                 offset: 0x80
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
-        
-        
-        
-        
-        
-        
         
         ##
         ## Asyncfallingdetect
         ##
-        GPASYNCFALLINGDETECT0:
+        AsyncFallingDetect0:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x88
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPASYNCFALLINGDETECT1:
+        AsyncFallingDetect1:
             description: "0 = detect disabled, 1 = enabled"
             offset: 0x8C
-            read-write: "wo"
+            read-write: "rw"
             width: 32
         # bits
-        
-        GPASYNCFALLINGDETECT_bits:
-        
+        asyncfallingdetect_bits:
             gp00:
                 offset: 0x88
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp01:
                 offset: 0x88
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp02:
                 offset: 0x88
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp03:
                 offset: 0x88
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp04:
                 offset: 0x88
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp05:
                 offset: 0x88
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp06:
                 offset: 0x88
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp07:
                 offset: 0x88
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp08:
                 offset: 0x88
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp09:
                 offset: 0x88
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp10:
                 offset: 0x88
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp11:
                 offset: 0x88
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp12:
                 offset: 0x88
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp13:
                 offset: 0x88
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp14:
                 offset: 0x88
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp15:
                 offset: 0x88
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp16:
                 offset: 0x88
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp17:
                 offset: 0x88
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp18:
                 offset: 0x88
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp19:
                 offset: 0x88
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp20:
                 offset: 0x88
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp21:
                 offset: 0x88
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp22:
                 offset: 0x88
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp23:
                 offset: 0x88
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp24:
                 offset: 0x88
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp25:
                 offset: 0x88
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
             gp26:
                 offset: 0x88
-                bits: 26:26
+                bits: "26:26"
                 read-write: "rw"
             
-        
             gp27:
                 offset: 0x88
-                bits: 27:27
+                bits: "27:27"
                 read-write: "rw"
             
-        
             gp28:
                 offset: 0x88
-                bits: 28:28
+                bits: "28:28"
                 read-write: "rw"
             
-        
             gp29:
                 offset: 0x88
-                bits: 29:29
+                bits: "29:29"
                 read-write: "rw"
             
-        
             gp30:
                 offset: 0x88
-                bits: 30:30
+                bits: "30:30"
                 read-write: "rw"
             
-        
             gp31:
                 offset: 0x88
-                bits: 31:31
+                bits: "31:31"
                 read-write: "rw"
             
-        
             gp32:
                 offset: 0x8C
-                bits: 0:0
+                bits: "0:0"
                 read-write: "rw"
             
-        
             gp33:
                 offset: 0x8C
-                bits: 1:1
+                bits: "1:1"
                 read-write: "rw"
             
-        
             gp34:
                 offset: 0x8C
-                bits: 2:2
+                bits: "2:2"
                 read-write: "rw"
             
-        
             gp35:
                 offset: 0x8C
-                bits: 3:3
+                bits: "3:3"
                 read-write: "rw"
             
-        
             gp36:
                 offset: 0x8C
-                bits: 4:4
+                bits: "4:4"
                 read-write: "rw"
             
-        
             gp37:
                 offset: 0x8C
-                bits: 5:5
+                bits: "5:5"
                 read-write: "rw"
             
-        
             gp38:
                 offset: 0x8C
-                bits: 6:6
+                bits: "6:6"
                 read-write: "rw"
             
-        
             gp39:
                 offset: 0x8C
-                bits: 7:7
+                bits: "7:7"
                 read-write: "rw"
             
-        
             gp40:
                 offset: 0x8C
-                bits: 8:8
+                bits: "8:8"
                 read-write: "rw"
             
-        
             gp41:
                 offset: 0x8C
-                bits: 9:9
+                bits: "9:9"
                 read-write: "rw"
             
-        
             gp42:
                 offset: 0x8C
-                bits: 10:10
+                bits: "10:10"
                 read-write: "rw"
             
-        
             gp43:
                 offset: 0x8C
-                bits: 11:11
+                bits: "11:11"
                 read-write: "rw"
             
-        
             gp44:
                 offset: 0x8C
-                bits: 12:12
+                bits: "12:12"
                 read-write: "rw"
             
-        
             gp45:
                 offset: 0x8C
-                bits: 13:13
+                bits: "13:13"
                 read-write: "rw"
             
-        
             gp46:
                 offset: 0x8C
-                bits: 14:14
+                bits: "14:14"
                 read-write: "rw"
             
-        
             gp47:
                 offset: 0x8C
-                bits: 15:15
+                bits: "15:15"
                 read-write: "rw"
             
-        
             gp48:
                 offset: 0x8C
-                bits: 16:16
+                bits: "16:16"
                 read-write: "rw"
             
-        
             gp49:
                 offset: 0x8C
-                bits: 17:17
+                bits: "17:17"
                 read-write: "rw"
             
-        
             gp50:
                 offset: 0x8C
-                bits: 18:18
+                bits: "18:18"
                 read-write: "rw"
             
-        
             gp51:
                 offset: 0x8C
-                bits: 19:19
+                bits: "19:19"
                 read-write: "rw"
             
-        
             gp52:
                 offset: 0x8C
-                bits: 20:20
+                bits: "20:20"
                 read-write: "rw"
             
-        
             gp53:
                 offset: 0x8C
-                bits: 21:21
+                bits: "21:21"
                 read-write: "rw"
             
-        
             gp54:
                 offset: 0x8C
-                bits: 22:22
+                bits: "22:22"
                 read-write: "rw"
             
-        
             gp55:
                 offset: 0x8C
-                bits: 23:23
+                bits: "23:23"
                 read-write: "rw"
             
-        
             gp56:
                 offset: 0x8C
-                bits: 24:24
+                bits: "24:24"
                 read-write: "rw"
             
-        
             gp57:
                 offset: 0x8C
-                bits: 25:25
+                bits: "25:25"
                 read-write: "rw"
             
-        
-        
-        
-        
-        
-        
-        
-        GPPULL_UP_DOWN_CTRL0:
+        PULL_UP_DOWN_CTRL0:
             offset: 0xe4
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
         
-        GPPULL_UP_DOWN_CTRL1:
+        PULL_UP_DOWN_CTRL1:
             offset: 0xe8
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
         
-        GPPULL_UP_DOWN_CTRL2:
+        PULL_UP_DOWN_CTRL2:
             offset: 0xec
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
         
-        GPPULL_UP_DOWN_CTRL3:
+        PULL_UP_DOWN_CTRL3:
             offset: 0xf0
             reset: 0x0000
             read-write: "rw"
@@ -4179,354 +3510,354 @@ registers:
         # bits
         GPPULL_UP_DOWN_CTRL_bits:
         
-            PULL_UP_DOWN_CTRL15:
+            gp15:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 31:30
+                bits: "31:30"
         
-            PULL_UP_DOWN_CTRL14:
+            gp14:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 29:28
+                bits: "29:28"
         
-            PULL_UP_DOWN_CTRL13:
+            gp13:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 27:26
+                bits: "27:26"
         
-            PULL_UP_DOWN_CTRL12:
+            gp12:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 25:24
+                bits: "25:24"
         
-            PULL_UP_DOWN_CTRL11:
+            gp11:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 23:22
+                bits: "23:22"
         
-            PULL_UP_DOWN_CTRL10:
+            gp10:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 21:20
+                bits: "21:20"
         
-            PULL_UP_DOWN_CTRL9:
+            gp9:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 19:18
+                bits: "19:18"
         
-            PULL_UP_DOWN_CTRL8:
+            gp8:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 17:16
+                bits: "17:16"
         
-            PULL_UP_DOWN_CTRL7:
+            gp7:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 15:14
+                bits: "15:14"
         
-            PULL_UP_DOWN_CTRL6:
+            gp6:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 13:12
+                bits: "13:12"
         
-            PULL_UP_DOWN_CTRL5:
+            gp5:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 11:10
+                bits: "11:10"
         
-            PULL_UP_DOWN_CTRL4:
+            gp4:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 9:8
+                bits: "9:8"
         
-            PULL_UP_DOWN_CTRL3:
+            gp3:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 7:6
+                bits: "7:6"
         
-            PULL_UP_DOWN_CTRL2:
+            gp2:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 5:4
+                bits: "5:4"
         
-            PULL_UP_DOWN_CTRL1:
+            gp1:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 3:2
+                bits: "3:2"
         
-            PULL_UP_DOWN_CTRL0:
+            gp0:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
-                bits: 1:0
+                bits: "1:0"
         
         
-            PULL_UP_DOWN_CTRL31:
+            gp31:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 31:30
+                bits: "31:30"
         
-            PULL_UP_DOWN_CTRL30:
+            gp30:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 29:28
+                bits: "29:28"
         
-            PULL_UP_DOWN_CTRL29:
+            gp29:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 27:26
+                bits: "27:26"
         
-            PULL_UP_DOWN_CTRL28:
+            gp28:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 25:24
+                bits: "25:24"
         
-            PULL_UP_DOWN_CTRL27:
+            gp27:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 23:22
+                bits: "23:22"
         
-            PULL_UP_DOWN_CTRL26:
+            gp26:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 21:20
+                bits: "21:20"
         
-            PULL_UP_DOWN_CTRL25:
+            gp25:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 19:18
+                bits: "19:18"
         
-            PULL_UP_DOWN_CTRL24:
+            gp24:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 17:16
+                bits: "17:16"
         
-            PULL_UP_DOWN_CTRL23:
+            gp23:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 15:14
+                bits: "15:14"
         
-            PULL_UP_DOWN_CTRL22:
+            gp22:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 13:12
+                bits: "13:12"
         
-            PULL_UP_DOWN_CTRL21:
+            gp21:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 11:10
+                bits: "11:10"
         
-            PULL_UP_DOWN_CTRL20:
+            gp20:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 9:8
+                bits: "9:8"
         
-            PULL_UP_DOWN_CTRL19:
+            gp19:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 7:6
+                bits: "7:6"
         
-            PULL_UP_DOWN_CTRL18:
+            gp18:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 5:4
+                bits: "5:4"
         
-            PULL_UP_DOWN_CTRL17:
+            gp17:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 3:2
+                bits: "3:2"
         
-            PULL_UP_DOWN_CTRL16:
+            gp16:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
-                bits: 1:0
+                bits: "1:0"
         
         
-            PULL_UP_DOWN_CTRL47:
+            gp47:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 31:30
+                bits: "31:30"
         
-            PULL_UP_DOWN_CTRL46:
+            gp46:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 29:28
+                bits: "29:28"
         
-            PULL_UP_DOWN_CTRL45:
+            gp45:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 27:26
+                bits: "27:26"
         
-            PULL_UP_DOWN_CTRL44:
+            gp44:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 25:24
+                bits: "25:24"
         
-            PULL_UP_DOWN_CTRL43:
+            gp43:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 23:22
+                bits: "23:22"
         
-            PULL_UP_DOWN_CTRL42:
+            gp42:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 21:20
+                bits: "21:20"
         
-            PULL_UP_DOWN_CTRL41:
+            gp41:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 19:18
+                bits: "19:18"
         
-            PULL_UP_DOWN_CTRL40:
+            gp40:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 17:16
+                bits: "17:16"
         
-            PULL_UP_DOWN_CTRL39:
+            gp39:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 15:14
+                bits: "15:14"
         
-            PULL_UP_DOWN_CTRL38:
+            gp38:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 13:12
+                bits: "13:12"
         
-            PULL_UP_DOWN_CTRL37:
+            gp37:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 11:10
+                bits: "11:10"
         
-            PULL_UP_DOWN_CTRL36:
+            gp36:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 9:8
+                bits: "9:8"
         
-            PULL_UP_DOWN_CTRL35:
+            gp35:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 7:6
+                bits: "7:6"
         
-            PULL_UP_DOWN_CTRL34:
+            gp34:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 5:4
+                bits: "5:4"
         
-            PULL_UP_DOWN_CTRL33:
+            gp33:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 3:2
+                bits: "3:2"
         
-            PULL_UP_DOWN_CTRL32:
+            gp32:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
-                bits: 1:0
+                bits: "1:0"
         
         
-            PULL_UP_DOWN_CTRL57:
+            gp57:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 19:18
+                bits: "19:18"
         
-            PULL_UP_DOWN_CTRL56:
+            gp56:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 17:16
+                bits: "17:16"
         
-            PULL_UP_DOWN_CTRL55:
+            gp55:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 15:14
+                bits: "15:14"
         
-            PULL_UP_DOWN_CTRL54:
+            gp54:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 13:12
+                bits: "13:12"
         
-            PULL_UP_DOWN_CTRL53:
+            gp53:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 11:10
+                bits: "11:10"
         
-            PULL_UP_DOWN_CTRL52:
+            gp52:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 9:8
+                bits: "9:8"
         
-            PULL_UP_DOWN_CTRL51:
+            gp51:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 7:6
+                bits: "7:6"
         
-            PULL_UP_DOWN_CTRL50:
+            gp50:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 5:4
+                bits: "5:4"
         
-            PULL_UP_DOWN_CTRL49:
+            gp49:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 3:2
+                bits: "3:2"
         
-            PULL_UP_DOWN_CTRL48:
+            gp48:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
-                bits: 1:0
+                bits: "1:0"
         

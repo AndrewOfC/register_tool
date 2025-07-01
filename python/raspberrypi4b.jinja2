@@ -3,21 +3,21 @@
         ## {{ field|capitalize }}
         ##
         {%- for setclr_n in range(2) %}
-        GP{{ field|upper }}{{setclr_n}}:
+        {{ field }}{{setclr_n}}:
             description: "{{ description }}"
             offset: 0x{{"%02X" % (offset+4*setclr_n)}}
-            read-write: "wo"
+            read-write: "{{ rw }}"
             width: 32
         # bits
-        {% endfor %}
-        GP{{ field|upper }}_bits:
-        {% for setclr_n in range(2) -%}
+        {%- endfor %}
+        {{ field|lower }}_bits:
+        {%- for setclr_n in range(2) %}
         {%- for i in range(32) %}{% if setclr_n*32+i <=57 %}
             gp{{ "%02d" % (setclr_n*32+i) }}:
                 offset: 0x{{"%02X" % (offset+4*setclr_n)}}
-                bits: {{i}}:{{i}}
+                bits: "{{i}}:{{i}}"
                 read-write: "{{ rw }}"
-            {% endif %}
+            {% endif -%}
         {% endfor %}{% endfor -%}
 {% endmacro -%}
 ##
@@ -32,6 +32,7 @@ completion-metadata:
 
 base: 0x7e200000
 length: 0x2000
+device: "/dev/mem"
 
 
 registers:
@@ -49,7 +50,7 @@ registers:
         ## 011 = GPIO Pin takes alternate function 4
         ## 010 = GPIO Pin takes alternate function 5
         {%- for gpio_n in range(6)%}
-        GPFSEL{{gpio_n}}:
+        FSEL{{gpio_n}}:
             offset: 0x{{'%02x' % (gpio_n*4)}}
             reset: 0x0000
             read-write: "rw"
@@ -62,7 +63,7 @@ registers:
                 offset: 0x{{'%02x' % (gpio_n*4)}}
                 reset: 0x0000
                 read-write: "rw"
-                bits: {{i*3+2}}:{{i*3}}
+                bits: "{{i*3+2}}:{{i*3}}"
                 shadow: "GPIO.GPFSEL{{gpio_n}}"{% endif -%}
 
         {%- endfor %}
@@ -79,7 +80,7 @@ registers:
         {{  SetClear("AsyncFallingDetect", 0x88, "rw", "0 = detect disabled, 1 = enabled") }}
 
         {%- for gpio_n in range(4) %}
-        GPPULL_UP_DOWN_CTRL{{gpio_n}}:
+        PULL_UP_DOWN_CTRL{{gpio_n}}:
             offset: 0x{{'%02x' % (0xe4+(gpio_n*4))}}
             reset: 0x0000
             read-write: "rw"
@@ -89,10 +90,10 @@ registers:
         GPPULL_UP_DOWN_CTRL_bits:
         {%- for gpio_n in range(4) %}
         {% for i in range(15, -1, -1) %}{% if gpio_n*16+i <=57 %}
-            PULL_UP_DOWN_CTRL{{gpio_n*16+i}}:
+            gp{{gpio_n*16+i}}:
                 offset: 0x{{'%02x' % (0xe4+(gpio_n*4))}}
                 reset: 0x1
                 read-write: "rw"
-                bits: {{i*2+1}}:{{i*2}}
+                bits: "{{i*2+1}}:{{i*2}}"
         {%  endif %}{% endfor %}{% endfor -%}
 
