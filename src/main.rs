@@ -1,12 +1,22 @@
 use std::env;
 use std::fs::File;
-use std::io::Read;
-use clap::{Command, Arg};
-use yaml_rust::YamlLoader;
-/// todo consolodate with ucomplet4er
+use clap::{Arg, ArgAction, Command};
+use register_tool::unsafes::mmap_memory;
+use rtoolconfig::RToolConfig;
+
+mod register;
+mod rtoolconfig;
+
+// const  WHOLE_MATCH: usize = 0 ;
+const KEY_MATCH: usize = 1 ;
+const INDEX_MATCH: usize = 2 ;
+
+const VALUE_MATCH: usize = 3 ;
+
+/// todo consolodate with ucompleter
 fn find_config_file(arg0: &str, env_var: &str) -> Result<String, String> {
     let home = env::var("HOME").unwrap_or("".to_string());
-    let default_path = format!(".:{}/.config/register_tool:/etc/register_tool", home);
+    let default_path = format!(".:{home}/.config/{arg0}:/etc/{arg0}");
     let path = env::var(env_var).unwrap_or(default_path);
     let paths: Vec<&str> = path.split(':').collect();
     let target = format!("{}.yaml", arg0) ;
@@ -28,14 +38,15 @@ fn main() {
         .about("Memory register read/write utility")
         .arg(Arg::new("file")
             .short('f').help("File of reg definitions, overriding defaults"))
-        .arg(Arg::new("value")
+        .arg(Arg::new("verbose")
             .short('v')
-            .long("value")
-            .help("Value to write (in hex)")
+            .action(ArgAction::SetTrue)
             .required(false))
         .arg(Arg::new("dump")
             .short('d')
-            .help("Dump the properties of this register"))
+            .long("dump")
+            .action(ArgAction::SetTrue)
+            .help("Dump the properties of this register, do not set or read"))
         .arg(Arg::new("registers")
             .help("Register names to access")
             .required(true)
@@ -44,16 +55,27 @@ fn main() {
     
     let path = find_config_file("register_tool", "REGISTER_TOOL_PATH").expect("no config file found");
 
-    let mut contents = String::new();
-    let mut file = File::open(&path).expect("Failed to open config file");
-    file.read_to_string(&mut contents).expect("Failed to read config file");
+    let config = RToolConfig::new(&mut File::open(path).expect("Failed to open config file"));
 
-    let docs = YamlLoader::load_from_str(&contents).expect("Failed to parse YAML");
-    let config = &docs[0];
+    let addr = if !matches.get_flag("dump") {
+         mmap_memory(config.device.as_str(), config.base, config.length).expect("mmap failed")
+    } else {
+        0 as *mut u8
+    };   // Close the if block for dump check
 
     if let Some(registers) = matches.get_many::<String>("registers") {
         for register in registers {
-            println!("Processing register: {}", register);
+            let reg = config.get_register(&register).expect("register not found");
+
+            if matches.get_flag("dump") {
+               continue ;
+            }
+            if reg.isset {
+                reg.set(addr);
+            }
+            else {
+                println!("0x{:08x}", reg.get(addr));
+            }
         }
     }
 }
