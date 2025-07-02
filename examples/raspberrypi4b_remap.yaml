@@ -1,0 +1,3302 @@
+---
+##
+## Register map for a Raspberry Pi 4B
+## Mappings taken from bcm2711-peripherals.pdf
+##
+
+# Data for ucompleter tool
+completion-metadata:
+    root: "registers"
+    terminus:  "offset"
+
+base: 0x7E200000
+length: 0x2000
+device: "/dev/gpiomem"
+
+registers:
+    GPIO:
+        pins:
+            ##
+            ## 0
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "2:0"
+              set: 
+                  offset: 0x1C
+                  bits: "0:0"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "0:0"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "0:0"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "0:0"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "0:0"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "0:0"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "0:0"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "0:0"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "0:0"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "0:0"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "1:0"
+              
+            ##
+            ## 1
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "5:3"
+              set: 
+                  offset: 0x1C
+                  bits: "1:1"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "1:1"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "1:1"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "1:1"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "1:1"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "1:1"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "1:1"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "1:1"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "1:1"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "1:1"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "3:2"
+              
+            ##
+            ## 2
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "8:6"
+              set: 
+                  offset: 0x1C
+                  bits: "2:2"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "2:2"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "2:2"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "2:2"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "2:2"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "2:2"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "2:2"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "2:2"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "2:2"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "2:2"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "5:4"
+              
+            ##
+            ## 3
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "11:9"
+              set: 
+                  offset: 0x1C
+                  bits: "3:3"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "3:3"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "3:3"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "3:3"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "3:3"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "3:3"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "3:3"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "3:3"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "3:3"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "3:3"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "7:6"
+              
+            ##
+            ## 4
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "14:12"
+              set: 
+                  offset: 0x1C
+                  bits: "4:4"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "4:4"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "4:4"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "4:4"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "4:4"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "4:4"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "4:4"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "4:4"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "4:4"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "4:4"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "9:8"
+              
+            ##
+            ## 5
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "17:15"
+              set: 
+                  offset: 0x1C
+                  bits: "5:5"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "5:5"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "5:5"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "5:5"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "5:5"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "5:5"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "5:5"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "5:5"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "5:5"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "5:5"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "11:10"
+              
+            ##
+            ## 6
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "20:18"
+              set: 
+                  offset: 0x1C
+                  bits: "6:6"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "6:6"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "6:6"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "6:6"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "6:6"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "6:6"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "6:6"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "6:6"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "6:6"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "6:6"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "13:12"
+              
+            ##
+            ## 7
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "23:21"
+              set: 
+                  offset: 0x1C
+                  bits: "7:7"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "7:7"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "7:7"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "7:7"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "7:7"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "7:7"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "7:7"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "7:7"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "7:7"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "7:7"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "15:14"
+              
+            ##
+            ## 8
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "26:24"
+              set: 
+                  offset: 0x1C
+                  bits: "8:8"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "8:8"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "8:8"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "8:8"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "8:8"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "8:8"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "8:8"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "8:8"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "8:8"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "8:8"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "17:16"
+              
+            ##
+            ## 9
+            ##
+            - function: 
+                  offset: 0x00
+                  reset: 0
+                  read-write: "rw"
+                  bits: "29:27"
+              set: 
+                  offset: 0x1C
+                  bits: "9:9"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "9:9"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "9:9"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "9:9"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "9:9"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "9:9"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "9:9"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "9:9"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "9:9"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "9:9"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "19:18"
+              
+            ##
+            ## 10
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "2:0"
+              set: 
+                  offset: 0x1C
+                  bits: "10:10"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "10:10"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "10:10"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "10:10"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "10:10"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "10:10"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "10:10"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "10:10"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "10:10"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "10:10"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "21:20"
+              
+            ##
+            ## 11
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "5:3"
+              set: 
+                  offset: 0x1C
+                  bits: "11:11"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "11:11"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "11:11"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "11:11"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "11:11"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "11:11"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "11:11"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "11:11"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "11:11"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "11:11"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "23:22"
+              
+            ##
+            ## 12
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "8:6"
+              set: 
+                  offset: 0x1C
+                  bits: "12:12"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "12:12"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "12:12"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "12:12"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "12:12"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "12:12"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "12:12"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "12:12"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "12:12"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "12:12"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "25:24"
+              
+            ##
+            ## 13
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "11:9"
+              set: 
+                  offset: 0x1C
+                  bits: "13:13"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "13:13"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "13:13"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "13:13"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "13:13"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "13:13"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "13:13"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "13:13"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "13:13"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "13:13"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "27:26"
+              
+            ##
+            ## 14
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "14:12"
+              set: 
+                  offset: 0x1C
+                  bits: "14:14"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "14:14"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "14:14"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "14:14"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "14:14"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "14:14"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "14:14"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "14:14"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "14:14"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "14:14"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "29:28"
+              
+            ##
+            ## 15
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "17:15"
+              set: 
+                  offset: 0x1C
+                  bits: "15:15"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "15:15"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "15:15"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "15:15"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "15:15"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "15:15"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "15:15"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "15:15"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "15:15"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "15:15"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE4
+                  reset: 1
+                  read-write: "rw"
+                  bits: "31:30"
+              
+            ##
+            ## 16
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "20:18"
+              set: 
+                  offset: 0x1C
+                  bits: "16:16"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "16:16"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "16:16"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "16:16"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "16:16"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "16:16"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "16:16"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "16:16"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "16:16"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "16:16"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "1:0"
+              
+            ##
+            ## 17
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "23:21"
+              set: 
+                  offset: 0x1C
+                  bits: "17:17"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "17:17"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "17:17"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "17:17"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "17:17"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "17:17"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "17:17"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "17:17"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "17:17"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "17:17"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "3:2"
+              
+            ##
+            ## 18
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "26:24"
+              set: 
+                  offset: 0x1C
+                  bits: "18:18"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "18:18"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "18:18"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "18:18"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "18:18"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "18:18"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "18:18"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "18:18"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "18:18"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "18:18"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "5:4"
+              
+            ##
+            ## 19
+            ##
+            - function: 
+                  offset: 0x04
+                  reset: 0
+                  read-write: "rw"
+                  bits: "29:27"
+              set: 
+                  offset: 0x1C
+                  bits: "19:19"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "19:19"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "19:19"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "19:19"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "19:19"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "19:19"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "19:19"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "19:19"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "19:19"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "19:19"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "7:6"
+              
+            ##
+            ## 20
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "2:0"
+              set: 
+                  offset: 0x1C
+                  bits: "20:20"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "20:20"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "20:20"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "20:20"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "20:20"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "20:20"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "20:20"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "20:20"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "20:20"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "20:20"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "9:8"
+              
+            ##
+            ## 21
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "5:3"
+              set: 
+                  offset: 0x1C
+                  bits: "21:21"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "21:21"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "21:21"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "21:21"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "21:21"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "21:21"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "21:21"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "21:21"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "21:21"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "21:21"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "11:10"
+              
+            ##
+            ## 22
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "8:6"
+              set: 
+                  offset: 0x1C
+                  bits: "22:22"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "22:22"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "22:22"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "22:22"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "22:22"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "22:22"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "22:22"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "22:22"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "22:22"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "22:22"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "13:12"
+              
+            ##
+            ## 23
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "11:9"
+              set: 
+                  offset: 0x1C
+                  bits: "23:23"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "23:23"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "23:23"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "23:23"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "23:23"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "23:23"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "23:23"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "23:23"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "23:23"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "23:23"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "15:14"
+              
+            ##
+            ## 24
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "14:12"
+              set: 
+                  offset: 0x1C
+                  bits: "24:24"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "24:24"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "24:24"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "24:24"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "24:24"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "24:24"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "24:24"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "24:24"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "24:24"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "24:24"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "17:16"
+              
+            ##
+            ## 25
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "17:15"
+              set: 
+                  offset: 0x1C
+                  bits: "25:25"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "25:25"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "25:25"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "25:25"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "25:25"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "25:25"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "25:25"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "25:25"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "25:25"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "25:25"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "19:18"
+              
+            ##
+            ## 26
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "20:18"
+              set: 
+                  offset: 0x1C
+                  bits: "26:26"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "26:26"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "26:26"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "26:26"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "26:26"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "26:26"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "26:26"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "26:26"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "26:26"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "26:26"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "21:20"
+              
+            ##
+            ## 27
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "23:21"
+              set: 
+                  offset: 0x1C
+                  bits: "27:27"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "27:27"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "27:27"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "27:27"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "27:27"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "27:27"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "27:27"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "27:27"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "27:27"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "27:27"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "23:22"
+              
+            ##
+            ## 28
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "26:24"
+              set: 
+                  offset: 0x1C
+                  bits: "28:28"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "28:28"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "28:28"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "28:28"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "28:28"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "28:28"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "28:28"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "28:28"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "28:28"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "28:28"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "25:24"
+              
+            ##
+            ## 29
+            ##
+            - function: 
+                  offset: 0x08
+                  reset: 0
+                  read-write: "rw"
+                  bits: "29:27"
+              set: 
+                  offset: 0x1C
+                  bits: "29:29"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "29:29"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "29:29"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "29:29"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "29:29"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "29:29"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "29:29"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "29:29"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "29:29"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "29:29"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "27:26"
+              
+            ##
+            ## 30
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "2:0"
+              set: 
+                  offset: 0x1C
+                  bits: "30:30"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "30:30"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "30:30"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "30:30"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "30:30"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "30:30"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "30:30"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "30:30"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "30:30"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "30:30"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "29:28"
+              
+            ##
+            ## 31
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "5:3"
+              set: 
+                  offset: 0x1C
+                  bits: "31:31"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x28
+                  bits: "31:31"
+                  read-write: "wo"
+              level: 
+                  offset: 0x34
+                  bits: "31:31"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x40
+                  bits: "31:31"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x4C
+                  bits: "31:31"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x58
+                  bits: "31:31"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x64
+                  bits: "31:31"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x70
+                  bits: "31:31"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x7C
+                  bits: "31:31"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x88
+                  bits: "31:31"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xE8
+                  reset: 1
+                  read-write: "rw"
+                  bits: "31:30"
+              
+            ##
+            ## 32
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "8:6"
+              set: 
+                  offset: 0x20
+                  bits: "0:0"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "0:0"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "0:0"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "0:0"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "0:0"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "0:0"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "0:0"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "0:0"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "0:0"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "0:0"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "1:0"
+              
+            ##
+            ## 33
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "11:9"
+              set: 
+                  offset: 0x20
+                  bits: "1:1"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "1:1"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "1:1"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "1:1"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "1:1"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "1:1"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "1:1"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "1:1"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "1:1"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "1:1"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "3:2"
+              
+            ##
+            ## 34
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "14:12"
+              set: 
+                  offset: 0x20
+                  bits: "2:2"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "2:2"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "2:2"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "2:2"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "2:2"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "2:2"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "2:2"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "2:2"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "2:2"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "2:2"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "5:4"
+              
+            ##
+            ## 35
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "17:15"
+              set: 
+                  offset: 0x20
+                  bits: "3:3"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "3:3"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "3:3"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "3:3"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "3:3"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "3:3"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "3:3"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "3:3"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "3:3"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "3:3"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "7:6"
+              
+            ##
+            ## 36
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "20:18"
+              set: 
+                  offset: 0x20
+                  bits: "4:4"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "4:4"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "4:4"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "4:4"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "4:4"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "4:4"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "4:4"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "4:4"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "4:4"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "4:4"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "9:8"
+              
+            ##
+            ## 37
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "23:21"
+              set: 
+                  offset: 0x20
+                  bits: "5:5"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "5:5"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "5:5"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "5:5"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "5:5"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "5:5"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "5:5"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "5:5"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "5:5"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "5:5"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "11:10"
+              
+            ##
+            ## 38
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "26:24"
+              set: 
+                  offset: 0x20
+                  bits: "6:6"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "6:6"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "6:6"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "6:6"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "6:6"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "6:6"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "6:6"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "6:6"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "6:6"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "6:6"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "13:12"
+              
+            ##
+            ## 39
+            ##
+            - function: 
+                  offset: 0x0C
+                  reset: 0
+                  read-write: "rw"
+                  bits: "29:27"
+              set: 
+                  offset: 0x20
+                  bits: "7:7"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "7:7"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "7:7"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "7:7"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "7:7"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "7:7"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "7:7"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "7:7"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "7:7"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "7:7"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "15:14"
+              
+            ##
+            ## 40
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "2:0"
+              set: 
+                  offset: 0x20
+                  bits: "8:8"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "8:8"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "8:8"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "8:8"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "8:8"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "8:8"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "8:8"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "8:8"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "8:8"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "8:8"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "17:16"
+              
+            ##
+            ## 41
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "5:3"
+              set: 
+                  offset: 0x20
+                  bits: "9:9"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "9:9"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "9:9"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "9:9"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "9:9"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "9:9"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "9:9"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "9:9"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "9:9"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "9:9"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "19:18"
+              
+            ##
+            ## 42
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "8:6"
+              set: 
+                  offset: 0x20
+                  bits: "10:10"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "10:10"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "10:10"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "10:10"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "10:10"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "10:10"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "10:10"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "10:10"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "10:10"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "10:10"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "21:20"
+              
+            ##
+            ## 43
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "11:9"
+              set: 
+                  offset: 0x20
+                  bits: "11:11"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "11:11"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "11:11"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "11:11"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "11:11"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "11:11"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "11:11"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "11:11"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "11:11"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "11:11"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "23:22"
+              
+            ##
+            ## 44
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "14:12"
+              set: 
+                  offset: 0x20
+                  bits: "12:12"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "12:12"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "12:12"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "12:12"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "12:12"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "12:12"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "12:12"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "12:12"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "12:12"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "12:12"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "25:24"
+              
+            ##
+            ## 45
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "17:15"
+              set: 
+                  offset: 0x20
+                  bits: "13:13"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "13:13"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "13:13"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "13:13"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "13:13"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "13:13"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "13:13"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "13:13"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "13:13"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "13:13"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "27:26"
+              
+            ##
+            ## 46
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "20:18"
+              set: 
+                  offset: 0x20
+                  bits: "14:14"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "14:14"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "14:14"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "14:14"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "14:14"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "14:14"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "14:14"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "14:14"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "14:14"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "14:14"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "29:28"
+              
+            ##
+            ## 47
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "23:21"
+              set: 
+                  offset: 0x20
+                  bits: "15:15"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "15:15"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "15:15"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "15:15"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "15:15"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "15:15"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "15:15"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "15:15"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "15:15"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "15:15"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xEC
+                  reset: 1
+                  read-write: "rw"
+                  bits: "31:30"
+              
+            ##
+            ## 48
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "26:24"
+              set: 
+                  offset: 0x20
+                  bits: "16:16"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "16:16"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "16:16"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "16:16"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "16:16"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "16:16"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "16:16"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "16:16"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "16:16"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "16:16"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "1:0"
+              
+            ##
+            ## 49
+            ##
+            - function: 
+                  offset: 0x10
+                  reset: 0
+                  read-write: "rw"
+                  bits: "29:27"
+              set: 
+                  offset: 0x20
+                  bits: "17:17"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "17:17"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "17:17"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "17:17"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "17:17"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "17:17"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "17:17"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "17:17"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "17:17"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "17:17"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "3:2"
+              
+            ##
+            ## 50
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "2:0"
+              set: 
+                  offset: 0x20
+                  bits: "18:18"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "18:18"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "18:18"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "18:18"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "18:18"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "18:18"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "18:18"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "18:18"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "18:18"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "18:18"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "5:4"
+              
+            ##
+            ## 51
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "5:3"
+              set: 
+                  offset: 0x20
+                  bits: "19:19"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "19:19"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "19:19"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "19:19"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "19:19"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "19:19"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "19:19"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "19:19"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "19:19"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "19:19"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "7:6"
+              
+            ##
+            ## 52
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "8:6"
+              set: 
+                  offset: 0x20
+                  bits: "20:20"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "20:20"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "20:20"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "20:20"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "20:20"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "20:20"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "20:20"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "20:20"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "20:20"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "20:20"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "9:8"
+              
+            ##
+            ## 53
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "11:9"
+              set: 
+                  offset: 0x20
+                  bits: "21:21"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "21:21"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "21:21"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "21:21"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "21:21"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "21:21"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "21:21"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "21:21"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "21:21"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "21:21"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "11:10"
+              
+            ##
+            ## 54
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "14:12"
+              set: 
+                  offset: 0x20
+                  bits: "22:22"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "22:22"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "22:22"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "22:22"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "22:22"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "22:22"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "22:22"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "22:22"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "22:22"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "22:22"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "13:12"
+              
+            ##
+            ## 55
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "17:15"
+              set: 
+                  offset: 0x20
+                  bits: "23:23"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "23:23"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "23:23"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "23:23"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "23:23"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "23:23"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "23:23"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "23:23"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "23:23"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "23:23"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "15:14"
+              
+            ##
+            ## 56
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "20:18"
+              set: 
+                  offset: 0x20
+                  bits: "24:24"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "24:24"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "24:24"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "24:24"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "24:24"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "24:24"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "24:24"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "24:24"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "24:24"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "24:24"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "17:16"
+              
+            ##
+            ## 57
+            ##
+            - function: 
+                  offset: 0x14
+                  reset: 0
+                  read-write: "rw"
+                  bits: "23:21"
+              set: 
+                  offset: 0x20
+                  bits: "25:25"
+                  read-write: "wo"
+              clear: 
+                  offset: 0x2C
+                  bits: "25:25"
+                  read-write: "wo"
+              level: 
+                  offset: 0x38
+                  bits: "25:25"
+                  read-write: "ro"
+              eventdetect: 
+                  offset: 0x44
+                  bits: "25:25"
+                  read-write: "w1c"
+              risingedgeenable: 
+                  offset: 0x50
+                  bits: "25:25"
+                  read-write: "rw"
+              fallingedgeenable: 
+                  offset: 0x5C
+                  bits: "25:25"
+                  read-write: "rw"
+              highdetectenable: 
+                  offset: 0x68
+                  bits: "25:25"
+                  read-write: "rw"
+              lowdetectenable: 
+                  offset: 0x74
+                  bits: "25:25"
+                  read-write: "rw"
+              asyncrisingdetect: 
+                  offset: 0x80
+                  bits: "25:25"
+                  read-write: "rw"
+              asyncfallingdetect: 
+                  offset: 0x8C
+                  bits: "25:25"
+                  read-write: "rw"
+              pull_up_down: 
+                  offset: 0xF0
+                  reset: 1
+                  read-write: "rw"
+                  bits: "19:18"
+              
+            
+        words:
+            function0:
+                offset: 0x00
+                reset: 0
+                read-write: "rw"
+                width: 32
+            function1:
+                offset: 0x04
+                reset: 0
+                read-write: "rw"
+                width: 32
+            function2:
+                offset: 0x08
+                reset: 0
+                read-write: "rw"
+                width: 32
+            function3:
+                offset: 0x0C
+                reset: 0
+                read-write: "rw"
+                width: 32
+            function4:
+                offset: 0x10
+                reset: 0
+                read-write: "rw"
+                width: 32
+            function5:
+                offset: 0x14
+                reset: 0
+                read-write: "rw"
+                width: 32
+            set0:
+                description: "Output Set"
+                offset: 0x1C
+                read-write: "wo"
+                width: 32
+            set1:
+                description: "Output Set"
+                offset: 0x20
+                read-write: "wo"
+                width: 32
+            clear0:
+                description: "Output Clear"
+                offset: 0x28
+                read-write: "wo"
+                width: 32
+            clear1:
+                description: "Output Clear"
+                offset: 0x2C
+                read-write: "wo"
+                width: 32
+            level0:
+                description: "0 = GPIO pin is low 1 = GPIO pin is high"
+                offset: 0x34
+                read-write: "ro"
+                width: 32
+            level1:
+                description: "0 = GPIO pin is low 1 = GPIO pin is high"
+                offset: 0x38
+                read-write: "ro"
+                width: 32
+            EventDetect0:
+                description: "Event Detected"
+                offset: 0x40
+                read-write: "w1c"
+                width: 32
+            EventDetect1:
+                description: "Event Detected"
+                offset: 0x44
+                read-write: "w1c"
+                width: 32
+            RisingEdgeEnable0:
+                description: "0 = Rising edge detect disabled, 1 = enabled"
+                offset: 0x4C
+                read-write: "rw"
+                width: 32
+            RisingEdgeEnable1:
+                description: "0 = Rising edge detect disabled, 1 = enabled"
+                offset: 0x50
+                read-write: "rw"
+                width: 32
+            FallingEdgeEnable0:
+                description: "0 = Falling edge detect disabled, 1 = enabled"
+                offset: 0x58
+                read-write: "rw"
+                width: 32
+            FallingEdgeEnable1:
+                description: "0 = Falling edge detect disabled, 1 = enabled"
+                offset: 0x5C
+                read-write: "rw"
+                width: 32
+            HighDetectEnable0:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x64
+                read-write: "rw"
+                width: 32
+            HighDetectEnable1:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x68
+                read-write: "rw"
+                width: 32
+            LowDetectEnable0:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x70
+                read-write: "rw"
+                width: 32
+            LowDetectEnable1:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x74
+                read-write: "rw"
+                width: 32
+            AsyncRisingDetect0:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x7C
+                read-write: "rw"
+                width: 32
+            AsyncRisingDetect1:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x80
+                read-write: "rw"
+                width: 32
+            AsyncFallingDetect0:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x88
+                read-write: "rw"
+                width: 32
+            AsyncFallingDetect1:
+                description: "0 = detect disabled, 1 = enabled"
+                offset: 0x8C
+                read-write: "rw"
+                width: 32
+            pull_up_down0:
+                offset: 0xE4
+                reset: 0
+                read-write: "rw"
+                width: 32
+            pull_up_down1:
+                offset: 0xE8
+                reset: 0
+                read-write: "rw"
+                width: 32
+            pull_up_down2:
+                offset: 0xEC
+                reset: 0
+                read-write: "rw"
+                width: 32
+            pull_up_down3:
+                offset: 0xF0
+                reset: 0
+                read-write: "rw"
+                width: 32
