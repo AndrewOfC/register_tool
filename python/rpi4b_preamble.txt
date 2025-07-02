@@ -1,0 +1,13 @@
+##
+## Register map for a Raspberry Pi 4B
+## Mappings taken from bcm2711-peripherals.pdf
+##
+
+# Data for ucompleter tool
+completion-metadata:
+    root: "registers"
+    terminus:  "offset"
+
+base: 0x7E200000
+length: 0x2000
+device: "/dev/gpiomem"

@@ -8,7 +8,7 @@ completion-metadata:
     root: "registers"
     terminus:  "offset"
 
-base: 0x0000000
+base: 0x7E200000
 length: 0x2000
 device: "/dev/gpiomem"
 
@@ -27,390 +27,390 @@ registers:
         ## 111 = GPIO Pin takes alternate function 3
         ## 011 = GPIO Pin takes alternate function 4
         ## 010 = GPIO Pin takes alternate function 5
-        FSEL0:
+        function0:
             offset: 0x00
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        FSEL1:
+        function1:
             offset: 0x04
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        FSEL2:
+        function2:
             offset: 0x08
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        FSEL3:
+        function3:
             offset: 0x0c
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        FSEL4:
+        function4:
             offset: 0x10
             reset: 0x0000
             read-write: "rw"
             width: 32
         
-        FSEL5:
+        function5:
             offset: 0x14
             reset: 0x0000
             read-write: "rw"
             width: 32
-        FSEL_bits:
+        function_bits:
             gp09:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
-                shadow: "GPIO.GPFSEL0"
+                
             gp08:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
-                shadow: "GPIO.GPFSEL0"
+                
             gp07:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
-                shadow: "GPIO.GPFSEL0"
+                
             gp06:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
-                shadow: "GPIO.GPFSEL0"
+                
             gp05:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
-                shadow: "GPIO.GPFSEL0"
+                
             gp04:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
-                shadow: "GPIO.GPFSEL0"
+                
             gp03:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
-                shadow: "GPIO.GPFSEL0"
+                
             gp02:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
-                shadow: "GPIO.GPFSEL0"
+                
             gp01:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
-                shadow: "GPIO.GPFSEL0"
+                
             gp00:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
-                shadow: "GPIO.GPFSEL0"
+                
             gp19:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
-                shadow: "GPIO.GPFSEL1"
+                
             gp18:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
-                shadow: "GPIO.GPFSEL1"
+                
             gp17:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
-                shadow: "GPIO.GPFSEL1"
+                
             gp16:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
-                shadow: "GPIO.GPFSEL1"
+                
             gp15:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
-                shadow: "GPIO.GPFSEL1"
+                
             gp14:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
-                shadow: "GPIO.GPFSEL1"
+                
             gp13:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
-                shadow: "GPIO.GPFSEL1"
+                
             gp12:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
-                shadow: "GPIO.GPFSEL1"
+                
             gp11:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
-                shadow: "GPIO.GPFSEL1"
+                
             gp10:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
-                shadow: "GPIO.GPFSEL1"
+                
             gp29:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
-                shadow: "GPIO.GPFSEL2"
+                
             gp28:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
-                shadow: "GPIO.GPFSEL2"
+                
             gp27:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
-                shadow: "GPIO.GPFSEL2"
+                
             gp26:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
-                shadow: "GPIO.GPFSEL2"
+                
             gp25:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
-                shadow: "GPIO.GPFSEL2"
+                
             gp24:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
-                shadow: "GPIO.GPFSEL2"
+                
             gp23:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
-                shadow: "GPIO.GPFSEL2"
+                
             gp22:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
-                shadow: "GPIO.GPFSEL2"
+                
             gp21:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
-                shadow: "GPIO.GPFSEL2"
+                
             gp20:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
-                shadow: "GPIO.GPFSEL2"
+                
             gp39:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
-                shadow: "GPIO.GPFSEL3"
+                
             gp38:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
-                shadow: "GPIO.GPFSEL3"
+                
             gp37:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
-                shadow: "GPIO.GPFSEL3"
+                
             gp36:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
-                shadow: "GPIO.GPFSEL3"
+                
             gp35:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
-                shadow: "GPIO.GPFSEL3"
+                
             gp34:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
-                shadow: "GPIO.GPFSEL3"
+                
             gp33:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
-                shadow: "GPIO.GPFSEL3"
+                
             gp32:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
-                shadow: "GPIO.GPFSEL3"
+                
             gp31:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
-                shadow: "GPIO.GPFSEL3"
+                
             gp30:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
-                shadow: "GPIO.GPFSEL3"
+                
             gp49:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
-                shadow: "GPIO.GPFSEL4"
+                
             gp48:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
-                shadow: "GPIO.GPFSEL4"
+                
             gp47:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
-                shadow: "GPIO.GPFSEL4"
+                
             gp46:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
-                shadow: "GPIO.GPFSEL4"
+                
             gp45:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
-                shadow: "GPIO.GPFSEL4"
+                
             gp44:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
-                shadow: "GPIO.GPFSEL4"
+                
             gp43:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
-                shadow: "GPIO.GPFSEL4"
+                
             gp42:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
-                shadow: "GPIO.GPFSEL4"
+                
             gp41:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
-                shadow: "GPIO.GPFSEL4"
+                
             gp40:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
-                shadow: "GPIO.GPFSEL4"
+                
             gp57:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
-                shadow: "GPIO.GPFSEL5"
+                
             gp56:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
-                shadow: "GPIO.GPFSEL5"
+                
             gp55:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
-                shadow: "GPIO.GPFSEL5"
+                
             gp54:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
-                shadow: "GPIO.GPFSEL5"
+                
             gp53:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
-                shadow: "GPIO.GPFSEL5"
+                
             gp52:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
-                shadow: "GPIO.GPFSEL5"
+                
             gp51:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
-                shadow: "GPIO.GPFSEL5"
+                
             gp50:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
-                shadow: "GPIO.GPFSEL5"
+                
         
         ##
         ## Set
@@ -3481,34 +3481,34 @@ registers:
                 bits: "25:25"
                 read-write: "rw"
             
-        PULL_UP_DOWN_CTRL0:
+        pull_up_down0:
             offset: 0xe4
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
         
-        PULL_UP_DOWN_CTRL1:
+        pull_up_down1:
             offset: 0xe8
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
         
-        PULL_UP_DOWN_CTRL2:
+        pull_up_down2:
             offset: 0xec
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
         
-        PULL_UP_DOWN_CTRL3:
+        pull_up_down3:
             offset: 0xf0
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
-        GPPULL_UP_DOWN_CTRL_bits:
+        pull_up_down_bits:
         
             gp15:
                 offset: 0xe4

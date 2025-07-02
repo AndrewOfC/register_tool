@@ -20,20 +20,7 @@
             {% endif -%}
         {% endfor %}{% endfor -%}
 {% endmacro -%}
-##
-## Register map for a Raspberry Pi 4B
-## Mappings taken from bcm2711-peripherals.pdf
-##
-
-# Data for ucompleter tool
-completion-metadata:
-    root: "registers"
-    terminus:  "offset"
-
-base: 0x7E200000
-length: 0x2000
-device: "/dev/gpiomem"
-
+{{ preamble }}
 
 registers:
     GPIO:
@@ -50,13 +37,13 @@ registers:
         ## 011 = GPIO Pin takes alternate function 4
         ## 010 = GPIO Pin takes alternate function 5
         {%- for gpio_n in range(6)%}
-        FSEL{{gpio_n}}:
+        function{{gpio_n}}:
             offset: 0x{{'%02x' % (gpio_n*4)}}
             reset: 0x0000
             read-write: "rw"
             width: 32
         {%  endfor -%}
-        FSEL{{gpio_n}}_bits:
+        function{{gpio_n}}_bits:
         {%- for gpio_n in range(6)%}
         {%- for i in range(9, -1, -1) %}{% if gpio_n*10+i<=57 %}
             gp{{"%02d" % (gpio_n*10+i)}}:
@@ -64,7 +51,7 @@ registers:
                 reset: 0x0000
                 read-write: "rw"
                 bits: "{{i*3+2}}:{{i*3}}"
-                shadow: "GPIO.GPFSEL{{gpio_n}}"{% endif -%}
+                {% endif -%}
 
         {%- endfor %}
         {%-endfor %}
@@ -80,14 +67,14 @@ registers:
         {{  SetClear("AsyncFallingDetect", 0x88, "rw", "0 = detect disabled, 1 = enabled") }}
 
         {%- for gpio_n in range(4) %}
-        PULL_UP_DOWN_CTRL{{gpio_n}}:
+        pull_up_down{{gpio_n}}:
             offset: 0x{{'%02x' % (0xe4+(gpio_n*4))}}
             reset: 0x0000
             read-write: "rw"
             width: 32
         # bits
         {%  endfor -%}
-        GPPULL_UP_DOWN_CTRL_bits:
+        pull_up_down_bits:
         {%- for gpio_n in range(4) %}
         {% for i in range(15, -1, -1) %}{% if gpio_n*16+i <=57 %}
             gp{{gpio_n*16+i}}:
