@@ -81,6 +81,25 @@ def format_value(key, value):
     func = FORMATTERS.get(key, lambda value: value)
     return func(value)
 
+def remap_parents(pins):
+    for reg, bits in enumerate(pins):
+        for bit in bits.values():
+            bit['parent'] = bit['parent'].replace("GPIO", "GPIO.words")
+    return
+
+KeepKeys = {"bits", "parent"}
+def scrub_bits(pins):
+    for reg, bits in enumerate(pins):
+        for key, bit in bits.items():
+            dels = []
+            for key2, value in bit.items():
+                if key2 not in KeepKeys:
+                    dels.append(key2)
+            for d in dels:
+                del bit[d]
+
+
+
 def remap(path, preamble, outf, root='registers'):
     with open(path, 'r') as file:
         yaml_content = yaml.safe_load(file)
@@ -100,6 +119,10 @@ def remap(path, preamble, outf, root='registers'):
     for entry in reg_collection:
         elems = entry[0].split(".")
         entry[0] = elems[-1]
+
+    remap_parents(bits_array)
+    scrub_bits(bits_array)
+
 
     template = j.Template(TEMPLATE_SRC)
     outf.write(template.render(register_bits=bits_array,

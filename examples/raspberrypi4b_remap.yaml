@@ -20,3133 +20,2321 @@ registers:
             ## 0
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "2:0"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "0:0"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "0:0"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "0:0"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "0:0"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "1:0"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 1
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "5:3"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "1:1"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "1:1"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "1:1"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "1:1"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "3:2"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 2
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "8:6"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "2:2"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "2:2"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "2:2"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "2:2"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "5:4"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 3
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "11:9"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "3:3"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "3:3"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "3:3"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "3:3"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "7:6"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 4
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "14:12"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "4:4"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "4:4"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "4:4"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "4:4"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "9:8"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 5
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "17:15"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "5:5"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "5:5"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "5:5"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "5:5"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "11:10"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 6
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "20:18"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "6:6"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "6:6"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "6:6"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "6:6"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "13:12"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 7
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "23:21"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "7:7"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "7:7"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "7:7"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "7:7"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "15:14"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 8
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "26:24"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "8:8"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "8:8"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "8:8"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "8:8"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "17:16"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 9
             ##
             - function: 
-                  offset: 0x00
-                  reset: 0
-                  read-write: "rw"
                   bits: "29:27"
+                  parent: GPIO.words.function0
               set: 
-                  offset: 0x1C
                   bits: "9:9"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "9:9"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "9:9"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "9:9"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "19:18"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 10
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "2:0"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "10:10"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "10:10"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "10:10"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "10:10"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "21:20"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 11
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "5:3"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "11:11"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "11:11"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "11:11"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "11:11"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "23:22"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 12
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "8:6"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "12:12"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "12:12"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "12:12"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "12:12"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "25:24"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 13
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "11:9"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "13:13"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "13:13"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "13:13"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "13:13"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "27:26"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 14
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "14:12"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "14:14"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "14:14"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "14:14"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "14:14"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "29:28"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 15
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "17:15"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "15:15"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "15:15"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "15:15"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "15:15"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE4
-                  reset: 1
-                  read-write: "rw"
                   bits: "31:30"
+                  parent: GPIO.words.pull_up_down0
               
             ##
             ## 16
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "20:18"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "16:16"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "16:16"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "16:16"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "16:16"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "1:0"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 17
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "23:21"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "17:17"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "17:17"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "17:17"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "17:17"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "3:2"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 18
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "26:24"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "18:18"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "18:18"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "18:18"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "18:18"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "5:4"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 19
             ##
             - function: 
-                  offset: 0x04
-                  reset: 0
-                  read-write: "rw"
                   bits: "29:27"
+                  parent: GPIO.words.function1
               set: 
-                  offset: 0x1C
                   bits: "19:19"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "19:19"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "19:19"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "19:19"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "7:6"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 20
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "2:0"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "20:20"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "20:20"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "20:20"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "20:20"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "9:8"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 21
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "5:3"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "21:21"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "21:21"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "21:21"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "21:21"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "11:10"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 22
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "8:6"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "22:22"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "22:22"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "22:22"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "22:22"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "13:12"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 23
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "11:9"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "23:23"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "23:23"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "23:23"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "23:23"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "15:14"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 24
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "14:12"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "24:24"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "24:24"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "24:24"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "24:24"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "17:16"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 25
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "17:15"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "25:25"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "25:25"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "25:25"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "25:25"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "19:18"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 26
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "20:18"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "26:26"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "26:26"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "26:26"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "26:26"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "26:26"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "26:26"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "26:26"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "26:26"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "26:26"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "26:26"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "21:20"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 27
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "23:21"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "27:27"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "27:27"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "27:27"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "27:27"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "27:27"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "27:27"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "27:27"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "27:27"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "27:27"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "27:27"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "23:22"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 28
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "26:24"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "28:28"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "28:28"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "28:28"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "28:28"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "28:28"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "28:28"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "28:28"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "28:28"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "28:28"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "28:28"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "25:24"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 29
             ##
             - function: 
-                  offset: 0x08
-                  reset: 0
-                  read-write: "rw"
                   bits: "29:27"
+                  parent: GPIO.words.function2
               set: 
-                  offset: 0x1C
                   bits: "29:29"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "29:29"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "29:29"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "29:29"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "29:29"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "29:29"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "29:29"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "29:29"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "29:29"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "29:29"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "27:26"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 30
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "2:0"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x1C
                   bits: "30:30"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "30:30"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "30:30"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "30:30"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "30:30"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "30:30"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "30:30"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "30:30"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "30:30"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "30:30"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "29:28"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 31
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "5:3"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x1C
                   bits: "31:31"
-                  read-write: "wo"
+                  parent: GPIO.words.set0
               clear: 
-                  offset: 0x28
                   bits: "31:31"
-                  read-write: "wo"
+                  parent: GPIO.words.clear0
               level: 
-                  offset: 0x34
                   bits: "31:31"
-                  read-write: "ro"
+                  parent: GPIO.words.level0
               eventdetect: 
-                  offset: 0x40
                   bits: "31:31"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect0
               risingedgeenable: 
-                  offset: 0x4C
                   bits: "31:31"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable0
               fallingedgeenable: 
-                  offset: 0x58
                   bits: "31:31"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable0
               highdetectenable: 
-                  offset: 0x64
                   bits: "31:31"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable0
               lowdetectenable: 
-                  offset: 0x70
                   bits: "31:31"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable0
               asyncrisingdetect: 
-                  offset: 0x7C
                   bits: "31:31"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect0
               asyncfallingdetect: 
-                  offset: 0x88
                   bits: "31:31"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect0
               pull_up_down: 
-                  offset: 0xE8
-                  reset: 1
-                  read-write: "rw"
                   bits: "31:30"
+                  parent: GPIO.words.pull_up_down1
               
             ##
             ## 32
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "8:6"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "0:0"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "0:0"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "0:0"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "0:0"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "0:0"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "1:0"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 33
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "11:9"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "1:1"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "1:1"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "1:1"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "1:1"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "1:1"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "3:2"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 34
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "14:12"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "2:2"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "2:2"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "2:2"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "2:2"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "2:2"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "5:4"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 35
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "17:15"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "3:3"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "3:3"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "3:3"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "3:3"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "3:3"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "7:6"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 36
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "20:18"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "4:4"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "4:4"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "4:4"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "4:4"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "4:4"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "9:8"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 37
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "23:21"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "5:5"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "5:5"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "5:5"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "5:5"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "5:5"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "11:10"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 38
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "26:24"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "6:6"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "6:6"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "6:6"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "6:6"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "6:6"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "13:12"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 39
             ##
             - function: 
-                  offset: 0x0C
-                  reset: 0
-                  read-write: "rw"
                   bits: "29:27"
+                  parent: GPIO.words.function3
               set: 
-                  offset: 0x20
                   bits: "7:7"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "7:7"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "7:7"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "7:7"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "7:7"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "15:14"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 40
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "2:0"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "8:8"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "8:8"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "8:8"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "8:8"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "8:8"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "17:16"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 41
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "5:3"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "9:9"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "9:9"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "9:9"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "9:9"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "9:9"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "19:18"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 42
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "8:6"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "10:10"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "10:10"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "10:10"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "10:10"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "10:10"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "21:20"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 43
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "11:9"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "11:11"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "11:11"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "11:11"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "11:11"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "11:11"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "23:22"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 44
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "14:12"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "12:12"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "12:12"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "12:12"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "12:12"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "12:12"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "25:24"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 45
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "17:15"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "13:13"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "13:13"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "13:13"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "13:13"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "13:13"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "27:26"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 46
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "20:18"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "14:14"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "14:14"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "14:14"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "14:14"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "14:14"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "29:28"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 47
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "23:21"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "15:15"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "15:15"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "15:15"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "15:15"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "15:15"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xEC
-                  reset: 1
-                  read-write: "rw"
                   bits: "31:30"
+                  parent: GPIO.words.pull_up_down2
               
             ##
             ## 48
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "26:24"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "16:16"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "16:16"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "16:16"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "16:16"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "16:16"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "1:0"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 49
             ##
             - function: 
-                  offset: 0x10
-                  reset: 0
-                  read-write: "rw"
                   bits: "29:27"
+                  parent: GPIO.words.function4
               set: 
-                  offset: 0x20
                   bits: "17:17"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "17:17"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "17:17"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "17:17"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "17:17"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "3:2"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 50
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "2:0"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "18:18"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "18:18"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "18:18"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "18:18"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "18:18"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "5:4"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 51
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "5:3"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "19:19"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "19:19"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "19:19"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "19:19"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "19:19"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "7:6"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 52
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "8:6"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "20:20"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "20:20"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "20:20"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "20:20"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "20:20"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "9:8"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 53
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "11:9"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "21:21"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "21:21"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "21:21"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "21:21"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "21:21"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "11:10"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 54
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "14:12"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "22:22"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "22:22"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "22:22"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "22:22"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "22:22"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "13:12"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 55
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "17:15"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "23:23"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "23:23"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "23:23"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "23:23"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "23:23"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "15:14"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 56
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "20:18"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "24:24"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "24:24"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "24:24"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "24:24"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "24:24"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "17:16"
+                  parent: GPIO.words.pull_up_down3
               
             ##
             ## 57
             ##
             - function: 
-                  offset: 0x14
-                  reset: 0
-                  read-write: "rw"
                   bits: "23:21"
+                  parent: GPIO.words.function5
               set: 
-                  offset: 0x20
                   bits: "25:25"
-                  read-write: "wo"
+                  parent: GPIO.words.set1
               clear: 
-                  offset: 0x2C
                   bits: "25:25"
-                  read-write: "wo"
+                  parent: GPIO.words.clear1
               level: 
-                  offset: 0x38
                   bits: "25:25"
-                  read-write: "ro"
+                  parent: GPIO.words.level1
               eventdetect: 
-                  offset: 0x44
                   bits: "25:25"
-                  read-write: "w1c"
+                  parent: GPIO.words.EventDetect1
               risingedgeenable: 
-                  offset: 0x50
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.RisingEdgeEnable1
               fallingedgeenable: 
-                  offset: 0x5C
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.FallingEdgeEnable1
               highdetectenable: 
-                  offset: 0x68
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.HighDetectEnable1
               lowdetectenable: 
-                  offset: 0x74
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.LowDetectEnable1
               asyncrisingdetect: 
-                  offset: 0x80
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncRisingDetect1
               asyncfallingdetect: 
-                  offset: 0x8C
                   bits: "25:25"
-                  read-write: "rw"
+                  parent: GPIO.words.AsyncFallingDetect1
               pull_up_down: 
-                  offset: 0xF0
-                  reset: 1
-                  read-write: "rw"
                   bits: "19:18"
+                  parent: GPIO.words.pull_up_down3
               
             
         words:
@@ -3155,31 +2343,37 @@ registers:
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
             function1:
                 offset: 0x04
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
             function2:
                 offset: 0x08
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
             function3:
                 offset: 0x0C
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
             function4:
                 offset: 0x10
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
             function5:
                 offset: 0x14
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
             set0:
                 description: "Output Set"
                 offset: 0x1C
@@ -3201,12 +2395,12 @@ registers:
                 read-write: "wo"
                 width: 32
             level0:
-                description: "0 = GPIO pin is low 1 = GPIO pin is high"
+                description: "0 = pin low, 1 = pin high"
                 offset: 0x34
                 read-write: "ro"
                 width: 32
             level1:
-                description: "0 = GPIO pin is low 1 = GPIO pin is high"
+                description: "0 = pin low, 1 = pin high"
                 offset: 0x38
                 read-write: "ro"
                 width: 32
@@ -3285,18 +2479,22 @@ registers:
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"
             pull_up_down1:
                 offset: 0xE8
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"
             pull_up_down2:
                 offset: 0xEC
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"
             pull_up_down3:
                 offset: 0xF0
                 reset: 0
                 read-write: "rw"
                 width: 32
+                description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"

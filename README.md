@@ -1,16 +1,63 @@
 # Overview
 
 This is a tool for examining and manipulating memory mapped registers in embedded devices via symbolic
-names instead of raw hex addresses.  
+names instead of raw addresses.  
 The program reads a register configuration file in yaml format which contains register definitions.  
 
 # Usage
 
 ```bash
-register_tool [options] <register>[=<value>]
+register_tool [options] <path>[=<value>]...
+```
+
+# Building
+
+## Arm64
+
+```bash
+cargo build --target aarch64 --bin register_tool
 ```
 
 
+
+## Parameters and options
+
+| P/O       | meaning                                                       |
+|-----------|---------------------------------------------------------------|
+| path      | path to register definition                                   |
+| value     | hex, octal or binary value to set register to                 |
+| -d        | Dump the register definition, do not set or read              |
+| -f <file> | override register file(s) that might be in REGISTER_TOOL_PATH |
+
+
+# Concepts
+
+## Path
+
+A 'path' describes the location of a register in the yaml definition file.  The notion is similar
+to dereferencing a python or javascript object.  A dot(.) will access fields in an associative array
+or hash block and [] may be used to access individual array members.
+
+### Example
+
+```yaml
+GPIO:
+    pins:
+         # 0 
+         - set:
+              offset: 0x1C
+           clear:
+              offset: 0x28
+         # 1     
+         - set:
+              offset: 0x1C
+           clear:
+              offset: 0x28
+```
+
+__GPIO.pins[0]__
+
+will access the pin 0
 
 # Environment Variables:
 
@@ -26,15 +73,41 @@ for convenience.
 ```yaml
 completion-metadata:
   root: "registers"
+  terminus: ["offset", "bits"]
 
 base: 0x0000 # base address
 
 registers:
   GPIO:
-    offset: 0x00 
-    bits: hi:lo # inclusive
-    read-write:  rw|ro|wo|w1c
+     
+      register:
+          offset: 0x00 
+          read-write:  rw|ro|wo|w1c
+          description: general purpose input/output
+
+      pin:
+          bits: hi:lo # inclusive
+          parent: "GPIO.register"          
 ```
+
+## completion-metadata
+This is information that the [ucompleter](https://github.com/AndrewOfC/ucompleter) tool will use to provide completions of your registers
+on the bash command line. 
+
+| Field | Purpose                                                        |
+|-------|----------------------------------------------------------------|
+| root  | Path to the element where register definitions are to be found |
+
+
+## Register Definition
+| Field       | Purpose                                                                                                            |
+|-------------|--------------------------------------------------------------------------------------------------------------------|
+| offset      | offset from memory base                                                                                            |
+| bits        | hibit:lobit selection of individual bits in a word(inclusive)<br> 31:31 first bit in register<br>0:1 last two bits |
+| read-write  | rw: read-write<br>ro: read-only<br>wo: write only<br>w1c: write-once-to-clear                                      |
+| description | Description of register                                                                                            |
+| parent      | If a required field is not found in block, parent will be checked(recursive)                                       |
+
 
 
 ## Provide completions
@@ -56,16 +129,7 @@ complete -o bashdefault -o default -o nospace  -C ucompleter register_tool
 
 # Concepts
 
-## Shadow Registers
-
-In many cases a word in a register manages multiple functions or components.  The 'bits' section of the register file
-examples splits up these functions/components for easier access.  The 'shadow' field of a register will point to the 
-register that contains the entire word.  This is done so that when setting a register the existing settings of all the 
-sibling bits are read first so their settings will remain unchanged.
-
 ### Example
-
-
 
 # Layout
 

@@ -15,7 +15,7 @@ pub fn mmap_memory(device: &str, address: u64, length: u64) -> Result<*mut u8, S
     unsafe {
         let fd = libc::open(device.as_ptr() as *const libc::c_char, libc::O_RDWR) ;
         if fd < 0 {
-            return Err("Failed to open /dev/mem".parse().unwrap());
+            return Err(format!("Failed to open {}", device));
         }
     
         let addr = mmap(
@@ -28,7 +28,10 @@ pub fn mmap_memory(device: &str, address: u64, length: u64) -> Result<*mut u8, S
         );
         
         if addr == libc::MAP_FAILED {
-            let errno =  *libc::__errno_location() ;
+            #[cfg(target_os = "macos")]
+            let errno = *libc::__error();
+            #[cfg(not(target_os = "macos"))]
+            let errno = *libc::__errno_location();
             let err_msg =  CStr::from_ptr(libc::strerror(errno))
                 .to_str()
                 .unwrap_or("Invalid error message");

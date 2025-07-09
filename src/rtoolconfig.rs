@@ -1,9 +1,8 @@
-use yaml_rust::{Yaml, YamlLoader};
 use regex::Regex;
+use std::fmt::Debug;
 use std::io::Read;
-use register_tool::parse_bits;
-use crate::register::Register;
-use crate::{INDEX_MATCH, KEY_MATCH, VALUE_MATCH};
+use std::str::FromStr;
+use yaml_rust::{Yaml, YamlLoader};
 
 pub struct RToolConfig {
     docs: Vec<Yaml>,
@@ -32,33 +31,12 @@ impl RToolConfig {
         RToolConfig { device: device, re: re , docs, base: base, length: length, registers_key: "registers".to_string()}
     }
 
-    pub fn get_register(&self, name: &str) -> Result<Register, String> {
-        let mut current = &self.docs[0][self.registers_key.as_str()] ;
-        let mut value = 0 ;
-        let mut isset = false ;
-        for part in self.re.captures_iter(name) {
-            (value, isset) = if let Some(v) = part.get(VALUE_MATCH) {
-                (v.as_str().parse::<u32>().unwrap(), true)
-            }
-            else {
-                (0, false)
-            } ;
-            if let Some(k) = part.get(KEY_MATCH) {
-                current = &current[k.as_str()] ;
-            } else if let Some(idx) = part.get(INDEX_MATCH) {
-                current = &current[idx.as_str().parse::<usize>().unwrap()] ;
-            } ;
-
+    pub fn get_value<T>(root: &Yaml, current: &Yaml, name: &str) -> T where T: std::str::FromStr, <T as FromStr>::Err: Debug {
+        if !current["parent"].is_badvalue()  {
+            return Self::get_value(root,&root["parent"], name) ;
         }
-
-        let(mask,  lo) = parse_bits(&current["bits"].as_str().unwrap())? ;
-
-        let r = Register::new(current["offset"].as_i64().expect("offset not found") as u64,
-                              mask ^ 0xFFFFFFFF,
-                              mask,
-                              lo,
-                              isset, value);
-        Ok(r)
-
+        T::from_str(current[name].as_str().unwrap()).unwrap()
     }
+
+    
 }
