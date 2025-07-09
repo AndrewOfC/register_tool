@@ -32,384 +32,448 @@ registers:
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
         
         function1:
             offset: 0x04
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
         
         function2:
             offset: 0x08
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
         
         function3:
             offset: 0x0c
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
         
         function4:
             offset: 0x10
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
         
         function5:
             offset: 0x14
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "000=input, 001=output, 100=alt0, 101=alt1, 110=alt2, 111=alt3, 011=alt4, 010=alt5"
         function_bits:
             gp09:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
+                parent: "GPIO.function0"
                 
             gp08:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
+                parent: "GPIO.function0"
                 
             gp07:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
+                parent: "GPIO.function0"
                 
             gp06:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
+                parent: "GPIO.function0"
                 
             gp05:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
+                parent: "GPIO.function0"
                 
             gp04:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
+                parent: "GPIO.function0"
                 
             gp03:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
+                parent: "GPIO.function0"
                 
             gp02:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
+                parent: "GPIO.function0"
                 
             gp01:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
+                parent: "GPIO.function0"
                 
             gp00:
                 offset: 0x00
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
+                parent: "GPIO.function0"
                 
             gp19:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
+                parent: "GPIO.function1"
                 
             gp18:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
+                parent: "GPIO.function1"
                 
             gp17:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
+                parent: "GPIO.function1"
                 
             gp16:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
+                parent: "GPIO.function1"
                 
             gp15:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
+                parent: "GPIO.function1"
                 
             gp14:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
+                parent: "GPIO.function1"
                 
             gp13:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
+                parent: "GPIO.function1"
                 
             gp12:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
+                parent: "GPIO.function1"
                 
             gp11:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
+                parent: "GPIO.function1"
                 
             gp10:
                 offset: 0x04
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
+                parent: "GPIO.function1"
                 
             gp29:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
+                parent: "GPIO.function2"
                 
             gp28:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
+                parent: "GPIO.function2"
                 
             gp27:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
+                parent: "GPIO.function2"
                 
             gp26:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
+                parent: "GPIO.function2"
                 
             gp25:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
+                parent: "GPIO.function2"
                 
             gp24:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
+                parent: "GPIO.function2"
                 
             gp23:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
+                parent: "GPIO.function2"
                 
             gp22:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
+                parent: "GPIO.function2"
                 
             gp21:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
+                parent: "GPIO.function2"
                 
             gp20:
                 offset: 0x08
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
+                parent: "GPIO.function2"
                 
             gp39:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
+                parent: "GPIO.function3"
                 
             gp38:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
+                parent: "GPIO.function3"
                 
             gp37:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
+                parent: "GPIO.function3"
                 
             gp36:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
+                parent: "GPIO.function3"
                 
             gp35:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
+                parent: "GPIO.function3"
                 
             gp34:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
+                parent: "GPIO.function3"
                 
             gp33:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
+                parent: "GPIO.function3"
                 
             gp32:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
+                parent: "GPIO.function3"
                 
             gp31:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
+                parent: "GPIO.function3"
                 
             gp30:
                 offset: 0x0c
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
+                parent: "GPIO.function3"
                 
             gp49:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "29:27"
+                parent: "GPIO.function4"
                 
             gp48:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "26:24"
+                parent: "GPIO.function4"
                 
             gp47:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
+                parent: "GPIO.function4"
                 
             gp46:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
+                parent: "GPIO.function4"
                 
             gp45:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
+                parent: "GPIO.function4"
                 
             gp44:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
+                parent: "GPIO.function4"
                 
             gp43:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
+                parent: "GPIO.function4"
                 
             gp42:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
+                parent: "GPIO.function4"
                 
             gp41:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
+                parent: "GPIO.function4"
                 
             gp40:
                 offset: 0x10
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
+                parent: "GPIO.function4"
                 
             gp57:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "23:21"
+                parent: "GPIO.function5"
                 
             gp56:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "20:18"
+                parent: "GPIO.function5"
                 
             gp55:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "17:15"
+                parent: "GPIO.function5"
                 
             gp54:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "14:12"
+                parent: "GPIO.function5"
                 
             gp53:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "11:9"
+                parent: "GPIO.function5"
                 
             gp52:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "8:6"
+                parent: "GPIO.function5"
                 
             gp51:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "5:3"
+                parent: "GPIO.function5"
                 
             gp50:
                 offset: 0x14
                 reset: 0x0000
                 read-write: "rw"
                 bits: "2:0"
+                parent: "GPIO.function5"
                 
         
         ##
@@ -432,291 +496,349 @@ registers:
                 offset: 0x1C
                 bits: "0:0"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp01:
                 offset: 0x1C
                 bits: "1:1"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp02:
                 offset: 0x1C
                 bits: "2:2"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp03:
                 offset: 0x1C
                 bits: "3:3"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp04:
                 offset: 0x1C
                 bits: "4:4"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp05:
                 offset: 0x1C
                 bits: "5:5"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp06:
                 offset: 0x1C
                 bits: "6:6"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp07:
                 offset: 0x1C
                 bits: "7:7"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp08:
                 offset: 0x1C
                 bits: "8:8"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp09:
                 offset: 0x1C
                 bits: "9:9"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp10:
                 offset: 0x1C
                 bits: "10:10"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp11:
                 offset: 0x1C
                 bits: "11:11"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp12:
                 offset: 0x1C
                 bits: "12:12"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp13:
                 offset: 0x1C
                 bits: "13:13"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp14:
                 offset: 0x1C
                 bits: "14:14"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp15:
                 offset: 0x1C
                 bits: "15:15"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp16:
                 offset: 0x1C
                 bits: "16:16"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp17:
                 offset: 0x1C
                 bits: "17:17"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp18:
                 offset: 0x1C
                 bits: "18:18"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp19:
                 offset: 0x1C
                 bits: "19:19"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp20:
                 offset: 0x1C
                 bits: "20:20"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp21:
                 offset: 0x1C
                 bits: "21:21"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp22:
                 offset: 0x1C
                 bits: "22:22"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp23:
                 offset: 0x1C
                 bits: "23:23"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp24:
                 offset: 0x1C
                 bits: "24:24"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp25:
                 offset: 0x1C
                 bits: "25:25"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp26:
                 offset: 0x1C
                 bits: "26:26"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp27:
                 offset: 0x1C
                 bits: "27:27"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp28:
                 offset: 0x1C
                 bits: "28:28"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp29:
                 offset: 0x1C
                 bits: "29:29"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp30:
                 offset: 0x1C
                 bits: "30:30"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp31:
                 offset: 0x1C
                 bits: "31:31"
                 read-write: "wo"
+                parent: "GPIO.set0"
             
             gp32:
                 offset: 0x20
                 bits: "0:0"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp33:
                 offset: 0x20
                 bits: "1:1"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp34:
                 offset: 0x20
                 bits: "2:2"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp35:
                 offset: 0x20
                 bits: "3:3"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp36:
                 offset: 0x20
                 bits: "4:4"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp37:
                 offset: 0x20
                 bits: "5:5"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp38:
                 offset: 0x20
                 bits: "6:6"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp39:
                 offset: 0x20
                 bits: "7:7"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp40:
                 offset: 0x20
                 bits: "8:8"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp41:
                 offset: 0x20
                 bits: "9:9"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp42:
                 offset: 0x20
                 bits: "10:10"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp43:
                 offset: 0x20
                 bits: "11:11"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp44:
                 offset: 0x20
                 bits: "12:12"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp45:
                 offset: 0x20
                 bits: "13:13"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp46:
                 offset: 0x20
                 bits: "14:14"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp47:
                 offset: 0x20
                 bits: "15:15"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp48:
                 offset: 0x20
                 bits: "16:16"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp49:
                 offset: 0x20
                 bits: "17:17"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp50:
                 offset: 0x20
                 bits: "18:18"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp51:
                 offset: 0x20
                 bits: "19:19"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp52:
                 offset: 0x20
                 bits: "20:20"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp53:
                 offset: 0x20
                 bits: "21:21"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp54:
                 offset: 0x20
                 bits: "22:22"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp55:
                 offset: 0x20
                 bits: "23:23"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp56:
                 offset: 0x20
                 bits: "24:24"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
             gp57:
                 offset: 0x20
                 bits: "25:25"
                 read-write: "wo"
+                parent: "GPIO.set1"
             
         
         ##
@@ -739,304 +861,362 @@ registers:
                 offset: 0x28
                 bits: "0:0"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp01:
                 offset: 0x28
                 bits: "1:1"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp02:
                 offset: 0x28
                 bits: "2:2"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp03:
                 offset: 0x28
                 bits: "3:3"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp04:
                 offset: 0x28
                 bits: "4:4"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp05:
                 offset: 0x28
                 bits: "5:5"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp06:
                 offset: 0x28
                 bits: "6:6"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp07:
                 offset: 0x28
                 bits: "7:7"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp08:
                 offset: 0x28
                 bits: "8:8"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp09:
                 offset: 0x28
                 bits: "9:9"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp10:
                 offset: 0x28
                 bits: "10:10"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp11:
                 offset: 0x28
                 bits: "11:11"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp12:
                 offset: 0x28
                 bits: "12:12"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp13:
                 offset: 0x28
                 bits: "13:13"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp14:
                 offset: 0x28
                 bits: "14:14"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp15:
                 offset: 0x28
                 bits: "15:15"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp16:
                 offset: 0x28
                 bits: "16:16"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp17:
                 offset: 0x28
                 bits: "17:17"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp18:
                 offset: 0x28
                 bits: "18:18"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp19:
                 offset: 0x28
                 bits: "19:19"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp20:
                 offset: 0x28
                 bits: "20:20"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp21:
                 offset: 0x28
                 bits: "21:21"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp22:
                 offset: 0x28
                 bits: "22:22"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp23:
                 offset: 0x28
                 bits: "23:23"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp24:
                 offset: 0x28
                 bits: "24:24"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp25:
                 offset: 0x28
                 bits: "25:25"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp26:
                 offset: 0x28
                 bits: "26:26"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp27:
                 offset: 0x28
                 bits: "27:27"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp28:
                 offset: 0x28
                 bits: "28:28"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp29:
                 offset: 0x28
                 bits: "29:29"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp30:
                 offset: 0x28
                 bits: "30:30"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp31:
                 offset: 0x28
                 bits: "31:31"
                 read-write: "wo"
+                parent: "GPIO.clear0"
             
             gp32:
                 offset: 0x2C
                 bits: "0:0"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp33:
                 offset: 0x2C
                 bits: "1:1"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp34:
                 offset: 0x2C
                 bits: "2:2"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp35:
                 offset: 0x2C
                 bits: "3:3"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp36:
                 offset: 0x2C
                 bits: "4:4"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp37:
                 offset: 0x2C
                 bits: "5:5"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp38:
                 offset: 0x2C
                 bits: "6:6"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp39:
                 offset: 0x2C
                 bits: "7:7"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp40:
                 offset: 0x2C
                 bits: "8:8"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp41:
                 offset: 0x2C
                 bits: "9:9"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp42:
                 offset: 0x2C
                 bits: "10:10"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp43:
                 offset: 0x2C
                 bits: "11:11"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp44:
                 offset: 0x2C
                 bits: "12:12"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp45:
                 offset: 0x2C
                 bits: "13:13"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp46:
                 offset: 0x2C
                 bits: "14:14"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp47:
                 offset: 0x2C
                 bits: "15:15"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp48:
                 offset: 0x2C
                 bits: "16:16"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp49:
                 offset: 0x2C
                 bits: "17:17"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp50:
                 offset: 0x2C
                 bits: "18:18"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp51:
                 offset: 0x2C
                 bits: "19:19"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp52:
                 offset: 0x2C
                 bits: "20:20"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp53:
                 offset: 0x2C
                 bits: "21:21"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp54:
                 offset: 0x2C
                 bits: "22:22"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp55:
                 offset: 0x2C
                 bits: "23:23"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp56:
                 offset: 0x2C
                 bits: "24:24"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
             gp57:
                 offset: 0x2C
                 bits: "25:25"
                 read-write: "wo"
+                parent: "GPIO.clear1"
             
         
         ##
         ## Level
         ##
         level0:
-            description: "0 = GPIO pin is low 1 = GPIO pin is high"
+            description: "0 = pin low, 1 = pin high"
             offset: 0x34
             read-write: "ro"
             width: 32
         # bits
         level1:
-            description: "0 = GPIO pin is low 1 = GPIO pin is high"
+            description: "0 = pin low, 1 = pin high"
             offset: 0x38
             read-write: "ro"
             width: 32
@@ -1046,291 +1226,349 @@ registers:
                 offset: 0x34
                 bits: "0:0"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp01:
                 offset: 0x34
                 bits: "1:1"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp02:
                 offset: 0x34
                 bits: "2:2"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp03:
                 offset: 0x34
                 bits: "3:3"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp04:
                 offset: 0x34
                 bits: "4:4"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp05:
                 offset: 0x34
                 bits: "5:5"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp06:
                 offset: 0x34
                 bits: "6:6"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp07:
                 offset: 0x34
                 bits: "7:7"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp08:
                 offset: 0x34
                 bits: "8:8"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp09:
                 offset: 0x34
                 bits: "9:9"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp10:
                 offset: 0x34
                 bits: "10:10"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp11:
                 offset: 0x34
                 bits: "11:11"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp12:
                 offset: 0x34
                 bits: "12:12"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp13:
                 offset: 0x34
                 bits: "13:13"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp14:
                 offset: 0x34
                 bits: "14:14"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp15:
                 offset: 0x34
                 bits: "15:15"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp16:
                 offset: 0x34
                 bits: "16:16"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp17:
                 offset: 0x34
                 bits: "17:17"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp18:
                 offset: 0x34
                 bits: "18:18"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp19:
                 offset: 0x34
                 bits: "19:19"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp20:
                 offset: 0x34
                 bits: "20:20"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp21:
                 offset: 0x34
                 bits: "21:21"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp22:
                 offset: 0x34
                 bits: "22:22"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp23:
                 offset: 0x34
                 bits: "23:23"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp24:
                 offset: 0x34
                 bits: "24:24"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp25:
                 offset: 0x34
                 bits: "25:25"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp26:
                 offset: 0x34
                 bits: "26:26"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp27:
                 offset: 0x34
                 bits: "27:27"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp28:
                 offset: 0x34
                 bits: "28:28"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp29:
                 offset: 0x34
                 bits: "29:29"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp30:
                 offset: 0x34
                 bits: "30:30"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp31:
                 offset: 0x34
                 bits: "31:31"
                 read-write: "ro"
+                parent: "GPIO.level0"
             
             gp32:
                 offset: 0x38
                 bits: "0:0"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp33:
                 offset: 0x38
                 bits: "1:1"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp34:
                 offset: 0x38
                 bits: "2:2"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp35:
                 offset: 0x38
                 bits: "3:3"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp36:
                 offset: 0x38
                 bits: "4:4"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp37:
                 offset: 0x38
                 bits: "5:5"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp38:
                 offset: 0x38
                 bits: "6:6"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp39:
                 offset: 0x38
                 bits: "7:7"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp40:
                 offset: 0x38
                 bits: "8:8"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp41:
                 offset: 0x38
                 bits: "9:9"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp42:
                 offset: 0x38
                 bits: "10:10"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp43:
                 offset: 0x38
                 bits: "11:11"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp44:
                 offset: 0x38
                 bits: "12:12"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp45:
                 offset: 0x38
                 bits: "13:13"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp46:
                 offset: 0x38
                 bits: "14:14"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp47:
                 offset: 0x38
                 bits: "15:15"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp48:
                 offset: 0x38
                 bits: "16:16"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp49:
                 offset: 0x38
                 bits: "17:17"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp50:
                 offset: 0x38
                 bits: "18:18"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp51:
                 offset: 0x38
                 bits: "19:19"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp52:
                 offset: 0x38
                 bits: "20:20"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp53:
                 offset: 0x38
                 bits: "21:21"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp54:
                 offset: 0x38
                 bits: "22:22"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp55:
                 offset: 0x38
                 bits: "23:23"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp56:
                 offset: 0x38
                 bits: "24:24"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
             gp57:
                 offset: 0x38
                 bits: "25:25"
                 read-write: "ro"
+                parent: "GPIO.level1"
             
         
         ##
@@ -1353,291 +1591,349 @@ registers:
                 offset: 0x40
                 bits: "0:0"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp01:
                 offset: 0x40
                 bits: "1:1"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp02:
                 offset: 0x40
                 bits: "2:2"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp03:
                 offset: 0x40
                 bits: "3:3"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp04:
                 offset: 0x40
                 bits: "4:4"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp05:
                 offset: 0x40
                 bits: "5:5"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp06:
                 offset: 0x40
                 bits: "6:6"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp07:
                 offset: 0x40
                 bits: "7:7"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp08:
                 offset: 0x40
                 bits: "8:8"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp09:
                 offset: 0x40
                 bits: "9:9"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp10:
                 offset: 0x40
                 bits: "10:10"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp11:
                 offset: 0x40
                 bits: "11:11"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp12:
                 offset: 0x40
                 bits: "12:12"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp13:
                 offset: 0x40
                 bits: "13:13"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp14:
                 offset: 0x40
                 bits: "14:14"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp15:
                 offset: 0x40
                 bits: "15:15"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp16:
                 offset: 0x40
                 bits: "16:16"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp17:
                 offset: 0x40
                 bits: "17:17"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp18:
                 offset: 0x40
                 bits: "18:18"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp19:
                 offset: 0x40
                 bits: "19:19"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp20:
                 offset: 0x40
                 bits: "20:20"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp21:
                 offset: 0x40
                 bits: "21:21"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp22:
                 offset: 0x40
                 bits: "22:22"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp23:
                 offset: 0x40
                 bits: "23:23"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp24:
                 offset: 0x40
                 bits: "24:24"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp25:
                 offset: 0x40
                 bits: "25:25"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp26:
                 offset: 0x40
                 bits: "26:26"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp27:
                 offset: 0x40
                 bits: "27:27"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp28:
                 offset: 0x40
                 bits: "28:28"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp29:
                 offset: 0x40
                 bits: "29:29"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp30:
                 offset: 0x40
                 bits: "30:30"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp31:
                 offset: 0x40
                 bits: "31:31"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect0"
             
             gp32:
                 offset: 0x44
                 bits: "0:0"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp33:
                 offset: 0x44
                 bits: "1:1"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp34:
                 offset: 0x44
                 bits: "2:2"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp35:
                 offset: 0x44
                 bits: "3:3"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp36:
                 offset: 0x44
                 bits: "4:4"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp37:
                 offset: 0x44
                 bits: "5:5"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp38:
                 offset: 0x44
                 bits: "6:6"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp39:
                 offset: 0x44
                 bits: "7:7"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp40:
                 offset: 0x44
                 bits: "8:8"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp41:
                 offset: 0x44
                 bits: "9:9"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp42:
                 offset: 0x44
                 bits: "10:10"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp43:
                 offset: 0x44
                 bits: "11:11"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp44:
                 offset: 0x44
                 bits: "12:12"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp45:
                 offset: 0x44
                 bits: "13:13"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp46:
                 offset: 0x44
                 bits: "14:14"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp47:
                 offset: 0x44
                 bits: "15:15"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp48:
                 offset: 0x44
                 bits: "16:16"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp49:
                 offset: 0x44
                 bits: "17:17"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp50:
                 offset: 0x44
                 bits: "18:18"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp51:
                 offset: 0x44
                 bits: "19:19"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp52:
                 offset: 0x44
                 bits: "20:20"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp53:
                 offset: 0x44
                 bits: "21:21"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp54:
                 offset: 0x44
                 bits: "22:22"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp55:
                 offset: 0x44
                 bits: "23:23"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp56:
                 offset: 0x44
                 bits: "24:24"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
             gp57:
                 offset: 0x44
                 bits: "25:25"
                 read-write: "w1c"
+                parent: "GPIO.EventDetect1"
             
         
         ##
@@ -1660,291 +1956,349 @@ registers:
                 offset: 0x4C
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp01:
                 offset: 0x4C
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp02:
                 offset: 0x4C
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp03:
                 offset: 0x4C
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp04:
                 offset: 0x4C
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp05:
                 offset: 0x4C
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp06:
                 offset: 0x4C
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp07:
                 offset: 0x4C
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp08:
                 offset: 0x4C
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp09:
                 offset: 0x4C
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp10:
                 offset: 0x4C
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp11:
                 offset: 0x4C
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp12:
                 offset: 0x4C
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp13:
                 offset: 0x4C
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp14:
                 offset: 0x4C
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp15:
                 offset: 0x4C
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp16:
                 offset: 0x4C
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp17:
                 offset: 0x4C
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp18:
                 offset: 0x4C
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp19:
                 offset: 0x4C
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp20:
                 offset: 0x4C
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp21:
                 offset: 0x4C
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp22:
                 offset: 0x4C
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp23:
                 offset: 0x4C
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp24:
                 offset: 0x4C
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp25:
                 offset: 0x4C
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp26:
                 offset: 0x4C
                 bits: "26:26"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp27:
                 offset: 0x4C
                 bits: "27:27"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp28:
                 offset: 0x4C
                 bits: "28:28"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp29:
                 offset: 0x4C
                 bits: "29:29"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp30:
                 offset: 0x4C
                 bits: "30:30"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp31:
                 offset: 0x4C
                 bits: "31:31"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable0"
             
             gp32:
                 offset: 0x50
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp33:
                 offset: 0x50
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp34:
                 offset: 0x50
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp35:
                 offset: 0x50
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp36:
                 offset: 0x50
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp37:
                 offset: 0x50
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp38:
                 offset: 0x50
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp39:
                 offset: 0x50
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp40:
                 offset: 0x50
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp41:
                 offset: 0x50
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp42:
                 offset: 0x50
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp43:
                 offset: 0x50
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp44:
                 offset: 0x50
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp45:
                 offset: 0x50
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp46:
                 offset: 0x50
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp47:
                 offset: 0x50
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp48:
                 offset: 0x50
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp49:
                 offset: 0x50
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp50:
                 offset: 0x50
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp51:
                 offset: 0x50
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp52:
                 offset: 0x50
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp53:
                 offset: 0x50
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp54:
                 offset: 0x50
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp55:
                 offset: 0x50
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp56:
                 offset: 0x50
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
             gp57:
                 offset: 0x50
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.RisingEdgeEnable1"
             
         
         ##
@@ -1967,291 +2321,349 @@ registers:
                 offset: 0x58
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp01:
                 offset: 0x58
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp02:
                 offset: 0x58
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp03:
                 offset: 0x58
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp04:
                 offset: 0x58
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp05:
                 offset: 0x58
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp06:
                 offset: 0x58
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp07:
                 offset: 0x58
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp08:
                 offset: 0x58
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp09:
                 offset: 0x58
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp10:
                 offset: 0x58
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp11:
                 offset: 0x58
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp12:
                 offset: 0x58
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp13:
                 offset: 0x58
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp14:
                 offset: 0x58
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp15:
                 offset: 0x58
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp16:
                 offset: 0x58
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp17:
                 offset: 0x58
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp18:
                 offset: 0x58
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp19:
                 offset: 0x58
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp20:
                 offset: 0x58
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp21:
                 offset: 0x58
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp22:
                 offset: 0x58
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp23:
                 offset: 0x58
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp24:
                 offset: 0x58
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp25:
                 offset: 0x58
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp26:
                 offset: 0x58
                 bits: "26:26"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp27:
                 offset: 0x58
                 bits: "27:27"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp28:
                 offset: 0x58
                 bits: "28:28"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp29:
                 offset: 0x58
                 bits: "29:29"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp30:
                 offset: 0x58
                 bits: "30:30"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp31:
                 offset: 0x58
                 bits: "31:31"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable0"
             
             gp32:
                 offset: 0x5C
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp33:
                 offset: 0x5C
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp34:
                 offset: 0x5C
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp35:
                 offset: 0x5C
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp36:
                 offset: 0x5C
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp37:
                 offset: 0x5C
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp38:
                 offset: 0x5C
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp39:
                 offset: 0x5C
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp40:
                 offset: 0x5C
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp41:
                 offset: 0x5C
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp42:
                 offset: 0x5C
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp43:
                 offset: 0x5C
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp44:
                 offset: 0x5C
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp45:
                 offset: 0x5C
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp46:
                 offset: 0x5C
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp47:
                 offset: 0x5C
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp48:
                 offset: 0x5C
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp49:
                 offset: 0x5C
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp50:
                 offset: 0x5C
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp51:
                 offset: 0x5C
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp52:
                 offset: 0x5C
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp53:
                 offset: 0x5C
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp54:
                 offset: 0x5C
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp55:
                 offset: 0x5C
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp56:
                 offset: 0x5C
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
             gp57:
                 offset: 0x5C
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.FallingEdgeEnable1"
             
         
         ##
@@ -2274,291 +2686,349 @@ registers:
                 offset: 0x64
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp01:
                 offset: 0x64
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp02:
                 offset: 0x64
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp03:
                 offset: 0x64
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp04:
                 offset: 0x64
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp05:
                 offset: 0x64
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp06:
                 offset: 0x64
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp07:
                 offset: 0x64
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp08:
                 offset: 0x64
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp09:
                 offset: 0x64
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp10:
                 offset: 0x64
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp11:
                 offset: 0x64
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp12:
                 offset: 0x64
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp13:
                 offset: 0x64
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp14:
                 offset: 0x64
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp15:
                 offset: 0x64
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp16:
                 offset: 0x64
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp17:
                 offset: 0x64
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp18:
                 offset: 0x64
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp19:
                 offset: 0x64
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp20:
                 offset: 0x64
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp21:
                 offset: 0x64
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp22:
                 offset: 0x64
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp23:
                 offset: 0x64
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp24:
                 offset: 0x64
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp25:
                 offset: 0x64
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp26:
                 offset: 0x64
                 bits: "26:26"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp27:
                 offset: 0x64
                 bits: "27:27"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp28:
                 offset: 0x64
                 bits: "28:28"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp29:
                 offset: 0x64
                 bits: "29:29"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp30:
                 offset: 0x64
                 bits: "30:30"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp31:
                 offset: 0x64
                 bits: "31:31"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable0"
             
             gp32:
                 offset: 0x68
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp33:
                 offset: 0x68
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp34:
                 offset: 0x68
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp35:
                 offset: 0x68
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp36:
                 offset: 0x68
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp37:
                 offset: 0x68
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp38:
                 offset: 0x68
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp39:
                 offset: 0x68
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp40:
                 offset: 0x68
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp41:
                 offset: 0x68
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp42:
                 offset: 0x68
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp43:
                 offset: 0x68
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp44:
                 offset: 0x68
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp45:
                 offset: 0x68
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp46:
                 offset: 0x68
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp47:
                 offset: 0x68
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp48:
                 offset: 0x68
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp49:
                 offset: 0x68
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp50:
                 offset: 0x68
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp51:
                 offset: 0x68
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp52:
                 offset: 0x68
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp53:
                 offset: 0x68
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp54:
                 offset: 0x68
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp55:
                 offset: 0x68
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp56:
                 offset: 0x68
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
             gp57:
                 offset: 0x68
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.HighDetectEnable1"
             
         
         ##
@@ -2581,291 +3051,349 @@ registers:
                 offset: 0x70
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp01:
                 offset: 0x70
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp02:
                 offset: 0x70
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp03:
                 offset: 0x70
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp04:
                 offset: 0x70
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp05:
                 offset: 0x70
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp06:
                 offset: 0x70
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp07:
                 offset: 0x70
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp08:
                 offset: 0x70
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp09:
                 offset: 0x70
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp10:
                 offset: 0x70
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp11:
                 offset: 0x70
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp12:
                 offset: 0x70
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp13:
                 offset: 0x70
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp14:
                 offset: 0x70
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp15:
                 offset: 0x70
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp16:
                 offset: 0x70
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp17:
                 offset: 0x70
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp18:
                 offset: 0x70
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp19:
                 offset: 0x70
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp20:
                 offset: 0x70
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp21:
                 offset: 0x70
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp22:
                 offset: 0x70
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp23:
                 offset: 0x70
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp24:
                 offset: 0x70
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp25:
                 offset: 0x70
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp26:
                 offset: 0x70
                 bits: "26:26"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp27:
                 offset: 0x70
                 bits: "27:27"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp28:
                 offset: 0x70
                 bits: "28:28"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp29:
                 offset: 0x70
                 bits: "29:29"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp30:
                 offset: 0x70
                 bits: "30:30"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp31:
                 offset: 0x70
                 bits: "31:31"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable0"
             
             gp32:
                 offset: 0x74
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp33:
                 offset: 0x74
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp34:
                 offset: 0x74
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp35:
                 offset: 0x74
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp36:
                 offset: 0x74
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp37:
                 offset: 0x74
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp38:
                 offset: 0x74
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp39:
                 offset: 0x74
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp40:
                 offset: 0x74
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp41:
                 offset: 0x74
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp42:
                 offset: 0x74
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp43:
                 offset: 0x74
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp44:
                 offset: 0x74
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp45:
                 offset: 0x74
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp46:
                 offset: 0x74
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp47:
                 offset: 0x74
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp48:
                 offset: 0x74
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp49:
                 offset: 0x74
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp50:
                 offset: 0x74
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp51:
                 offset: 0x74
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp52:
                 offset: 0x74
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp53:
                 offset: 0x74
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp54:
                 offset: 0x74
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp55:
                 offset: 0x74
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp56:
                 offset: 0x74
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
             gp57:
                 offset: 0x74
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.LowDetectEnable1"
             
         
         ##
@@ -2888,291 +3416,349 @@ registers:
                 offset: 0x7C
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp01:
                 offset: 0x7C
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp02:
                 offset: 0x7C
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp03:
                 offset: 0x7C
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp04:
                 offset: 0x7C
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp05:
                 offset: 0x7C
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp06:
                 offset: 0x7C
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp07:
                 offset: 0x7C
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp08:
                 offset: 0x7C
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp09:
                 offset: 0x7C
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp10:
                 offset: 0x7C
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp11:
                 offset: 0x7C
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp12:
                 offset: 0x7C
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp13:
                 offset: 0x7C
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp14:
                 offset: 0x7C
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp15:
                 offset: 0x7C
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp16:
                 offset: 0x7C
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp17:
                 offset: 0x7C
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp18:
                 offset: 0x7C
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp19:
                 offset: 0x7C
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp20:
                 offset: 0x7C
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp21:
                 offset: 0x7C
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp22:
                 offset: 0x7C
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp23:
                 offset: 0x7C
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp24:
                 offset: 0x7C
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp25:
                 offset: 0x7C
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp26:
                 offset: 0x7C
                 bits: "26:26"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp27:
                 offset: 0x7C
                 bits: "27:27"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp28:
                 offset: 0x7C
                 bits: "28:28"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp29:
                 offset: 0x7C
                 bits: "29:29"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp30:
                 offset: 0x7C
                 bits: "30:30"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp31:
                 offset: 0x7C
                 bits: "31:31"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect0"
             
             gp32:
                 offset: 0x80
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp33:
                 offset: 0x80
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp34:
                 offset: 0x80
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp35:
                 offset: 0x80
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp36:
                 offset: 0x80
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp37:
                 offset: 0x80
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp38:
                 offset: 0x80
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp39:
                 offset: 0x80
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp40:
                 offset: 0x80
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp41:
                 offset: 0x80
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp42:
                 offset: 0x80
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp43:
                 offset: 0x80
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp44:
                 offset: 0x80
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp45:
                 offset: 0x80
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp46:
                 offset: 0x80
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp47:
                 offset: 0x80
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp48:
                 offset: 0x80
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp49:
                 offset: 0x80
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp50:
                 offset: 0x80
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp51:
                 offset: 0x80
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp52:
                 offset: 0x80
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp53:
                 offset: 0x80
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp54:
                 offset: 0x80
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp55:
                 offset: 0x80
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp56:
                 offset: 0x80
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
             gp57:
                 offset: 0x80
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.AsyncRisingDetect1"
             
         
         ##
@@ -3195,297 +3781,356 @@ registers:
                 offset: 0x88
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp01:
                 offset: 0x88
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp02:
                 offset: 0x88
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp03:
                 offset: 0x88
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp04:
                 offset: 0x88
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp05:
                 offset: 0x88
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp06:
                 offset: 0x88
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp07:
                 offset: 0x88
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp08:
                 offset: 0x88
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp09:
                 offset: 0x88
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp10:
                 offset: 0x88
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp11:
                 offset: 0x88
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp12:
                 offset: 0x88
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp13:
                 offset: 0x88
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp14:
                 offset: 0x88
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp15:
                 offset: 0x88
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp16:
                 offset: 0x88
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp17:
                 offset: 0x88
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp18:
                 offset: 0x88
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp19:
                 offset: 0x88
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp20:
                 offset: 0x88
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp21:
                 offset: 0x88
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp22:
                 offset: 0x88
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp23:
                 offset: 0x88
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp24:
                 offset: 0x88
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp25:
                 offset: 0x88
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp26:
                 offset: 0x88
                 bits: "26:26"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp27:
                 offset: 0x88
                 bits: "27:27"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp28:
                 offset: 0x88
                 bits: "28:28"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp29:
                 offset: 0x88
                 bits: "29:29"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp30:
                 offset: 0x88
                 bits: "30:30"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp31:
                 offset: 0x88
                 bits: "31:31"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect0"
             
             gp32:
                 offset: 0x8C
                 bits: "0:0"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp33:
                 offset: 0x8C
                 bits: "1:1"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp34:
                 offset: 0x8C
                 bits: "2:2"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp35:
                 offset: 0x8C
                 bits: "3:3"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp36:
                 offset: 0x8C
                 bits: "4:4"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp37:
                 offset: 0x8C
                 bits: "5:5"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp38:
                 offset: 0x8C
                 bits: "6:6"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp39:
                 offset: 0x8C
                 bits: "7:7"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp40:
                 offset: 0x8C
                 bits: "8:8"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp41:
                 offset: 0x8C
                 bits: "9:9"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp42:
                 offset: 0x8C
                 bits: "10:10"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp43:
                 offset: 0x8C
                 bits: "11:11"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp44:
                 offset: 0x8C
                 bits: "12:12"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp45:
                 offset: 0x8C
                 bits: "13:13"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp46:
                 offset: 0x8C
                 bits: "14:14"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp47:
                 offset: 0x8C
                 bits: "15:15"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp48:
                 offset: 0x8C
                 bits: "16:16"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp49:
                 offset: 0x8C
                 bits: "17:17"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp50:
                 offset: 0x8C
                 bits: "18:18"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp51:
                 offset: 0x8C
                 bits: "19:19"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp52:
                 offset: 0x8C
                 bits: "20:20"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp53:
                 offset: 0x8C
                 bits: "21:21"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp54:
                 offset: 0x8C
                 bits: "22:22"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp55:
                 offset: 0x8C
                 bits: "23:23"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp56:
                 offset: 0x8C
                 bits: "24:24"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
             gp57:
                 offset: 0x8C
                 bits: "25:25"
                 read-write: "rw"
+                parent: "GPIO.AsyncFallingDetect1"
             
         pull_up_down0:
             offset: 0xe4
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"
         # bits
         
         pull_up_down1:
@@ -3493,6 +4138,7 @@ registers:
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"
         # bits
         
         pull_up_down2:
@@ -3500,6 +4146,7 @@ registers:
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"
         # bits
         
         pull_up_down3:
@@ -3507,6 +4154,7 @@ registers:
             reset: 0x0000
             read-write: "rw"
             width: 32
+            description: "00 = No resistor, 01 = Pull Up, 10 = Pull Down"
         # bits
         pull_up_down_bits:
         
@@ -3515,96 +4163,112 @@ registers:
                 reset: 0x1
                 read-write: "rw"
                 bits: "31:30"
+                parent: "GPIO.pull_up_down0"
         
             gp14:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "29:28"
+                parent: "GPIO.pull_up_down0"
         
             gp13:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "27:26"
+                parent: "GPIO.pull_up_down0"
         
             gp12:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "25:24"
+                parent: "GPIO.pull_up_down0"
         
             gp11:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "23:22"
+                parent: "GPIO.pull_up_down0"
         
             gp10:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "21:20"
+                parent: "GPIO.pull_up_down0"
         
             gp9:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "19:18"
+                parent: "GPIO.pull_up_down0"
         
             gp8:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "17:16"
+                parent: "GPIO.pull_up_down0"
         
             gp7:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "15:14"
+                parent: "GPIO.pull_up_down0"
         
             gp6:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "13:12"
+                parent: "GPIO.pull_up_down0"
         
             gp5:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "11:10"
+                parent: "GPIO.pull_up_down0"
         
             gp4:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "9:8"
+                parent: "GPIO.pull_up_down0"
         
             gp3:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "7:6"
+                parent: "GPIO.pull_up_down0"
         
             gp2:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "5:4"
+                parent: "GPIO.pull_up_down0"
         
             gp1:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "3:2"
+                parent: "GPIO.pull_up_down0"
         
             gp0:
                 offset: 0xe4
                 reset: 0x1
                 read-write: "rw"
                 bits: "1:0"
+                parent: "GPIO.pull_up_down0"
         
         
             gp31:
@@ -3612,96 +4276,112 @@ registers:
                 reset: 0x1
                 read-write: "rw"
                 bits: "31:30"
+                parent: "GPIO.pull_up_down1"
         
             gp30:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "29:28"
+                parent: "GPIO.pull_up_down1"
         
             gp29:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "27:26"
+                parent: "GPIO.pull_up_down1"
         
             gp28:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "25:24"
+                parent: "GPIO.pull_up_down1"
         
             gp27:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "23:22"
+                parent: "GPIO.pull_up_down1"
         
             gp26:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "21:20"
+                parent: "GPIO.pull_up_down1"
         
             gp25:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "19:18"
+                parent: "GPIO.pull_up_down1"
         
             gp24:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "17:16"
+                parent: "GPIO.pull_up_down1"
         
             gp23:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "15:14"
+                parent: "GPIO.pull_up_down1"
         
             gp22:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "13:12"
+                parent: "GPIO.pull_up_down1"
         
             gp21:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "11:10"
+                parent: "GPIO.pull_up_down1"
         
             gp20:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "9:8"
+                parent: "GPIO.pull_up_down1"
         
             gp19:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "7:6"
+                parent: "GPIO.pull_up_down1"
         
             gp18:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "5:4"
+                parent: "GPIO.pull_up_down1"
         
             gp17:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "3:2"
+                parent: "GPIO.pull_up_down1"
         
             gp16:
                 offset: 0xe8
                 reset: 0x1
                 read-write: "rw"
                 bits: "1:0"
+                parent: "GPIO.pull_up_down1"
         
         
             gp47:
@@ -3709,96 +4389,112 @@ registers:
                 reset: 0x1
                 read-write: "rw"
                 bits: "31:30"
+                parent: "GPIO.pull_up_down2"
         
             gp46:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "29:28"
+                parent: "GPIO.pull_up_down2"
         
             gp45:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "27:26"
+                parent: "GPIO.pull_up_down2"
         
             gp44:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "25:24"
+                parent: "GPIO.pull_up_down2"
         
             gp43:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "23:22"
+                parent: "GPIO.pull_up_down2"
         
             gp42:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "21:20"
+                parent: "GPIO.pull_up_down2"
         
             gp41:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "19:18"
+                parent: "GPIO.pull_up_down2"
         
             gp40:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "17:16"
+                parent: "GPIO.pull_up_down2"
         
             gp39:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "15:14"
+                parent: "GPIO.pull_up_down2"
         
             gp38:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "13:12"
+                parent: "GPIO.pull_up_down2"
         
             gp37:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "11:10"
+                parent: "GPIO.pull_up_down2"
         
             gp36:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "9:8"
+                parent: "GPIO.pull_up_down2"
         
             gp35:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "7:6"
+                parent: "GPIO.pull_up_down2"
         
             gp34:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "5:4"
+                parent: "GPIO.pull_up_down2"
         
             gp33:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "3:2"
+                parent: "GPIO.pull_up_down2"
         
             gp32:
                 offset: 0xec
                 reset: 0x1
                 read-write: "rw"
                 bits: "1:0"
+                parent: "GPIO.pull_up_down2"
         
         
             gp57:
@@ -3806,58 +4502,68 @@ registers:
                 reset: 0x1
                 read-write: "rw"
                 bits: "19:18"
+                parent: "GPIO.pull_up_down3"
         
             gp56:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "17:16"
+                parent: "GPIO.pull_up_down3"
         
             gp55:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "15:14"
+                parent: "GPIO.pull_up_down3"
         
             gp54:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "13:12"
+                parent: "GPIO.pull_up_down3"
         
             gp53:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "11:10"
+                parent: "GPIO.pull_up_down3"
         
             gp52:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "9:8"
+                parent: "GPIO.pull_up_down3"
         
             gp51:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "7:6"
+                parent: "GPIO.pull_up_down3"
         
             gp50:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "5:4"
+                parent: "GPIO.pull_up_down3"
         
             gp49:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "3:2"
+                parent: "GPIO.pull_up_down3"
         
             gp48:
                 offset: 0xf0
                 reset: 0x1
                 read-write: "rw"
                 bits: "1:0"
+                parent: "GPIO.pull_up_down3"
         

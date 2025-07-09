@@ -1,3 +1,7 @@
+[workspace]
+members = [".", "tools/ucompleter/aep_rust_common"]
+
+
 [package]
 name = "register_tool"
 version = "0.1.0"
@@ -9,3 +13,4 @@ memmap = "0.7.0"
 yaml-rust = "0.4.5"
 libc = "0.2.174"
 regex = "1.11.1"
+aep_rust_common = { path = "tools/ucompleter/aep_rust_common" }
