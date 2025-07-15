@@ -1,6 +1,7 @@
 use std::io::Write;
 use clap::parser::ValuesRef;
 use regex::Regex;
+use yaml_rust::Yaml;
 use aep_rust_common::descender;
 use aep_rust_common::descender::Descender;
 use crate::register::Register;
@@ -65,19 +66,23 @@ impl RegisterTool {
         Ok(())
     }
 
-    pub fn apply_registers<F>(&self, f: F) -> Result<(), String>
+    pub fn apply_registers<F>(&self, f: F) -> Result<Vec<Result<u32, String>>, String>
     where
-        F: Fn(u64),
+        F: Fn(u32) -> Result<u32, String>,
     {
+        let mut results : Vec<Result<u32, String>> = Vec::new();
         for reg in &self.regs {
             if !reg.isset {
-                f(reg.get(self.addr) as u64);
+                results.push(f(reg.get(self.addr)));
             }
             else {
-                reg.set(self.addr);
+                results.push(match reg.set(self.addr) {
+                    Ok(i) => f(i),
+                    Err(e) => Err(e),
+                });
             }
         }
-        Ok(())
+        Ok(results)
     }
 
 }
