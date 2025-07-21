@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="rpi4b_renderings" type="PythonConfigurationType" factoryName="Python">
+  <configuration default="false" name="rpi4b_renderings remap" type="PythonConfigurationType" factoryName="Python">
     <module name="register_tool" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
@@ -15,7 +15,7 @@
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
     <option name="SCRIPT_NAME" value="$ProjectFileDir$/python/rpi4b_renderings.py" />
-    <option name="PARAMETERS" value="-o examples/raspberrypi4b_source.yaml" />
+    <option name="PARAMETERS" value="-r examples/raspberrypi4b_source.yaml -o examples/raspberrypi4b.yaml" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="false" />

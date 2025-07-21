@@ -1,26 +1,35 @@
+// 
+// SPDX-License-Identifier: MIT
+// 
+// Copyright (c) 2025 Andrew Ellis Page
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+// 
 use std::fs::File;
 use std::io::Write;
 use clap::{Arg, ArgAction, Command};
-use register_tool::unsafes::mmap_memory;
-use rtoolconfig::RToolConfig;
-use aep_rust_common::find_config_file;
 use aep_rust_common::find_config_file::find_config_file;
 use std::process;
-use aep_rust_common::descender::Descender;
 use aep_rust_common::yaml_descender::YamlDescender;
 use register_tool::register_tool::RegisterTool;
 
-mod register;
-mod rtoolconfig;
-
-// const  WHOLE_MATCH: usize = 0 ;
-const KEY_MATCH: usize = 1 ;
-const INDEX_MATCH: usize = 2 ;
-
-const VALUE_MATCH: usize = 3 ;
-
-
-
+mod register_op;
 
 fn main() {
     let options = Command::new("register_tool")
@@ -58,8 +67,6 @@ fn main() {
         .map(|s| s.as_str())
         .collect();
 
-
-
     let config_file = match options.get_one::<String>("file") {
         Some(s) => s,
         None => &{
@@ -91,14 +98,25 @@ fn main() {
 
     let mut register_tool = RegisterTool::new(descender);
 
-    match register_tool.gather_regs(registers) {
+
+    if *options.get_one::<bool>("dump").unwrap_or(&false) {
+        match register_tool.dump_registers(&registers) {
+            Ok(_) =>         process::exit(0),
+            Err(e) => {
+                println!("{}", e);
+                process::exit(1);
+            }
+        }
+    }
+
+    match register_tool.gather_regs(&registers) {
         Ok(_) => {}
         Err(e) => {
             println!("{}", e);
             process::exit(1);
         }
     } ;
-    
+
     if *options.get_one::<bool>("test").unwrap_or(&false) {
         register_tool.set_test_area() ;
     } else {
@@ -112,7 +130,7 @@ fn main() {
 
     for r in results {
         match r {
-            Ok(i) => {}
+            Ok(_) => {}
             Err(e) => {
                 process::exit(1);
             }

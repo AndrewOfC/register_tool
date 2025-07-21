@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="rpi4b_renderings" type="PythonConfigurationType" factoryName="Python">
+  <configuration default="false" name="annotate" type="PythonConfigurationType" factoryName="Python">
     <module name="register_tool" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
@@ -9,13 +9,13 @@
     </envs>
     <option name="SDK_HOME" value="" />
     <option name="SDK_NAME" value="Python 3.12 (register_tool)" />
-    <option name="WORKING_DIRECTORY" value="$ProjectFileDir$" />
+    <option name="WORKING_DIRECTORY" value="" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    <option name="SCRIPT_NAME" value="$ProjectFileDir$/python/rpi4b_renderings.py" />
-    <option name="PARAMETERS" value="-o examples/raspberrypi4b_source.yaml" />
+    <option name="SCRIPT_NAME" value="$ProjectFileDir$/python/license_annotator.py" />
+    <option name="PARAMETERS" value="--verbose" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="false" />

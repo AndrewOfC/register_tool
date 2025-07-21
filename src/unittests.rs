@@ -1,10 +1,33 @@
+// 
+// SPDX-License-Identifier: MIT
+// 
+// Copyright (c) 2025 Andrew Ellis Page
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+// 
 #[cfg(test)]
 pub mod rtool_tests {
     use std::io::Write;
     use std::process;
     use aep_rust_common::descender::Descender;
     use aep_rust_common::yaml_descender::YamlDescender;
-    use crate::register::parse_bits;
+    use crate::register_op::parse_bits;
     use crate::register_tool::RegisterTool;
 
     #[test]
@@ -31,7 +54,7 @@ pub mod rtool_tests {
         let descender = Box::new(YamlDescender::new_from_file(&*config_file, false).unwrap()) as Box<dyn Descender<dyn Write>> ;
         let mut register_tool = RegisterTool::new(descender);
 
-        register_tool.gather_regs(regspecs) ;
+        register_tool.gather_regs(&regspecs) ;
         register_tool.set_test_area() ;
 
         let replies = register_tool.apply_registers(|v| {
