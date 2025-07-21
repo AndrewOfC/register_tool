@@ -6,7 +6,7 @@
 # Data for ucompleter tool
 completion-metadata:
     root: "registers"
-    terminus:  "offset"
+    terminal-fields:  ["offset", "parent"]
 
 base: 0x7E200000
 length: 0x2000

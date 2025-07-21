@@ -27,7 +27,8 @@ cargo build --target aarch64 --bin register_tool
 | path      | path to register definition                                   |
 | value     | hex, octal or binary value to set register to                 |
 | -d        | Dump the register definition, do not set or read              |
-| -f <file> | override register file(s) that might be in REGISTER_TOOL_PATH |
+| -f <file> | Override register file(s) that might be in REGISTER_TOOL_PATH |
+| -t        | Test mode.  Do not map memory, allocate a black of 'length'    |
 
 
 # Concepts
@@ -66,6 +67,24 @@ will access the pin 0
 | REGISTER_TOOL_PATH    | colon separated list of directories to search for register_tool.yaml |
 
 # How To
+
+## Define a device
+
+The root of your yaml configuration file should contain the following fields
+
+```yaml
+base: 0x7E200000
+length: 0x2000
+device: "/dev/gpiomem"
+```
+
+| field  | value                                                  |
+|--------|--------------------------------------------------------|
+| base   | base addrewss to apply with mmap                       |
+| length | length to apply to mmap                                |
+| device | path to device to open for mmap.  Defaults to /dev/mem |
+
+
 ## Define a register
 Registers may be defined in any hierarchy that makes sense for your project.  They can also be duplicated and aliased
 for convenience.
@@ -76,6 +95,7 @@ completion-metadata:
   terminus: ["offset", "bits"]
 
 base: 0x0000 # base address
+length: 0x2000
 
 registers:
   GPIO:
@@ -92,21 +112,22 @@ registers:
 
 ## completion-metadata
 This is information that the [ucompleter](https://github.com/AndrewOfC/ucompleter) tool will use to provide completions of your registers
-on the bash command line. 
+on the bash command line. It is not required, but it is recommended.
 
 | Field | Purpose                                                        |
 |-------|----------------------------------------------------------------|
 | root  | Path to the element where register definitions are to be found |
+ |terminus| If any of these fields are present in hash as the tree is descended the descent is stopped| 
 
 
 ## Register Definition
-| Field       | Purpose                                                                                                            |
-|-------------|--------------------------------------------------------------------------------------------------------------------|
-| offset      | offset from memory base                                                                                            |
-| bits        | hibit:lobit selection of individual bits in a word(inclusive)<br> 31:31 first bit in register<br>0:1 last two bits |
-| read-write  | rw: read-write<br>ro: read-only<br>wo: write only<br>w1c: write-once-to-clear                                      |
-| description | Description of register                                                                                            |
-| parent      | If a required field is not found in block, parent will be checked(recursive)                                       |
+| Field       | Purpose                                                                                                             |
+|-------------|---------------------------------------------------------------------------------------------------------------------|
+| offset      | offset from memory base                                                                                             |
+| bits        | hibit:lobit selection of individual bits in a word(inclusive)<br> 31:31 first bit in register<br>1:0 last two bits  |
+| read-write  | rw: read-write<br>ro: read-only<br>wo: write only<br>w1c: write-once-to-clear                                       |
+| description | Description of register                                                                                             |
+| parent      | If a required field is not found in block, parent will be checked(recursive). This is a path from the defined root. |
 
 
 

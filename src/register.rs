@@ -52,7 +52,7 @@ impl Register {
         let offset_r = descender.get_int_field_or_parent(path, "offset");
         let offset = match offset_r {
             Ok(o) => o,
-            Err(e) => return Err(e),
+            Err(e) => return Err(format!("Invalid offset for register {}: {}", path, e)),
         } ;
 
         let bits_r = descender.get_string_field_or_parent(path, "bits");
@@ -71,7 +71,7 @@ impl Register {
         let read_only_r = descender.get_string_field_or_parent(path, "read-write") ;
         let read_only = match read_only_r {
             Ok(o) => o == "ro",
-            Err(e) => return Err(e),
+            Err(e) => return Err(format!("Invalid read-write for register {}", path)),
         } ;
 
         if read_only && is_set {
@@ -94,7 +94,7 @@ impl Register {
     }
 
 
-    pub fn set(&self, addr: *mut u8) -> u32 {
+    pub fn set(&self, addr: *mut u8) -> Result<u32, String> {
 
         let addr2 = unsafe { addr.add(self.offset as usize) };
         let value = self.value << self.shift;
@@ -103,7 +103,7 @@ impl Register {
             let new_value = (curr_value & self.set_mask) | value;
             *(addr2 as *mut u32) = new_value ;
         }
-        value
+        Ok(self.value)
     }
 
     pub fn get(&self, addr: *mut u8) -> u32 {
