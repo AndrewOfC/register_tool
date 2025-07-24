@@ -23,7 +23,7 @@
 # 
 
         
-name: Rust
+name: register_tool
 
 on:
   push:
@@ -36,12 +36,36 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    container: rust:latest
     steps:
     - uses: actions/checkout@v4
       with:
-          submodules: recursive
+        submodules: recursive
+    - run:  rustup update
+    - name: Install cargo-deb
+      run: cargo install cargo-deb
     - name: Build
       run: cargo build --verbose
     - name: Run tests
-      run: cargo test --verbose
+      run: cargo test && cd aep_rust_common && cargo test
+    - name: rustup aarch64
+      run: rustup target add aarch64-unknown-linux-gnu
+    - name: gcc-arm64
+      run:  apt-get update && apt-get install -y gcc-aarch64-linux-gnu
+    - name: aarch64
+      run: cargo build --target=aarch64-unknown-linux-gnu 
+    - name: deb aarch64
+      run: cargo deb --target=aarch64-unknown-linux-gnu 
+    - name: deb amd64
+      run: cargo deb
+    - uses: actions/upload-artifact@v4
+      with:
+        name: register_tool-arm64
+        path: "target/aarch64-unknown-linux-gnu/debian/register_tool*.deb"
+        overwrite: true
+    - uses: actions/upload-artifact@v4
+      with:
+          name: register_tool-x86
+          path: target/debian/register_tool*.deb
+          overwrite: true
+          

@@ -4,12 +4,6 @@ This is a tool for examining and manipulating memory mapped registers in embedde
 names instead of raw addresses.  
 The program reads a register configuration file in yaml format which contains register definitions.  
 
-# Usage
-
-```bash
-register_tool [options] <path>[=<value>]...
-```
-
 # Building
 
 ## aarch64-unknown-linux-gnu
@@ -17,14 +11,22 @@ register_tool [options] <path>[=<value>]...
 Suitable for executing on a raspberrypi OS, or ubuntu
 
 ```bash
+rustup target add aarch64-unknown-linux-gnu # once
+sudo apt-get install -y gcc-aarch64-linux-gnu # once
+
 git clone https://https://github.com/AndrewOfC/register_tool.git --recursive
 cd register_tool
-rustup target add aarch64-unknown-linux-gnu # once
+cargo build 
+
 cargo build --target aarch64-unknown-linux-gnu
 ```
 
+# Usage
 
-# Parameters and options
+```bash
+register_tool [options] <path>[=<value>]...
+```
+## Parameters and options
 
 | P/O       | meaning                                                       |
 |-----------|---------------------------------------------------------------|
@@ -34,6 +36,16 @@ cargo build --target aarch64-unknown-linux-gnu
 | -f <file> | Override register file(s) that might be in REGISTER_TOOL_PATH |
 | -t        | Test mode.  Do not map memory, allocate a block of 'length'   |
 
+## Exit Status
+
+| Status | Meaning                                                                                    |
+|--------|--------------------------------------------------------------------------------------------|
+| 0      | success                                                                                    |
+| 1      | if any operation is illegal(reading a write-only register or writing a read-only register) |
+| 2      | if a configuration file cannot be found or an error in reading                             |
+
+Paths and values may be specified multiple times.  Before any action is taken
+the values are checked for legality. 
 
 # Concepts
 
@@ -42,7 +54,6 @@ cargo build --target aarch64-unknown-linux-gnu
 A 'path' describes the location of a register in the yaml definition file.  The notion is similar
 to dereferencing a python or javascript object.  A dot(.) will access fields in an associative array
 or hash block and [] may be used to access individual array members.
-
 
 ### Example
 
@@ -65,34 +76,38 @@ GPIO:
               bits: 30:30
 ```
 
-__GPIO.pins[0]__
+__GPIO.pins[0].set__
 
-will access the pin 0
+will access the pin 0 set register
 
 
 ## Bits
 
 Bits are specified by "hibit:lobit" (inclusive).  This allows you to set/clear bits individually in a 
-regsiter without changing the other bits in he register.  Example to set pin 1 in the above exmple
+regsiter without changing the other bits in the register.  Example to set pin 1 in the above exmple
 this command would be used:
 
 ```bash
 register_tool GPIO.pins[0].set=1
 ```
 
-Inside register tool, the current
+Inside register tool, the current value is read from the register(for rw registers)
+or the shadow register(for wo registers) and the value is only appled to the 
+bits in question before being written.  
+
+Attempting to read a write-only register that has no shadow produces an error
 
 # Environment Variables:
 
-| Var | Effect                                                               |
-|-----|----------------------------------------------------------------------|
-| REGISTER_TOOL_PATH    | colon separated list of directories to search for register_tool.yaml |
+| Var                        | Effect                                                               |
+|----------------------------|----------------------------------------------------------------------|
+| REGISTER_TOOL_PATH         | colon separated list of directories to search for register_tool.yaml |
 
 # How To
 
 ## Define a device
 
-The root of your yaml configuration file should contain the following fields
+The root of your YAML configuration file should contain the following fields
 
 ```yaml
 base: 0x7E200000
@@ -148,26 +163,17 @@ registers:
 This is information that the [ucompleter](https://github.com/AndrewOfC/ucompleter) tool will use to provide completions of your registers
 on the bash command line. It is not required, but it is recommended.
 
-| Field           | Purpose                                                                                      |
-|-----------------|----------------------------------------------------------------------------------------------|
-| root            | Path to the element where register definitions are to be found                               |
-| terminal-fields | If any of these fields are present in a hash as the tree is descended the descent is stopped | 
+| Field           | Purpose                                                                                       |
+|-----------------|-----------------------------------------------------------------------------------------------|
+| root            | Path to the element where register definitions are to be found                                |
+| terminal-fields | If any of these fields are present in a hash as the tree is descended the descent is stopped  | 
 
 # Example Files
 
-| File                                              | Contents                                 |
-|---------------------------------------------------|------------------------------------------|
+| File                                                            | Contents                                 |
+|-----------------------------------------------------------------|------------------------------------------|
 | [raspberrypi4b_source.yaml](examples/raspberrypi4b_source.yaml) | Register definitions for RaspberryPi 4b This file was constructed with data from: [bcm2711-peripherals.pdf](https://datasheets.raspberrypi.com/bcm2711/bcm2711-peripherals.pdf)|
-| [raspberrypi4b.yaml](examples/raspberrypi4b.yaml) |  The raspberrypi4b_source.yaml file remapped for a 'per pin' perspective.                                                                                                                                                                              |
-
-# Companion tools
-
-The ucompleter tool can be configured with bash to provide register completions. 
-Once enabled pressing TAB-TAB after register_tool will provide you with the available completions
-
-```bash
-complete -o bashdefault -o default -o nospace  -C ucompleter register_tool 
-```
+| [raspberrypi4b.yaml](examples/raspberrypi4b.yaml)               |  The raspberrypi4b_source.yaml file remapped for a 'per pin' perspective.                                                                                                                                                                              |
 
 # Example
 
@@ -188,3 +194,19 @@ register_tool GPIO.pins[27].clear=1 # sets pin 27 lo
 | src                  | Rust source code                                                   |
 | target               | cargo output directory                                             |
 | [tools](tools)       | Optional tools that can assist with use                            |
+
+
+# Companion tools
+
+## tools/ucompleter
+The ucompleter tool can be configured with bash to provide register completions.
+Once enabled pressing TAB-TAB after register_tool will provide you with the available completions
+
+```bash
+complete -o bashdefault -o default -o nospace  -C ucompleter register_tool 
+```
+
+## tools/register_config_validator.py
+
+Python script to validate configuration files.  Gathers all potential errors
+before exitting.

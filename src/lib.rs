@@ -25,4 +25,3 @@ mod unittests;
 pub mod unsafes;
 pub mod register_tool;
 pub mod register_op;
-mod register_tool_dump;

@@ -1,18 +1,21 @@
-// 
+use crate::register_op::RegisterOp;
+use crate::unsafes::mmap_memory;
+use aep_rust_common::descender::Descender;
+//
 // SPDX-License-Identifier: MIT
-// 
+//
 // Copyright (c) 2025 Andrew Ellis Page
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all
 // copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,16 +23,8 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-// 
+//
 use std::io::Write;
-use clap::parser::ValuesRef;
-use libc::fanotify_init;
-use regex::Regex;
-use yaml_rust::Yaml;
-use aep_rust_common::descender;
-use aep_rust_common::descender::Descender;
-use crate::register_op::RegisterOp;
-use crate::unsafes::mmap_memory;
 
 pub struct RegisterTool {
     descender: Box<dyn Descender<dyn Write>>,
@@ -61,7 +56,7 @@ impl RegisterTool {
             match offset {
                Ok(o) => println!("   offset: 0x{o:04X}"),
                Err(e) => { 
-                   println!("   offset: NOT FOUND") ; 
+                   println!("  {e} offset: NOT FOUND") ;
                    fail = true ;
                    bad_regs.push(path) ;
                }
@@ -71,7 +66,13 @@ impl RegisterTool {
             println!("   bits: {}", bits) ;
             println!("   description: \"{}\"", desc) ;
         }
-        self.descender.set_root(&*old_root) ;
+        match self.descender.set_root(&*old_root) {
+            Ok(_) => {},
+            Err(e) => {
+                println!("Error resetting root: {}", e);
+                fail = true;
+            }
+        }
         if fail {
             let bad_reg_list = bad_regs.join(" ");
             Err(format!("invalid registers: {}", bad_reg_list))
@@ -115,8 +116,8 @@ impl RegisterTool {
             if parts.len() > 2 {
                 return Err(format!("Bad argument {}", spec));
             }
-            let isSet = parts.len() == 2 ;
-            let value = if isSet {
+            let is_set = parts.len() == 2 ;
+            let value = if is_set {
                 match parts[1].parse::<u32>() {
                     Ok(v) => Some(v),
                     Err(_) => return Err(format!("Bad argument {}", spec)),
@@ -130,7 +131,13 @@ impl RegisterTool {
 
             self.regs.push(r)
         }
-        self.descender.set_root(&*old_root) ;
+        match self.descender.set_root(&*old_root) {
+            Ok(_) => {},
+            Err(e) => {
+                println!("Error resetting root: {}", e);
+                return Err(format!("Error resetting root: {}", e));
+            }
+        }
         Ok(())
     }
 
