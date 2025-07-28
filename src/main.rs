@@ -96,7 +96,15 @@ fn main() {
         process::exit(3);
     } ;
 
-    let mut register_tool = RegisterTool::new(descender);
+    let mut register_tool = match RegisterTool::new(descender) {
+       Ok(rt) => rt,
+        Err(errs) => {
+            for e in errs {
+                eprintln!("{}", e);
+            }
+            process::exit(4);
+        }
+    } ;
 
 
     if *options.get_one::<bool>("dump").unwrap_or(&false) {
@@ -109,10 +117,16 @@ fn main() {
         }
     }
 
+    /*
+     * gather up all the registers to read or set.
+     * If there are erroneous registers report them all and exit
+     */
     match register_tool.gather_regs(&registers) {
         Ok(_) => {}
         Err(e) => {
-            println!("{}", e);
+            for e in e {
+                eprintln!("{}", e);           
+            }
             process::exit(1);
         }
     } ;
@@ -120,7 +134,13 @@ fn main() {
     if *options.get_one::<bool>("test").unwrap_or(&false) {
         register_tool.set_test_area() ;
     } else {
-        register_tool.set_base_address() ;
+        match register_tool.set_base_address() {
+            Ok(_) => {}
+            Err(e) => {
+                eprintln!("{}", e);
+                process::exit(1);
+            }       
+        }
     }
     
     let results =  register_tool.apply_registers(|v| {

@@ -20,15 +20,16 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-// 
+//
+
 #[cfg(test)]
 pub mod rtool_tests {
     use std::io::Write;
-    use std::process;
-    use aep_rust_common::descender::Descender;
+    use aep_rust_common::descender::{Descender as OtherDescender, Descender};
     use aep_rust_common::yaml_descender::YamlDescender;
     use crate::register_op::parse_bits;
     use crate::register_tool::RegisterTool;
+
 
     #[test]
     fn test_bitmask() {
@@ -46,15 +47,15 @@ pub mod rtool_tests {
     }
     #[test]
     fn test_gather_and_apply_regsters() {
-        let regspecs = vec!["GPIO.words.function2=0", "GPIO.pins@27.function=1", "GPIO.words.function2", "GPIO.pins@27.function"] ;
+        let regspecs = vec!["GPIO.words.function2=0", "GPIO.pins[27].function=1", "GPIO.words.function2", "GPIO.pins[27].function"] ;
 
         let working_dir = env!("CARGO_MANIFEST_DIR");
         let config_file = format!("{}/register_tool.yaml", working_dir);
 
-        let descender = Box::new(YamlDescender::new_from_file(&*config_file, false).unwrap()) as Box<dyn Descender<dyn Write>> ;
-        let mut register_tool = RegisterTool::new(descender);
+        let descender = Box::new(YamlDescender::new_from_file(&*config_file, true).unwrap()) as Box<dyn Descender<dyn Write>> ;
+        let mut register_tool = RegisterTool::new(descender).unwrap() ;
 
-        register_tool.gather_regs(&regspecs) ;
+        register_tool.gather_regs(&regspecs).expect("TODO: panic message");
         register_tool.set_test_area() ;
 
         let replies = register_tool.apply_registers(|v| {
@@ -68,5 +69,22 @@ pub mod rtool_tests {
         assert_eq!(replies[3].clone().unwrap(), 0x00000001);
     }
 
-    
+    #[test]
+    fn test_bad_config() {
+        let bogus_base = r"{}" ;
+        let descender = YamlDescender::new(bogus_base, true).unwrap() ;
+        let register_tool = RegisterTool::new(Box::new(descender)) ;
+        match register_tool {
+            Err(errs)    => assert_eq!(errs.len(), 3),
+            Ok(_) => panic!("Should have failed to create a register tool")
+        } ;
+    }
+
+    #[test]
+    fn test_correct_basic() {
+        let correct = r"{device: /dev/mem, base: 0x40000000, length: 0x1000}" ;
+        let descender = YamlDescender::new(correct, true).unwrap() ;
+        let register_tool = RegisterTool::new(Box::new(descender)) ;
+        assert!(register_tool.is_ok()) ;
+    }
 }

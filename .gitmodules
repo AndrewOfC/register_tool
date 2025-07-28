@@ -1,3 +1,3 @@
 [submodule "tools/ucompleter"]
 	path = tools/ucompleter
-	url = git@github.com:AndrewOfC/ucompleter
+	url = git@github.com:AndrewOfC/ucompleter.git

@@ -1,8 +1,21 @@
+
+[![Build, Test and Package](https://github.com/AndrewOfC/register_tool/actions/workflows/build_and_test.yml/badge.svg?branch=master)](https://github.com/AndrewOfC/register_tool/actions/workflows/build_and_test.yml)
+![](https://www.rust-lang.org/logos/rust-logo-blk.svg)
+
 # Overview
 
 This is a tool for examining and manipulating memory mapped registers in embedded devices via symbolic
-names instead of raw addresses.  
+names instead of raw addresses. 
+
 The program reads a register configuration file in yaml format which contains register definitions.  
+
+# Demonstration 
+
+[Video]()
+
+Here on a [SparkFun PiWedge](https://www.sparkfun.com/sparkfun-pi-wedge.html) we've connected GPIO[27] pin of the RaspberyPi 4b's BCM2711 to an LED through a 330Ω resister.
+On the command line we set the pins .function register to 1(output), then set the .set register to
+1 to trn on the LED, then set the .clear register to 1 to turn it off.
 
 # Building
 
@@ -16,10 +29,24 @@ sudo apt-get install -y gcc-aarch64-linux-gnu # once
 
 git clone https://https://github.com/AndrewOfC/register_tool.git --recursive
 cd register_tool
-cargo build 
-
 cargo build --target aarch64-unknown-linux-gnu
 ```
+
+The executable can be found in "target/aarch64-uknonwn-linux-gnu/debug/register_tool"
+
+# Installation
+
+From .deb package
+
+## RasberryPi4b
+
+### With .deb package
+If installing from the .deb package, copy or symlink the file [/usr/share/doc/register-tool/examples/raspberrypi4b.yaml](file:///usr/share/doc/register-tool/examples/raspberrypi4b.yaml) to
+$HOME/.config/register_tool/register_tool.yaml
+
+### With local build
+
+copy or symlink the file [examples/raspberrypi4.yaml](file://examples/raspberrypi4.yaml)
 
 # Usage
 
@@ -170,10 +197,10 @@ on the bash command line. It is not required, but it is recommended.
 
 # Example Files
 
-| File                                                            | Contents                                 |
-|-----------------------------------------------------------------|------------------------------------------|
+| File                                                     | Contents                                 |
+|----------------------------------------------------------|------------------------------------------|
 | [raspberrypi4b_source.yaml](examples/raspberrypi4b_source.yaml) | Register definitions for RaspberryPi 4b This file was constructed with data from: [bcm2711-peripherals.pdf](https://datasheets.raspberrypi.com/bcm2711/bcm2711-peripherals.pdf)|
-| [raspberrypi4b.yaml](examples/raspberrypi4b.yaml)               |  The raspberrypi4b_source.yaml file remapped for a 'per pin' perspective.                                                                                                                                                                              |
+| [raspberrypi4b.yaml](examples/raspberrypi4b.yaml)        |  The raspberrypi4b_source.yaml file remapped for a 'per pin' perspective.|                                                                                                                                                                             |
 
 # Example
 

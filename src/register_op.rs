@@ -80,6 +80,19 @@ pub fn parse_bits(bitsstr: &str) -> Result<(u32, u32), String> {
 }
 
 impl RegisterOp {
+    
+    /// a noop register
+    pub fn noop() -> RegisterOp {
+        RegisterOp {
+            offset: 0,
+            set_mask: 0,
+            read_mask: 0,
+            shift: 0,
+            value: None,
+            shadow_offset: None,
+            access_type: RegisterAccess::Unspecified,
+        }
+    }
     pub fn new(descender: &dyn Descender<dyn Write>, value: Option<u32>, path:&str) -> Result<RegisterOp, String> {
 
         let offset_r = descender.get_int_field_or_parent(path, "offset");
