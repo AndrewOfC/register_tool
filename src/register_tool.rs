@@ -31,6 +31,9 @@ pub struct RegisterTool {
     regs: Vec<RegisterOp>,
     addr: *mut u8,
     test_mode: bool,
+    device: String,
+    base: u64,
+    length: u64,
 }
 
 impl RegisterTool {
@@ -69,7 +72,7 @@ impl RegisterTool {
         match self.descender.set_root(&*old_root) {
             Ok(_) => {},
             Err(e) => {
-                println!("Error resetting root: {}", e);
+                eprintln!("Error resetting root: {}", e);
                 fail = true;
             }
         }
@@ -84,27 +87,73 @@ impl RegisterTool {
 }
 
 impl RegisterTool {
-    pub fn new(descender: Box<dyn Descender<dyn Write>>) -> Self {
-        Self {descender, regs: Vec::new(), addr: std::ptr::null_mut(), test_mode: false }
+    pub fn new(descender: Box<dyn Descender<dyn Write>>) -> Result<Self, Vec<String>> {
+        let mut errs: Vec<String> = Vec::new();
+
+        /*
+         * Validate the integrity of the file
+         */
+        let device = match descender.get_string_field_or_parent("","device") {
+            Ok(d) => d,
+            Err(e) => {
+                errs.push(format!("device not found: {}", e));
+                "".to_string()
+            }
+        } ;
+
+        let base = match descender.get_int_field_or_parent("","base") {
+            Ok(b) => b,
+            Err(e) => {
+                errs.push(format!("base not found: {}", e));
+                0
+            }
+        }  as u64 ;
+
+        let length = match descender.get_int_field_or_parent("","length") {
+            Ok(l) => l,
+            Err(e) => {
+                errs.push(format!("length not found: {}", e));
+                0
+            }
+        } as u64 ;
+
+        /*
+         * return all collected errors
+         */
+        if errs.len() > 0 {
+            return Err(errs);
+        }
+        let register_tool = Self {descender, regs: Vec::new(), addr: std::ptr::null_mut(), test_mode: false, device, base, length } ;
+
+        Ok(register_tool)
     }
 
-    pub fn set_base_address(&mut self) {
-        let device = self.descender.get_string_field_or_parent("","device").expect("device not found") ;
-        let base = self.descender.get_int_field_or_parent("","base").expect("base not found") ;
-        let length = self.descender.get_int_field_or_parent("","length").expect("length not found") ;
-        self.addr = mmap_memory(device.as_str(), base as u64, length as u64).expect("mmap failed") ;
+    pub fn set_base_address(&mut self) -> Result<(), String> {
+        self.addr = match mmap_memory(self.device.as_str(), self.base, self.length) {
+            Ok(a) => a,
+            Err(e) => {
+                return Err(format!("Error mapping memory: {}", e));
+            }
+        } ;
+        Ok(())
     }
 
     pub fn set_test_area(&mut self) {
-        let length = self.descender.get_int_field_or_parent("", "length").expect("length not found");
-        let mut memory = Vec::with_capacity(length as usize);
-        memory.resize(length as usize, 0u8);
+        let mut memory = Vec::with_capacity(self.length as usize);
+        memory.resize(self.length as usize, 0u8);
         self.addr = memory.as_mut_ptr();
         std::mem::forget(memory);
         self.test_mode = true;
     }
 
-    pub fn gather_regs(&mut self, regsspecs: &Vec<&str>) -> Result<(), String> {
+
+    ///
+    /// gather the registers to set or read.
+    ///
+    /// return Ok or the collected errors
+    ///
+    pub fn gather_regs(&mut self, regsspecs: &Vec<&str>) -> Result<(), Vec<String>> {
+        let mut errs: Vec<String> = Vec::new();
 
         let old_root = match &self.descender.get_string_field_or_parent("completion-metadata", "root") {
             Ok(r) => self.descender.set_root(r).unwrap(),
@@ -114,31 +163,43 @@ impl RegisterTool {
         for spec in regsspecs {
             let parts = spec.split("=").collect::<Vec<&str>>();
             if parts.len() > 2 {
-                return Err(format!("Bad argument {}", spec));
+                errs.push(format!("Bad argument {}", spec));
+                continue ;
             }
             let is_set = parts.len() == 2 ;
             let value = if is_set {
                 match parts[1].parse::<u32>() {
                     Ok(v) => Some(v),
-                    Err(_) => return Err(format!("Bad argument {}", spec)),
+                    Err(_) => {
+                        errs.push(format!("Bad argument {}", spec)) ;
+                        None
+                    }
                 }
             } else { None };
 
             let r = match RegisterOp::new(&*self.descender, value, parts[0]) {
                 Ok(r) => r,
-                Err(e) => return Err(e),
+                Err(e) => { errs.push(e) ;
+                    RegisterOp::noop()
+                }
             } ;
 
             self.regs.push(r)
         }
+
         match self.descender.set_root(&*old_root) {
             Ok(_) => {},
             Err(e) => {
                 println!("Error resetting root: {}", e);
-                return Err(format!("Error resetting root: {}", e));
+                errs.push(format!("Error resetting old root: {}", e));
             }
+        } ;
+
+        if errs.len() > 0 {
+            Err(errs)
+        } else {
+            Ok(())
         }
-        Ok(())
     }
 
     pub fn apply_registers<F>(&self, f: F) -> Result<Vec<Result<u32, String>>, String>
@@ -159,8 +220,11 @@ impl RegisterTool {
         }
         Ok(results)
     }
-
 }
+
+///
+/// Free any memory we might have allocated
+///
 impl Drop for RegisterTool {
     fn drop(&mut self) {
         if self.test_mode {

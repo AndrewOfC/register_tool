@@ -37,3 +37,14 @@ yaml-rust = "0.4.5"
 libc = "0.2.174"
 regex = "1.11.1"
 aep_rust_common = { path = "tools/ucompleter/aep_rust_common" }
+lazy_static = "1.5.0"
+
+
+[package.metadata.deb]
+copyright = "© copyright Andrew Ellis Page"
+extended-description-file= "README.md"
+section = "Utilities"
+assets = [ "$auto", [ "examples/raspberrypi4b_source.yaml", "/usr/share/doc/register-tool/examples/", "0644" ],
+       	   ["examples/raspberrypi4b.yaml", "/usr/share/doc/register-tool/examples/", "0644" ],
+	   ["docs/*", "/usr/share/doc/register-tool/docs/", "0644"]]
+	   
