@@ -23,7 +23,7 @@
 # 
 
         
-name: register_tool
+name: Register_Tool
 
 on:
   push:
@@ -33,7 +33,7 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
+  Build_and_Test:
 
     runs-on: ubuntu-latest
     container: rust:latest
@@ -47,7 +47,7 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: Run tests
-      run: cargo test && cd aep_rust_common && cargo test
+      run: cargo test && cd tools/ucompleter/aep_rust_common && cargo test
     - name: rustup aarch64
       run: rustup target add aarch64-unknown-linux-gnu
     - name: gcc-arm64
@@ -61,11 +61,11 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: register_tool-arm64
-        path: "target/aarch64-unknown-linux-gnu/debian/register_tool*.deb"
+        path: "target/aarch64-unknown-linux-gnu/debian/register-tool*.deb"
         overwrite: true
     - uses: actions/upload-artifact@v4
       with:
           name: register_tool-x86
-          path: target/debian/register_tool*.deb
+          path: target/debian/register-tool*.deb
           overwrite: true
           

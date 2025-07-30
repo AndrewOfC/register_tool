@@ -184,6 +184,7 @@ version = "0.1.0"
 dependencies = [
  "aep_rust_common",
  "clap",
+ "lazy_static",
  "libc",
  "memmap",
  "regex",
